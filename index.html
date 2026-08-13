@@ -2,167 +2,134 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="GABRIX — Creating Reach. Moving Culture. Digital promotion for artists, creators and brands.">
-<title>GABRIX® — Creating Reach. Moving Culture.</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="GABRIX NETWORK â€” The Network Behind the Next Big Thing. Music promotion, YouTube growth and digital campaigns.">
+<title>GABRIX NETWORK â€” The Network Behind the Next Big Thing.</title>
 <style>
-:root{--black:#050505;--white:#f7f7f7;--grey:#a0a0a0;--dark:#101010;--line:#242424;--blue:#2f7cff}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
-a{text-decoration:none;color:inherit}
-.container{width:min(1160px,92%);margin:auto}
-nav{position:fixed;z-index:99;top:0;left:0;right:0;background:rgba(5,5,5,.88);backdrop-filter:blur(18px);border-bottom:1px solid #1d1d1d}
+:root{--navy:#030916;--navy2:#06152b;--blue:#1677ff;--blue2:#58a6ff;--gold:#e7bd5b;--gold2:#ffe39a;--white:#f7f9ff;--muted:#9ba9bd;--line:#173052;--card:#071224}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.55}
+a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 85% 8%,rgba(22,119,255,.16),transparent 28%),radial-gradient(circle at 12% 45%,rgba(231,189,91,.06),transparent 30%);z-index:-1}
+nav{position:fixed;z-index:99;top:0;left:0;right:0;background:rgba(3,9,22,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(91,142,204,.18)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:25px;font-weight:900;letter-spacing:4px}
-.logo b{font-weight:900}
-.links{display:flex;gap:27px;font-size:13px;color:#aaa}
-.links a:hover{color:#fff}
-.cta-small{border:1px solid #fff;padding:10px 15px;color:#fff!important}
-.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 90px;overflow:hidden;position:relative}
-.hero:before{content:"G";position:absolute;right:-10%;top:8%;font-size:70vw;font-weight:900;color:#0d0d0d;line-height:.8;z-index:-1}
-.eyebrow{font-size:11px;letter-spacing:4px;color:#777;text-transform:uppercase;margin-bottom:25px}
-h1{font-size:clamp(58px,10vw,132px);line-height:.84;letter-spacing:-6px}
-h1 span{color:#777}
-.hero p{max-width:680px;color:#999;font-size:18px;margin-top:30px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
-.btn{display:inline-block;padding:14px 22px;border:1px solid #444;font-size:13px;font-weight:700}
-.btn.primary{background:#fff;color:#000;border-color:#fff}
-.btn:hover{transform:translateY(-1px)}
-section{padding:110px 0;border-top:1px solid var(--line)}
-.label{font-size:11px;letter-spacing:4px;color:#666;text-transform:uppercase;margin-bottom:15px}
-h2{font-size:clamp(40px,6vw,76px);line-height:.95;letter-spacing:-4px}
-.lead{max-width:720px;color:#999;font-size:17px;margin-top:20px}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:55px}
-.service{background:var(--black);padding:32px;min-height:250px}
-.number{font-size:11px;color:#666;letter-spacing:2px}
-.service h3{font-size:22px;margin:45px 0 10px}
-.service p{font-size:14px;color:#888}
+.logo{font-weight:950;letter-spacing:4px;font-size:24px}.logo span{color:var(--gold)}
+.links{display:flex;gap:25px;align-items:center;color:#aebbd0;font-size:12px}.links a:hover{color:#fff}
+.cta-small{border:1px solid var(--gold);padding:10px 15px;color:var(--gold2)!important}
+.hero{min-height:100vh;display:flex;align-items:center;text-align:center;position:relative;overflow:hidden;padding:120px 0 80px}
+.hero:before{content:"";position:absolute;width:700px;height:700px;right:-260px;top:5%;border-radius:50%;background:radial-gradient(circle,rgba(22,119,255,.3),rgba(22,119,255,.05) 42%,transparent 70%);filter:blur(5px);z-index:-1}
+.hero:after{content:"";position:absolute;width:600px;height:600px;left:-300px;bottom:-300px;border-radius:50%;background:radial-gradient(circle,rgba(231,189,91,.12),transparent 68%);z-index:-1}
+.hero-inner{max-width:1050px;margin:auto}
+.eyebrow{font-size:10px;letter-spacing:5px;color:var(--blue2);text-transform:uppercase;margin-bottom:24px}
+.hero-logo{font-size:clamp(42px,8vw,86px);font-weight:950;letter-spacing:7px;line-height:.9;text-shadow:0 0 35px rgba(22,119,255,.18)}
+.hero-logo span{color:var(--gold)}
+.hero-line{height:1px;width:min(440px,70%);margin:25px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+h1{font-size:clamp(43px,7.2vw,91px);line-height:.9;letter-spacing:-4px;text-transform:uppercase}
+h1 .gold{color:var(--gold2)}.hero p{max-width:650px;margin:28px auto 0;color:var(--muted);font-size:16px}
+.hero-services{margin-top:18px;color:#dce5f3;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:31px}
+.btn{display:inline-block;padding:14px 23px;border:1px solid #34557d;font-size:11px;font-weight:900;letter-spacing:.7px}
+.btn.primary{background:linear-gradient(90deg,var(--gold),var(--gold2));border-color:var(--gold);color:#07101c}
+.btn:hover{transform:translateY(-2px)}
+.trust{margin-top:42px;color:#687d98;font-size:9px;letter-spacing:3px;text-transform:uppercase}
+section{padding:105px 0;border-top:1px solid rgba(56,92,132,.22)}
+.label{font-size:10px;letter-spacing:4px;color:var(--blue2);text-transform:uppercase;margin-bottom:15px}
+h2{font-size:clamp(39px,6vw,75px);line-height:.92;letter-spacing:-3px}
+.lead{max-width:720px;color:var(--muted);font-size:16px;margin-top:20px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}
+.service{background:linear-gradient(145deg,rgba(8,25,48,.92),rgba(4,13,28,.96));border:1px solid var(--line);padding:28px;min-height:220px;transition:.2s}
+.service:hover{border-color:#2c70bb;transform:translateY(-3px)}
+.number{font-size:10px;color:var(--gold);letter-spacing:2px}.service h3{font-size:20px;margin:40px 0 9px}.service p{font-size:13px;color:#8292a9}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.quote{font-size:clamp(32px,4.8vw,62px);line-height:1.02;letter-spacing:-2px}
-.network-box{margin-top:35px;border:1px solid var(--line);padding:28px}
-.network-box strong{font-size:30px;display:block}
-.network-box span{color:#777;font-size:12px}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);margin-top:50px}
-.step{background:var(--black);padding:27px}
-.step strong{font-size:13px;color:#777}
-.step h3{margin:22px 0 8px;font-size:20px}
-.step p{font-size:13px;color:#888}
-.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:45px}
-.work{min-height:250px;border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(145deg,#111,#070707)}
-.work small{color:#666;letter-spacing:2px}
-.work h3{font-size:28px;margin-top:8px}
-.form-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
-form{display:grid;gap:13px}
-input,textarea,select{width:100%;background:#0d0d0d;border:1px solid #292929;color:#fff;padding:15px;font:inherit;outline:none}
-textarea{min-height:130px;resize:vertical}
-button{cursor:pointer;padding:15px;background:#fff;color:#000;border:0;font-weight:800}
-footer{padding:35px 0;color:#666;font-size:11px;display:flex;justify-content:space-between;border-top:1px solid var(--line)}
-@media(max-width:760px){
- .links{display:none}.hero{padding-top:120px}.hero:before{font-size:100vw}
- h1{letter-spacing:-4px}.services,.process,.split,.form-wrap{grid-template-columns:1fr}
- .work-grid{grid-template-columns:1fr}.split{gap:35px}
- footer{display:block}footer div+div{margin-top:10px}
-}
+.network-box{margin-top:30px;border:1px solid #274b78;padding:24px;background:linear-gradient(135deg,rgba(15,52,93,.32),rgba(5,15,31,.7))}
+.network-box strong{font-size:23px;display:block}.network-box span{font-size:9px;letter-spacing:3px;color:var(--gold)}
+.quote{font-size:clamp(29px,4.6vw,59px);line-height:1.02;letter-spacing:-2px}.quote b{color:var(--gold2)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:45px}
+.step{background:var(--card);border:1px solid var(--line);padding:25px}.step strong{color:var(--gold)}.step h3{margin:18px 0 7px}.step p{font-size:12px;color:#8190a4}
+.packages-head{display:flex;justify-content:space-between;gap:30px;align-items:end}.packages{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:45px}
+.card{background:linear-gradient(155deg,#091a31,#050d1b);border:1px solid #17365b;padding:25px;min-height:470px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.card:after{content:"";position:absolute;width:190px;height:190px;right:-100px;top:-100px;border-radius:50%;background:rgba(22,119,255,.13)}
+.card:nth-child(1){border-top:2px solid #36d5d0}.card:nth-child(2){border-top:2px solid var(--blue)}.card:nth-child(3){border-top:2px solid #b44dff}.card:nth-child(4){border-top:2px solid var(--gold)}
+.card.popular{box-shadow:0 0 45px rgba(22,119,255,.14);transform:translateY(-6px)}
+.badge{display:inline-block;align-self:flex-start;background:var(--blue);color:white;padding:6px 9px;font-size:8px;font-weight:900;letter-spacing:1.5px;margin-bottom:14px}
+.icon{font-size:27px;margin-bottom:10px}.card h3{font-size:22px}.tier{font-size:9px;letter-spacing:2px;color:#70829a;text-transform:uppercase;margin-top:4px}
+.price{font-size:31px;font-weight:950;margin:20px 0 15px;color:var(--gold2)}.features{list-style:none;border-top:1px solid #173052;padding-top:12px}.features li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(23,48,82,.55);font-size:11px}.features b{color:#e4edf9}
+.card-note{font-size:9px;color:#6f7f93;margin-top:12px}.card-btn{margin-top:auto;text-align:center;background:linear-gradient(90deg,#1acb73,#22e39a);color:#03130b;padding:12px;font-size:10px;font-weight:950;border-radius:2px}
+.disclaimer{margin-top:17px;color:#63758b;font-size:9px}
+.start{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}.formbox{background:linear-gradient(145deg,#07162b,#040b17);border:1px solid var(--line);padding:29px}
+form{display:grid;gap:11px}input,textarea,select{width:100%;background:#040b16;border:1px solid #203c60;color:#eef4ff;padding:14px;font:inherit;outline:none}input:focus,textarea:focus,select:focus{border-color:var(--blue)}textarea{min-height:115px;resize:vertical}button{cursor:pointer;padding:14px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:#07101c;border:0;font-weight:950}
+.help{font-size:10px;color:#6e8096}.direct{display:inline-block;margin-top:24px;border:1px solid var(--gold);padding:13px 17px;color:var(--gold2);font-size:10px;font-weight:900}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:40px}.work{min-height:205px;border:1px solid var(--line);padding:27px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(145deg,#081a31,#040b17)}.work small{color:var(--blue2);letter-spacing:2px}.work h3{font-size:24px;margin-top:7px}
+footer{padding:34px 0;color:#64758a;font-size:9px;display:flex;justify-content:space-between;border-top:1px solid rgba(56,92,132,.22);letter-spacing:.7px}
+@media(max-width:980px){.packages{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.links{display:none}.hero{padding-top:115px}.hero-logo{letter-spacing:4px}.hero h1{letter-spacing:-2.5px}.services,.process,.split,.start,.work-grid,.packages{grid-template-columns:1fr}.card.popular{transform:none}.packages-head{display:block}footer{display:block}footer div+div{margin-top:9px}}
 </style>
 </head>
 <body>
 <nav><div class="container nav">
-<a class="logo" href="#top">GABRIX<span>®</span></a>
-<div class="links">
-<a href="#services">Services</a><a href="#network">Network</a><a href="#process">Process</a><a href="#work">Campaigns</a><a href="#about">About</a>
-<a class="cta-small" href="#start">Start a Campaign</a>
-</div>
+<a class="logo" href="#top">GABRIX<span>Â®</span></a>
+<div class="links"><a href="#services">Services</a><a href="#network">Network</a><a href="#packages">Packages</a><a href="#process">Process</a><a href="#start">Contact</a><a class="cta-small" href="#packages">Choose a Campaign</a></div>
 </div></nav>
 
-<header class="hero" id="top"><div class="container">
-<div class="eyebrow">Digital Promotion Movement</div>
-<h1>CREATING<br><span>REACH.</span><br>MOVING<br>CULTURE.</h1>
-<p>GABRIX helps artists, creators and brands build digital visibility through organized promotion campaigns, creative strategy and a growing network of campaign partners.</p>
-<div class="buttons"><a class="btn primary" href="#start">Start a Campaign</a><a class="btn" href="#services">Explore Services</a></div>
+<header class="hero" id="top"><div class="container hero-inner">
+<div class="eyebrow">GABRIX NETWORK / DIGITAL CAMPAIGNS</div>
+<div class="hero-logo">GABRIX<span>Â®</span></div>
+<div class="hero-line"></div>
+<h1>THE NETWORK BEHIND<br><span class="gold">THE NEXT BIG THING.</span></h1>
+<p>Built for artists, creators and brands ready to move further. Strategic digital promotion, YouTube growth and campaign support through one connected network.</p>
+<div class="hero-services">YouTube Growth &nbsp;â€¢&nbsp; Music Promotion &nbsp;â€¢&nbsp; Digital Campaigns</div>
+<div class="buttons"><a class="btn primary" href="#packages">EXPLORE CAMPAIGNS</a><a class="btn" href="#network">DISCOVER GABRIX</a></div>
+<div class="trust">CREATORS &nbsp;â€¢&nbsp; ARTISTS &nbsp;â€¢&nbsp; BRANDS &nbsp;â€¢&nbsp; DIGITAL PROJECTS</div>
 </div></header>
 
 <section id="services"><div class="container">
-<div class="label">01 / Services</div><h2>BUILT FOR<br>VISIBILITY.</h2>
-<p class="lead">Every campaign starts with a goal. GABRIX helps turn that goal into a structured digital promotion plan.</p>
+<div class="label">01 / Services</div><h2>BUILT TO<br>MOVE.</h2>
+<p class="lead">GABRIX turns promotion into a structured campaign â€” giving projects a clear direction, stronger presentation and coordinated digital support.</p>
 <div class="services">
-<div class="service"><div class="number">01</div><h3>Music Promotion</h3><p>Promotion support for releases, music videos and independent artists looking to expand discovery and reach.</p></div>
-<div class="service"><div class="number">02</div><h3>YouTube Campaigns</h3><p>Organized campaigns designed around content visibility, discovery and genuine audience engagement.</p></div>
-<div class="service"><div class="number">03</div><h3>Digital Campaigns</h3><p>Cross-platform promotion for creators and projects that need a coordinated digital presence.</p></div>
-<div class="service"><div class="number">04</div><h3>Artist Visibility</h3><p>Helping emerging talent present their work professionally and reach audiences beyond their starting point.</p></div>
-<div class="service"><div class="number">05</div><h3>Creator Support</h3><p>Campaign planning and practical digital support for creators building consistency and visibility.</p></div>
-<div class="service"><div class="number">06</div><h3>Campaign Strategy</h3><p>Clear objectives, pacing and progress tracking so every campaign has direction.</p></div>
+<div class="service"><div class="number">01</div><h3>Music Promotion</h3><p>Campaign support for releases, music videos and independent artists seeking wider discovery.</p></div>
+<div class="service"><div class="number">02</div><h3>YouTube Growth</h3><p>Campaigns focused on channel visibility, content discovery and audience development.</p></div>
+<div class="service"><div class="number">03</div><h3>Digital Campaigns</h3><p>Structured promotion for creators, launches, brands and digital projects.</p></div>
+<div class="service"><div class="number">04</div><h3>Audience Engagement</h3><p>Campaign support around subscribers, likes, comments and content interaction.</p></div>
+<div class="service"><div class="number">05</div><h3>Watch-Time Strategy</h3><p>Promotion planning designed to encourage content discovery and viewing.</p></div>
+<div class="service"><div class="number">06</div><h3>Campaign Support</h3><p>Clear communication, pacing and progress tracking throughout an agreed campaign.</p></div>
 </div>
 </div></section>
 
 <section id="network"><div class="container split">
-<div><div class="label">02 / The movement</div><h2>THE GABRIX<br>NETWORK.</h2>
-<p class="lead">GABRIX is built around a growing network of digital promoters and campaign partners. The network allows campaigns to be coordinated across different audiences and markets.</p>
-<div class="network-box"><strong>ONE VISION. MANY VOICES.</strong><span>THE GABRIX NETWORK</span></div></div>
-<div class="quote">“More than promotion.<br><br><b>A movement built to move ideas, music and talent further.</b>”</div>
+<div><div class="label">02 / The Movement</div><h2>THE GABRIX<br>NETWORK.</h2>
+<p class="lead">A growing digital network built around promotion, creators, music and opportunity. One vision connects different voices, audiences and projects.</p>
+<div class="network-box"><strong>THE NETWORK BEHIND THE NEXT BIG THING.</strong><span>GABRIX NETWORK</span></div></div>
+<div class="quote">More than promotion.<br><br><b>A network built to move ideas, music and talent further.</b></div>
+</div></section>
+
+<section id="packages"><div class="container">
+<div class="packages-head"><div><div class="label">03 / Campaign Packages</div><h2>CHOOSE<br>YOUR LEVEL.</h2></div><p class="lead">Four campaign levels. Select your direction and connect with GABRIX directly.</p></div>
+<div class="packages">
+<article class="card"><div class="icon">âš¡</div><h3>THE SPARK</h3><div class="tier">Starter Campaign</div><div class="price">KSh 899</div><ul class="features"><li><span>Subscribers</span><b>40</b></li><li><span>Likes</span><b>50</b></li><li><span>Comments</span><b>39</b></li><li><span>Watch-time target</span><b>18 hrs</b></li></ul><p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p><a class="card-btn" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27m%20interested%20in%20THE%20SPARK%20package%20(KSh%20899).">CHAT ON WHATSAPP â†’</a></article>
+<article class="card popular"><div class="badge">MOST POPULAR</div><div class="icon">ðŸš€</div><h3>THE RISE</h3><div class="tier">Growth Campaign</div><div class="price">KSh 1,500</div><ul class="features"><li><span>Subscribers</span><b>70</b></li><li><span>Likes</span><b>70</b></li><li><span>Comments</span><b>50</b></li><li><span>Watch-time target</span><b>25 hrs</b></li></ul><p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p><a class="card-btn" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27m%20interested%20in%20THE%20RISE%20package%20(KSh%201%2C500).">CHAT ON WHATSAPP â†’</a></article>
+<article class="card"><div class="icon">ðŸ”¥</div><h3>THE MOVEMENT</h3><div class="tier">Professional Campaign</div><div class="price">KSh 2,500</div><ul class="features"><li><span>Subscribers</span><b>150</b></li><li><span>Likes</span><b>120</b></li><li><span>Comments</span><b>100</b></li><li><span>Watch-time target</span><b>40 hrs</b></li></ul><p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p><a class="card-btn" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27m%20interested%20in%20THE%20MOVEMENT%20package%20(KSh%202%2C500).">CHAT ON WHATSAPP â†’</a></article>
+<article class="card"><div class="icon">ðŸ‘‘</div><h3>THE NEXT BIG THING</h3><div class="tier">Premium Campaign</div><div class="price">KSh 5,000</div><ul class="features"><li><span>Subscribers</span><b>250</b></li><li><span>Likes</span><b>300</b></li><li><span>Comments</span><b>150</b></li><li><span>Watch-time target</span><b>70 hrs</b></li></ul><p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p><a class="card-btn" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27m%20interested%20in%20THE%20NEXT%20BIG%20THING%20package%20(KSh%205%2C000).">CHAT ON WHATSAPP â†’</a></article>
+</div>
+<p class="disclaimer">Campaign figures are promotional targets/estimates, not guaranteed platform outcomes. Audience response and platform policies can affect final results.</p>
 </div></section>
 
 <section id="process"><div class="container">
-<div class="label">03 / How it works</div><h2>FROM IDEA<br>TO REACH.</h2>
-<div class="process">
-<div class="step"><strong>01</strong><h3>Tell us</h3><p>Share your artist, channel, release or project and what you want to achieve.</p></div>
-<div class="step"><strong>02</strong><h3>Plan</h3><p>We review the project and outline a suitable campaign direction.</p></div>
-<div class="step"><strong>03</strong><h3>Activate</h3><p>The agreed campaign is coordinated through the GABRIX network.</p></div>
-<div class="step"><strong>04</strong><h3>Track</h3><p>Progress is monitored and communicated throughout the campaign.</p></div>
-</div>
+<div class="label">04 / How It Works</div><h2>FROM IDEA<br>TO REACH.</h2>
+<div class="process"><div class="step"><strong>01</strong><h3>Choose</h3><p>Select the campaign level that fits your project.</p></div><div class="step"><strong>02</strong><h3>Chat</h3><p>One tap opens WhatsApp directly with GABRIX NETWORK.</p></div><div class="step"><strong>03</strong><h3>Plan</h3><p>Share your project name and campaign goals.</p></div><div class="step"><strong>04</strong><h3>Activate</h3><p>Your agreed campaign is coordinated through the network.</p></div></div>
 </div></section>
 
-<section id="work"><div class="container">
-<div class="label">04 / Campaigns</div><h2>THE WORK<br>WE MOVE.</h2>
-<p class="lead">This section is ready for real GABRIX campaigns, client stories, screenshots and verified results as your portfolio grows.</p>
-<div class="work-grid">
-<div class="work"><small>CASE STUDY 01</small><h3>Music Release Campaign</h3></div>
-<div class="work"><small>CASE STUDY 02</small><h3>YouTube Visibility Campaign</h3></div>
-<div class="work"><small>CASE STUDY 03</small><h3>Creator Growth Campaign</h3></div>
-<div class="work"><small>CASE STUDY 04</small><h3>Coming Soon</h3></div>
-</div>
+<section id="start"><div class="container start">
+<div><div class="label">05 / Start a Campaign</div><h2>LET'S<br>MOVE IT.</h2><p class="lead">No complicated URLs. Give us your YouTube channel, artist or project name and tell us what you want to achieve.</p><a class="direct" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27d%20like%20to%20discuss%20a%20campaign.">ðŸ’¬ CHAT DIRECTLY ON WHATSAPP</a></div>
+<div class="formbox"><form id="campaignForm"><input id="name" required placeholder="Your name"><input id="project" required placeholder="YouTube / Project Name"><select id="package" required><option value="">Choose a package</option><option>THE SPARK â€” KSh 899</option><option>THE RISE â€” KSh 1,500</option><option>THE MOVEMENT â€” KSh 2,500</option><option>THE NEXT BIG THING â€” KSh 5,000</option></select><textarea id="details" placeholder="Tell us briefly about your campaign"></textarea><button type="submit">ðŸ’¬ CHAT WITH GABRIX NETWORK</button><p class="help">Enter the name only â€” no https:// or www. required.</p></form></div>
 </div></section>
 
-<section id="about"><div class="container split">
-<div><div class="label">05 / About GABRIX</div><h2>MORE THAN<br>PROMOTION.</h2></div>
-<p class="quote">GABRIX exists to help great work get discovered — connecting creators, audiences and opportunities through organized digital campaigns.</p>
-</div></section>
-
-<section id="start"><div class="wrap form"><div><div class="label">06 / START A CAMPAIGN</div><h2>LET'S<br>MOVE IT.</h2><p class="lead">Tell GABRIX about your project. Your request will be prepared as a WhatsApp message for our campaign team.</p><div class="box"><b>CAMPAIGN ENQUIRIES</b><small>WhatsApp: 0113630612</small></div></div>
-<form id="campaignForm">
-<input id="name" required placeholder="Your name">
-<input id="brand" required placeholder="Artist / Brand / YouTube channel">
-<input id="link" type="url" placeholder="YouTube or project link">
-<select id="service" required><option value="">Choose a service</option><option>Music Promotion</option><option>YouTube Campaign</option><option>Digital Campaign</option><option>Artist Visibility</option><option>Creator Support</option><option>Campaign Strategy</option></select>
-<textarea id="details" required placeholder="Tell us about your campaign"></textarea>
-<button type="submit">SEND CAMPAIGN REQUEST ON WHATSAPP</button>
-<small id="msg" style="color:#777"></small>
-</form></div></section>
-
-<footer class="container"><div>© 2026 GABRIX®. ALL RIGHTS RESERVED.</div><div>CREATING REACH. MOVING CULTURE.</div></footer>
+<footer class="container"><div>Â© 2026 GABRIX NETWORKÂ®. ALL RIGHTS RESERVED.</div><div>THE NETWORK BEHIND THE NEXT BIG THING.</div></footer>
 <script>
-document.getElementById('campaignForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const brand = document.getElementById('brand').value.trim();
-  const link = document.getElementById('link').value.trim();
-  const service = document.getElementById('service').value;
-  const details = document.getElementById('details').value.trim();
-
-  const message =
-`Hello GABRIX, I would like to start a campaign.
-
-Name: ${name}
-Artist / Brand / Channel: ${brand}
-Service: ${service}
-Project link: ${link || 'Not provided'}
-
-Campaign details:
-${details}`;
-
-  const phone = '254113630612';
-  window.location.href = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+document.getElementById('campaignForm').addEventListener('submit',function(e){
+e.preventDefault();
+const name=document.getElementById('name').value.trim(),project=document.getElementById('project').value.trim(),pkg=document.getElementById('package').value,details=document.getElementById('details').value.trim();
+const msg=`Hello GABRIX NETWORK ðŸ‘‹ðŸ½\n\nMy name is ${name}.\nYouTube / Project: ${project}\nPackage: ${pkg}\n\nCampaign details:\n${details||'I would like to discuss this campaign.'}`;
+window.location.href='https://wa.me/254113630612?text='+encodeURIComponent(msg);
 });
 </script>
-</body>
-</html>
+</body></html>
