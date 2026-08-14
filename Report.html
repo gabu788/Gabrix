@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GABRIX — Private Campaign Desk</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#071018;color:#fff;font-family:Arial,sans-serif;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{width:min(480px,100%);padding:28px;border:1px solid #20333d;border-radius:24px;background:#0b1720;box-shadow:0 20px 60px #0008}
+.brand{color:#00d9ff;font-size:12px;font-weight:800;letter-spacing:.18em}
+h1{margin:10px 0 8px;font-size:28px}
+.sub{color:#9daab2;line-height:1.5}
+input{width:100%;padding:15px;margin:18px 0 10px;background:#071018;color:#fff;border:1px solid #29404b;border-radius:11px;font-size:16px}
+button{width:100%;padding:15px;border:0;border-radius:11px;background:#00d9ff;color:#041017;font-weight:800;font-size:14px}
+#msg{margin-top:14px}
+#desk{display:none;margin-top:24px;border-top:1px solid #21323a;padding-top:20px}
+.row{padding:14px 0;border-bottom:1px solid #17262e}
+.label{color:#81909b;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.value{margin-top:6px;font-weight:bold}
+a{color:#00d9ff;text-decoration:none}
+</style>
+</head>
+
+<body>
+<div class="card">
+<div class="brand">GABRIX NETWORK</div>
+<h1>Private Campaign Desk</h1>
+<p class="sub">Enter the private campaign code given to you by GABRIX after payment.</p>
+
+<input id="code" type="password" placeholder="Private campaign code">
+<button onclick="login()">ACCESS MY CAMPAIGN</button>
+
+<div id="msg"></div>
+<div id="desk"></div>
+</div>
+
+<script>
+async function login(){
+  const code=document.getElementById("code").value.trim();
+  const msg=document.getElementById("msg");
+  const desk=document.getElementById("desk");
+
+  desk.style.display="none";
+
+  if(!code){
+    msg.textContent="Please enter your campaign code.";
+    return;
+  }
+
+  msg.textContent="Checking...";
+  msg.style.color="#9daab2";
+
+  try{
+    const response=await fetch("/api/client/login",{
+      method:"POST",
+      headers:{"content-type":"application/json"},
+      body:JSON.stringify({code})
+    });
+
+    const data=await response.json();
+
+    if(!response.ok) throw new Error(data.error||"Invalid campaign code.");
+
+    const c=data.client;
+
+    msg.textContent="Access granted.";
+    msg.style.color="#00d9ff";
+
+    desk.innerHTML=`
+      <div class="row">
+        <div class="label">Client</div>
+        <div class="value">${safe(c.name)}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Campaign</div>
+        <div class="value">${safe(c.campaign)}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Package</div>
+        <div class="value">${safe(c.package)}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Status</div>
+        <div class="value">${safe(c.status)}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Progress</div>
+        <div class="value">${safe(c.progress)}</div>
+      </div>
+
+      <div class="row">
+        <div class="label">Latest Update</div>
+        <div class="value">${safe(c.update_note)}</div>
+      </div>
+
+      <div class="row">
+        <a href="https://wa.me/254113630612">Contact GABRIX on WhatsApp →</a>
+      </div>
+    `;
+
+    desk.style.display="block";
+
+  }catch(error){
+    msg.textContent=error.message;
+    msg.style.color="#ff9d9d";
+  }
+}
+
+function safe(value){
+  return String(value ?? "").replace(/[&<>"']/g,function(char){
+    return {
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#39;"
+    }[char];
+  });
+}
+</script>
+</body>
+</html>
