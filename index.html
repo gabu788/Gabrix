@@ -178,4 +178,123 @@ window.location.href='https://wa.me/254113630612?text='+encodeURIComponent(msg);
     🔐 Client Campaign Desk
   </a>
 </div>
+  <!-- GABRIX PRIVATE CLIENT DESK -->
+<section id="clientDesk" style="padding:45px 20px;text-align:center;background:#071018;">
+  <div style="max-width:430px;margin:auto;padding:25px;border:1px solid #243842;border-radius:20px;background:#0b1720;">
+    <div style="font-size:11px;letter-spacing:3px;color:#00d9ff;font-weight:bold;">
+      GABRIX NETWORK
+    </div>
+
+    <h2 style="margin:10px 0 8px;color:white;">
+      🔐 Client Campaign Desk
+    </h2>
+
+    <p style="color:#9daab2;font-size:14px;line-height:1.5;">
+      Private access for GABRIX clients. Enter the campaign code provided after payment.
+    </p>
+
+    <input
+      id="gabrixCode"
+      type="password"
+      placeholder="Enter private campaign code"
+      style="width:100%;padding:14px;margin:12px 0;border-radius:10px;border:1px solid #304650;background:#071018;color:white;"
+    >
+
+    <button
+      onclick="gabrixClientLogin()"
+      style="width:100%;padding:14px;border:0;border-radius:10px;background:#00d9ff;color:#031017;font-weight:bold;">
+      ACCESS MY CAMPAIGN
+    </button>
+
+    <div id="gabrixMessage" style="margin-top:14px;font-size:13px;"></div>
+    <div id="gabrixClientResult" style="display:none;text-align:left;margin-top:20px;"></div>
+  </div>
+</section>
+
+<script>
+async function gabrixClientLogin() {
+  const code = document.getElementById("gabrixCode").value.trim();
+  const message = document.getElementById("gabrixMessage");
+  const result = document.getElementById("gabrixClientResult");
+
+  result.style.display = "none";
+
+  if (!code) {
+    message.textContent = "Please enter your private campaign code.";
+    message.style.color = "#ff9d9d";
+    return;
+  }
+
+  message.textContent = "Checking campaign access...";
+  message.style.color = "#9daab2";
+
+  try {
+    const response = await fetch("/api/client/login", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({code})
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Invalid campaign code.");
+    }
+
+    const c = data.client;
+
+    result.innerHTML = `
+      <div style="padding:14px;border-bottom:1px solid #20323b;">
+        <small style="color:#81909b;">CLIENT</small>
+        <div style="color:white;font-weight:bold;margin-top:5px;">${escapeGabrix(c.name)}</div>
+      </div>
+
+      <div style="padding:14px;border-bottom:1px solid #20323b;">
+        <small style="color:#81909b;">CAMPAIGN</small>
+        <div style="color:white;font-weight:bold;margin-top:5px;">${escapeGabrix(c.campaign)}</div>
+      </div>
+
+      <div style="padding:14px;border-bottom:1px solid #20323b;">
+        <small style="color:#81909b;">PACKAGE</small>
+        <div style="color:white;font-weight:bold;margin-top:5px;">${escapeGabrix(c.package)}</div>
+      </div>
+
+      <div style="padding:14px;border-bottom:1px solid #20323b;">
+        <small style="color:#81909b;">STATUS</small>
+        <div style="color:#00d9ff;font-weight:bold;margin-top:5px;">${escapeGabrix(c.status)}</div>
+      </div>
+
+      <div style="padding:14px;border-bottom:1px solid #20323b;">
+        <small style="color:#81909b;">PROGRESS</small>
+        <div style="color:white;font-weight:bold;margin-top:5px;">${escapeGabrix(c.progress)}</div>
+      </div>
+
+      <div style="padding:14px;">
+        <small style="color:#81909b;">LATEST UPDATE</small>
+        <div style="color:white;margin-top:5px;">${escapeGabrix(c.update_note)}</div>
+      </div>
+    `;
+
+    result.style.display = "block";
+    message.textContent = "✓ Private access granted.";
+    message.style.color = "#00d9ff";
+
+  } catch (error) {
+    message.textContent = error.message;
+    message.style.color = "#ff9d9d";
+  }
+}
+
+function escapeGabrix(value) {
+  return String(value ?? "").replace(/[&<>"']/g, function(char) {
+    return {
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#39;"
+    }[char];
+  });
+}
+</script>
 </body></html>
