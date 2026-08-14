@@ -3,9 +3,9 @@ export async function onRequestPost(context) {
     const body = await context.request.json();
     const code = String(body.code || "").trim();
 
-    if (!code) {
+    if (!/^\d{4}$/.test(code)) {
       return Response.json(
-        { error: "Enter your campaign code." },
+        { error: "Enter a valid 4-digit campaign code." },
         { status: 400 }
       );
     }
@@ -24,23 +24,39 @@ export async function onRequestPost(context) {
         SELECT name, campaign, package, status, progress, update_note
         FROM clients
         WHERE code_hash = ? AND active = 1
+        LIMIT 1
       `)
       .bind(hash)
       .first();
 
     if (!client) {
       return Response.json(
-        { error: "Invalid campaign code. Please contact GABRIX." },
+        { error: "Invalid campaign code. Please check your code." },
         { status: 401 }
       );
     }
 
-    return Response.json({ client });
+    return Response.json(
+      { client },
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Cache-Control": "no-store"
+        }
+      }
+    );
 
   } catch (error) {
     return Response.json(
-      { error: "Unable to access the campaign desk right now." },
-      { status: 500 }
+      { error: "Server error. Please try again." },
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json; charset=UTF-8",
+          "Cache-Control": "no-store"
+        }
+      }
     );
   }
 }
