@@ -4,138 +4,268 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>GABRIX Admin Dashboard</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:#071018;color:#fff;font-family:Arial,sans-serif;padding:20px}
-.wrap{width:min(700px,100%);margin:auto}
-.card{background:#0b1720;border:1px solid #20333d;border-radius:22px;padding:24px;margin-bottom:18px}
-.brand{color:#00d9ff;font-size:12px;font-weight:800;letter-spacing:.16em}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:#071018;
+  color:#fff;
+  font-family:Arial,sans-serif;
+  padding:20px;
+}
+
+.wrap{
+  width:min(700px,100%);
+  margin:auto;
+}
+
+.card{
+  background:#0b1720;
+  border:1px solid #20333d;
+  border-radius:22px;
+  padding:24px;
+  margin-bottom:18px;
+}
+
+.brand{
+  color:#ff3333;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.16em;
+}
+
 h1{margin:10px 0 6px}
-.sub{color:#9daab2;font-size:14px}
-label{display:block;margin-top:15px;margin-bottom:6px;color:#9daab2;font-size:12px}
-input,textarea,select{width:100%;padding:13px;border-radius:10px;border:1px solid #29404b;background:#071018;color:#fff;font-size:15px}
-textarea{min-height:100px;resize:vertical}
-button{width:100%;padding:14px;margin-top:18px;border:0;border-radius:10px;background:#00d9ff;color:#031017;font-weight:800}
-#msg{margin-top:14px;font-size:13px}
-.warning{color:#9daab2;font-size:12px;line-height:1.5}
+
+.sub{
+  color:#9daab2;
+  font-size:14px;
+}
+
+label{
+  display:block;
+  margin-top:15px;
+  margin-bottom:6px;
+  color:#9daab2;
+  font-size:12px;
+}
+
+input,textarea,select{
+  width:100%;
+  padding:13px;
+  border-radius:10px;
+  border:1px solid #29404b;
+  background:#071018;
+  color:#fff;
+  font-size:15px;
+}
+
+textarea{
+  min-height:100px;
+  resize:vertical;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  margin-top:18px;
+  border:0;
+  border-radius:10px;
+  background:#ff3333;
+  color:#fff;
+  font-weight:800;
+}
+
+#msg{
+  margin-top:14px;
+  font-size:13px;
+}
+
+.warning{
+  color:#9daab2;
+  font-size:12px;
+  line-height:1.5;
+}
 </style>
 </head>
 
 <body>
+
 <div class="wrap">
 
 <div class="card">
-<div class="brand">GABRIX NETWORK</div>
+
+<div class="brand">GABRIX NETWORK — ADMIN</div>
+
 <h1>Admin Dashboard</h1>
-<p class="sub">Create or update a client's private campaign space.</p>
+
+<p class="sub">
+Create or update a client's private campaign space.
+</p>
 
 <label>Admin Secret</label>
-<input id="secret" type="password" placeholder="Enter your admin secret">
+<input
+  id="secret"
+  type="password"
+  placeholder="Enter your admin secret"
+>
 
 <label>Client Name</label>
-<input id="name" placeholder="Client name">
+<input
+  id="name"
+  placeholder="Client name"
+>
 
 <label>Campaign</label>
-<input id="campaign" placeholder="Campaign name">
+<input
+  id="campaign"
+  placeholder="Campaign name"
+>
 
 <label>Package</label>
 <select id="package">
-<option value="THE SPARK">THE SPARK</option>
-<option value="THE RISE">THE RISE</option>
-<option value="THE MOVEMENT">THE MOVEMENT</option>
-<option value="THE VIP">THE VIP</option>
+  <option value="THE SPARK">THE SPARK</option>
+  <option value="THE RISE">THE RISE</option>
+  <option value="THE MOVEMENT">THE MOVEMENT</option>
+  <option value="THE VIP">THE VIP</option>
 </select>
 
 <label>Status</label>
 <select id="status">
-<option>Active</option>
-<option>In Progress</option>
-<option>Completed</option>
-<option>Paused</option>
+  <option>Active</option>
+  <option>In Progress</option>
+  <option>Completed</option>
+  <option>Paused</option>
 </select>
 
 <label>Progress</label>
-<input id="progress" placeholder="Example: 25 / 100">
+<input
+  id="progress"
+  placeholder="Example: 25 / 100"
+>
 
 <label>Latest Update</label>
-<textarea id="update_note" placeholder="Write the latest campaign update..."></textarea>
+<textarea
+  id="update_note"
+  placeholder="Write the latest campaign update..."
+></textarea>
 
-<label>Private Client Code</label>
-<input id="code" placeholder="Example: GAB-LV-4821">
+<label>Private Client Code — 4 digits</label>
 
-<button onclick="saveClient()">SAVE CLIENT CAMPAIGN</button>
+<input
+  id="code"
+  type="text"
+  inputmode="numeric"
+  maxlength="4"
+  pattern="[0-9]{4}"
+  placeholder="Example: 6084"
+  oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,4)"
+>
+
+<button onclick="saveClient()">
+SAVE CLIENT CAMPAIGN
+</button>
 
 <div id="msg"></div>
+
 </div>
 
 <div class="card">
+
 <p class="warning">
-🔐 Keep this page private. Your admin secret is checked by the server and is not stored in this page.
+🔐 Your admin secret is sent securely to the server and is not stored in this page.
 </p>
+
 </div>
 
 </div>
 
 <script>
+
 async function saveClient(){
 
-const secret=document.getElementById("secret").value.trim();
+  const secret =
+    document.getElementById("secret").value.trim();
 
-const data={
-name:document.getElementById("name").value.trim(),
-campaign:document.getElementById("campaign").value.trim(),
-package:document.getElementById("package").value,
-status:document.getElementById("status").value,
-progress:document.getElementById("progress").value.trim(),
-update_note:document.getElementById("update_note").value.trim(),
-code:document.getElementById("code").value.trim()
-};
+  const code =
+    document.getElementById("code").value.trim();
 
-const msg=document.getElementById("msg");
+  const msg =
+    document.getElementById("msg");
 
-if(!secret){
-msg.textContent="Enter your admin secret.";
-msg.style.color="#ff9d9d";
-return;
-}
+  if(!secret){
+    msg.textContent = "Enter your admin secret.";
+    msg.style.color = "#ff9d9d";
+    return;
+  }
 
-msg.textContent="Saving...";
-msg.style.color="#9daab2";
+  if(!/^\d{4}$/.test(code)){
+    msg.textContent = "Client code must contain exactly 4 digits.";
+    msg.style.color = "#ff9d9d";
+    return;
+  }
 
-try{
+  const data = {
+    name: document.getElementById("name").value.trim(),
+    campaign: document.getElementById("campaign").value.trim(),
+    package: document.getElementById("package").value,
+    status: document.getElementById("status").value,
+    progress: document.getElementById("progress").value.trim(),
+    update_note: document.getElementById("update_note").value.trim(),
+    code: code
+  };
 
-const response=await fetch("/api/admin/client",{
-method:"POST",
-headers:{
-"Content-Type":"application/json",
-"x-gabrix-admin-secret":secret
-},
-body:JSON.stringify(data)
-});
+  if(!data.name || !data.campaign || !data.progress || !data.update_note){
+    msg.textContent = "Please complete all campaign fields.";
+    msg.style.color = "#ff9d9d";
+    return;
+  }
 
-const result=await response.json();
+  msg.textContent = "Saving...";
+  msg.style.color = "#9daab2";
 
-if(!response.ok){
-throw new Error(result.error||"Unable to save client.");
-}
+  try{
 
-msg.textContent="✓ Client campaign saved successfully.";
-msg.style.color="#00d9ff";
+    const response = await fetch("/api/admin/client",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json",
+        "Accept":"application/json",
+        "x-gabrix-admin-secret":secret
+      },
+      body:JSON.stringify(data)
+    });
 
-document.getElementById("name").value="";
-document.getElementById("campaign").value="";
-document.getElementById("progress").value="";
-document.getElementById("update_note").value="";
-document.getElementById("code").value="";
+    const raw = await response.text();
 
-}catch(error){
+    let result = {};
 
-msg.textContent=error.message;
-msg.style.color="#ff9d9d";
+    if(raw){
+      try{
+        result = JSON.parse(raw);
+      }catch{
+        throw new Error(
+          "The server returned an unexpected response (" +
+          response.status +
+          ")."
+        );
+      }
+    }
 
-}
-}
-</script>
+    if(!response.ok){
+      throw new Error(
+        result.error ||
+        "Unable to save the campaign."
+      );
+    }
 
-</body>
-</html>
+    msg.textContent =
+      "✓ Client campaign saved successfully. Code: " + code;
+
+    msg.style.color = "#00d9ff";
+
+    document.getElementById("name").value = "";
+    document.getElementById("campaign").value = "";
+    document.getElement
