@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GABRIX Admin Dashboard</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#071018;color:#fff;font-family:Arial,sans-serif;padding:20px}
+.wrap{width:min(700px,100%);margin:auto}
+.card{background:#0b1720;border:1px solid #20333d;border-radius:22px;padding:24px;margin-bottom:18px}
+.brand{color:#00d9ff;font-size:12px;font-weight:800;letter-spacing:.16em}
+h1{margin:10px 0 6px}
+.sub{color:#9daab2;font-size:14px}
+label{display:block;margin-top:15px;margin-bottom:6px;color:#9daab2;font-size:12px}
+input,textarea,select{width:100%;padding:13px;border-radius:10px;border:1px solid #29404b;background:#071018;color:#fff;font-size:15px}
+textarea{min-height:100px;resize:vertical}
+button{width:100%;padding:14px;margin-top:18px;border:0;border-radius:10px;background:#00d9ff;color:#031017;font-weight:800}
+#msg{margin-top:14px;font-size:13px}
+.warning{color:#9daab2;font-size:12px;line-height:1.5}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<div class="card">
+<div class="brand">GABRIX NETWORK</div>
+<h1>Admin Dashboard</h1>
+<p class="sub">Create or update a client's private campaign space.</p>
+
+<label>Admin Secret</label>
+<input id="secret" type="password" placeholder="Enter your admin secret">
+
+<label>Client Name</label>
+<input id="name" placeholder="Client name">
+
+<label>Campaign</label>
+<input id="campaign" placeholder="Campaign name">
+
+<label>Package</label>
+<select id="package">
+<option value="THE SPARK">THE SPARK</option>
+<option value="THE RISE">THE RISE</option>
+<option value="THE MOVEMENT">THE MOVEMENT</option>
+<option value="THE VIP">THE VIP</option>
+</select>
+
+<label>Status</label>
+<select id="status">
+<option>Active</option>
+<option>In Progress</option>
+<option>Completed</option>
+<option>Paused</option>
+</select>
+
+<label>Progress</label>
+<input id="progress" placeholder="Example: 25 / 100">
+
+<label>Latest Update</label>
+<textarea id="update_note" placeholder="Write the latest campaign update..."></textarea>
+
+<label>Private Client Code</label>
+<input id="code" placeholder="Example: GAB-LV-4821">
+
+<button onclick="saveClient()">SAVE CLIENT CAMPAIGN</button>
+
+<div id="msg"></div>
+</div>
+
+<div class="card">
+<p class="warning">
+🔐 Keep this page private. Your admin secret is checked by the server and is not stored in this page.
+</p>
+</div>
+
+</div>
+
+<script>
+async function saveClient(){
+
+const secret=document.getElementById("secret").value.trim();
+
+const data={
+name:document.getElementById("name").value.trim(),
+campaign:document.getElementById("campaign").value.trim(),
+package:document.getElementById("package").value,
+status:document.getElementById("status").value,
+progress:document.getElementById("progress").value.trim(),
+update_note:document.getElementById("update_note").value.trim(),
+code:document.getElementById("code").value.trim()
+};
+
+const msg=document.getElementById("msg");
+
+if(!secret){
+msg.textContent="Enter your admin secret.";
+msg.style.color="#ff9d9d";
+return;
+}
+
+msg.textContent="Saving...";
+msg.style.color="#9daab2";
+
+try{
+
+const response=await fetch("/api/admin/client",{
+method:"POST",
+headers:{
+"Content-Type":"application/json",
+"x-gabrix-admin-secret":secret
+},
+body:JSON.stringify(data)
+});
+
+const result=await response.json();
+
+if(!response.ok){
+throw new Error(result.error||"Unable to save client.");
+}
+
+msg.textContent="✓ Client campaign saved successfully.";
+msg.style.color="#00d9ff";
+
+document.getElementById("name").value="";
+document.getElementById("campaign").value="";
+document.getElementById("progress").value="";
+document.getElementById("update_note").value="";
+document.getElementById("code").value="";
+
+}catch(error){
+
+msg.textContent=error.message;
+msg.style.color="#ff9d9d";
+
+}
+}
+</script>
+
+</body>
+</html>
