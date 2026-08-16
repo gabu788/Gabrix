@@ -3,304 +3,838 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="GABRIX NETWORK — The Network Behind the Next Big Thing. Music promotion, YouTube growth and digital campaigns.">
+<meta name="description" content="GABRIX NETWORK — The Network Behind the Next Big Thing.">
 <title>GABRIX NETWORK — The Network Behind the Next Big Thing.</title>
-<style>
-:root{--navy:#030916;--navy2:#06152b;--blue:#1677ff;--blue2:#58a6ff;--gold:#e7bd5b;--gold2:#ffe39a;--white:#f7f9ff;--muted:#9ba9bd;--line:#173052;--card:#071224}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{background:var(--navy);color:var(--white);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.55}
-a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 85% 8%,rgba(22,119,255,.16),transparent 28%),radial-gradient(circle at 12% 45%,rgba(231,189,91,.06),transparent 30%);z-index:-1}
-nav{position:fixed;z-index:99;top:0;left:0;right:0;background:rgba(3,9,22,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(91,142,204,.18)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:950;letter-spacing:4px;font-size:24px}.logo span{color:var(--gold)}
-.links{display:flex;gap:25px;align-items:center;color:#aebbd0;font-size:12px}.links a:hover{color:#fff}
-.cta-small{border:1px solid var(--gold);padding:10px 15px;color:var(--gold2)!important}
-.hero{min-height:100vh;display:flex;align-items:center;text-align:center;position:relative;overflow:hidden;padding:120px 0 80px}
-.hero:before{content:"";position:absolute;width:700px;height:700px;right:-260px;top:5%;border-radius:50%;background:radial-gradient(circle,rgba(22,119,255,.3),rgba(22,119,255,.05) 42%,transparent 70%);filter:blur(5px);z-index:-1}
-.hero:after{content:"";position:absolute;width:600px;height:600px;left:-300px;bottom:-300px;border-radius:50%;background:radial-gradient(circle,rgba(231,189,91,.12),transparent 68%);z-index:-1}
-.hero-inner{max-width:1050px;margin:auto}
-.eyebrow{font-size:10px;letter-spacing:5px;color:var(--blue2);text-transform:uppercase;margin-bottom:24px}
-.hero-logo{font-size:clamp(42px,8vw,86px);font-weight:950;letter-spacing:7px;line-height:.9;text-shadow:0 0 35px rgba(22,119,255,.18)}
-.hero-logo span{color:var(--gold)}
-.hero-line{height:1px;width:min(440px,70%);margin:25px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-h1{font-size:clamp(43px,7.2vw,91px);line-height:.9;letter-spacing:-4px;text-transform:uppercase}
-h1 .gold{color:var(--gold2)}.hero p{max-width:650px;margin:28px auto 0;color:var(--muted);font-size:16px}
-.hero-services{margin-top:18px;color:#dce5f3;font-size:11px;letter-spacing:2px;text-transform:uppercase}
-.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:31px}
-.btn{display:inline-block;padding:14px 23px;border:1px solid #34557d;font-size:11px;font-weight:900;letter-spacing:.7px}
-.btn.primary{background:linear-gradient(90deg,var(--gold),var(--gold2));border-color:var(--gold);color:#07101c}
-.btn:hover{transform:translateY(-2px)}
-.trust{margin-top:42px;color:#687d98;font-size:9px;letter-spacing:3px;text-transform:uppercase}
-section{padding:105px 0;border-top:1px solid rgba(56,92,132,.22)}
-.label{font-size:10px;letter-spacing:4px;color:var(--blue2);text-transform:uppercase;margin-bottom:15px}
-h2{font-size:clamp(39px,6vw,75px);line-height:.92;letter-spacing:-3px}
-.lead{max-width:720px;color:var(--muted);font-size:16px;margin-top:20px}
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}
-.service{background:linear-gradient(145deg,rgba(8,25,48,.92),rgba(4,13,28,.96));border:1px solid var(--line);padding:28px;min-height:220px;transition:.2s}
-.service:hover{border-color:#2c70bb;transform:translateY(-3px)}
-.number{font-size:10px;color:var(--gold);letter-spacing:2px}.service h3{font-size:20px;margin:40px 0 9px}.service p{font-size:13px;color:#8292a9}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.network-box{margin-top:30px;border:1px solid #274b78;padding:24px;background:linear-gradient(135deg,rgba(15,52,93,.32),rgba(5,15,31,.7))}
-.network-box strong{font-size:23px;display:block}.network-box span{font-size:9px;letter-spacing:3px;color:var(--gold)}
-.quote{font-size:clamp(29px,4.6vw,59px);line-height:1.02;letter-spacing:-2px}.quote b{color:var(--gold2)}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:45px}
-.step{background:var(--card);border:1px solid var(--line);padding:25px}.step strong{color:var(--gold)}.step h3{margin:18px 0 7px}.step p{font-size:12px;color:#8190a4}
-.packages-head{display:flex;justify-content:space-between;gap:30px;align-items:end}.packages{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:45px}
-.card{background:linear-gradient(155deg,#091a31,#050d1b);border:1px solid #17365b;padding:25px;min-height:470px;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.card:after{content:"";position:absolute;width:190px;height:190px;right:-100px;top:-100px;border-radius:50%;background:rgba(22,119,255,.13)}
-.card:nth-child(1){border-top:2px solid #36d5d0}.card:nth-child(2){border-top:2px solid var(--blue)}.card:nth-child(3){border-top:2px solid #b44dff}.card:nth-child(4){border-top:2px solid var(--gold)}
-.card.popular{box-shadow:0 0 45px rgba(22,119,255,.14);transform:translateY(-6px)}
-.badge{display:inline-block;align-self:flex-start;background:var(--blue);color:white;padding:6px 9px;font-size:8px;font-weight:900;letter-spacing:1.5px;margin-bottom:14px}
-.icon{font-size:27px;margin-bottom:10px}.card h3{font-size:22px}.tier{font-size:9px;letter-spacing:2px;color:#70829a;text-transform:uppercase;margin-top:4px}
-.package-label{display:inline-block!important;color:#58a6ff!important;font-size:11px!important;font-weight:900;letter-spacing:2px!important;margin-top:7px!important;text-transform:uppercase;text-shadow:0 0 12px rgba(88,166,255,.28)}
-.price{font-size:31px;font-weight:950;margin:20px 0 15px;color:var(--gold2)}.features{list-style:none;border-top:1px solid #173052;padding-top:12px}.features li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(23,48,82,.55);font-size:11px}.features b{color:#e4edf9}
-.card-note{font-size:9px;color:#6f7f93;margin-top:12px}.card-btn{margin-top:auto;text-align:center;background:linear-gradient(90deg,#1acb73,#22e39a);color:#03130b;padding:12px;font-size:10px;font-weight:950;border-radius:2px}
-.disclaimer{margin-top:17px;color:#63758b;font-size:9px}
-.start{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}.formbox{background:linear-gradient(145deg,#07162b,#040b17);border:1px solid var(--line);padding:29px}
-form{display:grid;gap:11px}input,textarea,select{width:100%;background:#040b16;border:1px solid #203c60;color:#eef4ff;padding:14px;font:inherit;outline:none}input:focus,textarea:focus,select:focus{border-color:var(--blue)}textarea{min-height:115px;resize:vertical}button{cursor:pointer;padding:14px;background:linear-gradient(90deg,var(--gold),var(--gold2));color:#07101c;border:0;font-weight:950}
-.help{font-size:10px;color:#6e8096}.direct{display:inline-block;margin-top:24px;border:1px solid var(--gold);padding:13px 17px;color:var(--gold2);font-size:10px;font-weight:900}
-.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:40px}.work{min-height:205px;border:1px solid var(--line);padding:27px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(145deg,#081a31,#040b17)}.work small{color:var(--blue2);letter-spacing:2px}.work h3{font-size:24px;margin-top:7px}
-footer{padding:34px 0;color:#64758a;font-size:9px;display:flex;justify-content:space-between;border-top:1px solid rgba(56,92,132,.22);letter-spacing:.7px}
-@media(max-width:980px){.packages{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:760px){.links{display:none}.hero{padding-top:115px}.hero-logo{letter-spacing:4px}.hero h1{letter-spacing:-2.5px}.services,.process,.split,.start,.work-grid,.packages{grid-template-columns:1fr}.card.popular{transform:none}.packages-head{display:block}footer{display:block}footer div+div{margin-top:9px}}
-</style>
 
 <style>
-.payment-pro-section{padding:82px 0 70px;background:linear-gradient(180deg,rgba(255,255,255,.015),rgba(255,255,255,.035));}
-.payment-head{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;margin-top:12px}
-.payment-badge{border:1px solid rgba(233,197,107,.45);border-radius:14px;padding:14px 18px;text-align:right;color:#ffe39a;font-size:.72rem;font-weight:900;letter-spacing:.12em;line-height:1.5}
-.payment-badge span{color:rgba(255,255,255,.55);font-size:.62rem}
-.payment-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-top:34px}
-.payment-number-card,.payment-confirm-card{border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:30px;background:rgba(255,255,255,.035);box-shadow:0 16px 50px rgba(0,0,0,.18)}
-.payment-number-card{border-color:rgba(233,197,107,.42);background:linear-gradient(135deg,rgba(233,197,107,.10),rgba(255,255,255,.025))}
-.payment-small{font-size:.68rem;letter-spacing:.15em;font-weight:900;color:#00d9ff}
-.payment-number{font-size:clamp(2.2rem,7vw,4rem);font-weight:950;letter-spacing:.04em;color:#ffe39a;margin:16px 0 7px;line-height:1}
-.payment-name{font-size:.75rem;letter-spacing:.16em;color:rgba(255,255,255,.58);margin-bottom:22px}
-.copy-payment{border:0;border-radius:10px;padding:12px 16px;background:#e9c56b;color:#07101c;font-weight:900;letter-spacing:.04em;cursor:pointer}
-.payment-confirm-card h3{font-size:1.35rem;margin:12px 0 8px}.payment-confirm-card p{color:rgba(255,255,255,.62);line-height:1.6;margin-bottom:22px}.payment-whatsapp{display:inline-block}
-.payment-foot{display:flex;flex-wrap:wrap;gap:10px;margin-top:15px;color:rgba(255,255,255,.5);font-size:.72rem}.payment-foot span{padding:8px 11px;border:1px solid rgba(255,255,255,.09);border-radius:999px}
-@media(max-width:760px){.payment-head{display:block}.payment-badge{text-align:left;width:max-content;margin-top:18px}.payment-grid{grid-template-columns:1fr}.payment-number{text-align:left}.payment-foot{display:block}.payment-foot span{display:block;margin-top:7px;width:max-content}}
+:root{
+  --black:#030305;
+  --black2:#07070c;
+  --white:#f7f7fb;
+  --soft:#b7b7c5;
+  --blue:#1677ff;
+  --violet:#7b3cff;
+  --purple:#a044ff;
+  --pink:#e72caa;
+  --red:#ff303d;
+  --line:rgba(255,255,255,.12);
+  --card:rgba(255,255,255,.035);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 75% 8%,rgba(22,119,255,.11),transparent 30%),
+    radial-gradient(circle at 25% 38%,rgba(160,68,255,.07),transparent 28%),
+    var(--black);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.55;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+
+/* HEADER */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(3,3,5,.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-size:25px;
+  font-weight:950;
+  letter-spacing:5px;
+  color:#fff;
+  white-space:nowrap;
+}
+.logo span{color:var(--red)}
+.links{display:flex;gap:24px;align-items:center;color:#aaaabd;font-size:11px;font-weight:800}
+.links a:hover{color:#fff}
+.nav-btn{
+  border:1px solid var(--blue);
+  padding:10px 14px;
+  color:#fff!important;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  padding:120px 0 70px;
+  position:relative;
+  overflow:hidden;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  width:720px;height:720px;
+  top:-280px;left:50%;
+  transform:translateX(-50%);
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(22,119,255,.13),transparent 68%);
+  pointer-events:none;
+}
+.hero-inner{max-width:1000px;margin:auto}
+
+.hero-logo{
+  font-size:clamp(48px,10vw,92px);
+  font-weight:950;
+  letter-spacing:8px;
+  line-height:1;
+  color:#fff;
+  text-shadow:0 0 35px rgba(255,255,255,.08);
+}
+.hero-logo span{color:var(--red)}
+
+.gradient-line{
+  width:min(460px,72%);
+  height:4px;
+  margin:30px auto 42px;
+  border-radius:99px;
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--pink),var(--red));
+  box-shadow:0 0 22px rgba(123,60,255,.28);
+}
+
+.hero h1{
+  font-size:clamp(44px,8vw,88px);
+  line-height:.93;
+  letter-spacing:-4px;
+  font-weight:950;
+  text-transform:uppercase;
+}
+.hero h1 .gradient{
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--pink),var(--red));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.hero p{
+  max-width:720px;
+  margin:34px auto 0;
+  color:#c0c0cc;
+  font-size:17px;
+}
+.hero-services{
+  margin-top:23px;
+  color:#fff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:36px;
+}
+.btn{
+  display:inline-block;
+  min-width:210px;
+  padding:16px 22px;
+  border:1px solid var(--blue);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:.8px;
+  transition:.2s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{
+  border:0;
+  color:#fff;
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--purple));
+  box-shadow:0 12px 35px rgba(22,119,255,.16);
+}
+.trust{
+  margin-top:54px;
+  color:#777789;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+/* SECTIONS */
+section{
+  padding:100px 0;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+.label{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  color:#fff;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+.label:before{
+  content:"";
+  width:34px;height:3px;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--blue),var(--pink),var(--red));
+}
+h2{
+  margin-top:18px;
+  font-size:clamp(42px,6vw,72px);
+  line-height:.92;
+  letter-spacing:-3px;
+  font-weight:950;
+}
+.lead{
+  max-width:720px;
+  color:#aaaaba;
+  font-size:16px;
+  margin-top:22px;
+}
+
+/* SERVICES */
+.section-banner{
+  margin:35px 0 45px;
+  padding:20px 24px;
+  border:1px solid rgba(22,119,255,.45);
+  border-left:6px solid var(--blue);
+  border-radius:18px;
+  background:
+    linear-gradient(110deg,rgba(22,119,255,.11),rgba(123,60,255,.07),rgba(231,44,170,.05)),
+    rgba(255,255,255,.02);
+}
+.section-banner-top{
+  display:flex;align-items:center;gap:18px;
+  font-weight:950;letter-spacing:3px;
+}
+.section-number{
+  display:grid;place-items:center;
+  width:62px;height:62px;border-radius:14px;
+  background:linear-gradient(135deg,var(--blue),var(--violet));
+  font-size:20px;
+}
+.section-banner-title{font-size:20px}
+.section-banner-sub{
+  margin:10px 0 0 80px;
+  color:#6daeff;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.service{
+  background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+  border:1px solid var(--line);
+  border-top:3px solid var(--blue);
+  padding:30px;
+  min-height:220px;
+  transition:.2s;
+}
+.service:hover{
+  transform:translateY(-4px);
+  border-color:rgba(22,119,255,.55);
+}
+.service-number{
+  color:#6daeff;
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:3px;
+}
+.service h3{
+  margin:40px 0 10px;
+  font-size:21px;
+  font-weight:950;
+}
+.service p{color:#9292a5;font-size:13px}
+
+/* NETWORK */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+.network-box{
+  margin-top:30px;
+  padding:26px;
+  border:1px solid rgba(255,255,255,.14);
+  background:#000;
+}
+.network-box strong{display:block;font-size:22px;font-weight:950;color:#fff}
+.network-box span{display:block;margin-top:8px;color:#777;font-size:9px;letter-spacing:3px}
+.quote{
+  font-size:clamp(30px,4.5vw,56px);
+  line-height:1;
+  font-weight:950;
+  letter-spacing:-2px;
+}
+.quote b{
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--pink),var(--red));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+
+/* PACKAGES */
+.packages{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  margin-top:45px;
+}
+.card{
+  min-height:450px;
+  padding:26px;
+  display:flex;
+  flex-direction:column;
+  background:#000;
+  border:1px solid rgba(255,255,255,.14);
+  position:relative;
+  overflow:hidden;
+}
+.card:before{
+  content:"";
+  position:absolute;left:0;right:0;top:0;height:4px;
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--pink),var(--red));
+}
+.card h3{font-size:21px;font-weight:950;margin-top:8px}
+.package-label{
+  margin-top:7px;
+  color:#fff;
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.package-label.vip1{color:#6daeff}
+.package-label.vip2{color:#b56cff}
+.package-label.vip3{color:#ff5cb8}
+.package-label.vip4{color:#ff4b55}
+.price{font-size:31px;font-weight:950;margin:22px 0 16px}
+.features{list-style:none;border-top:1px solid rgba(255,255,255,.1)}
+.features li{
+  display:flex;justify-content:space-between;
+  padding:9px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#9b9baa;font-size:11px;
+}
+.features b{color:#fff}
+.card-note{font-size:9px;color:#676777;margin-top:12px}
+.card-btn{
+  margin-top:auto;
+  text-align:center;
+  padding:13px;
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--pink));
+  color:#fff;
+  font-size:10px;
+  font-weight:950;
+}
+.disclaimer{margin-top:18px;color:#666677;font-size:9px}
+
+/* PROCESS */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:45px}
+.step{
+  background:rgba(255,255,255,.025);
+  border:1px solid var(--line);
+  padding:25px;
+}
+.step strong{color:#6daeff;font-size:11px}
+.step h3{margin:18px 0 7px;font-size:19px}
+.step p{font-size:12px;color:#818192}
+
+/* START */
+.start{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+.direct{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 18px;
+  border:1px solid var(--blue);
+  color:#fff;
+  font-size:10px;
+  font-weight:950;
+}
+.formbox{
+  padding:30px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.025);
+}
+form{display:grid;gap:11px}
+input,textarea,select{
+  width:100%;
+  background:#030305;
+  border:1px solid #252532;
+  color:#fff;
+  padding:14px;
+  font:inherit;
+  outline:none;
+}
+input:focus,textarea:focus,select:focus{border-color:var(--blue)}
+textarea{min-height:115px;resize:vertical}
+button{
+  cursor:pointer;
+  padding:14px;
+  border:0;
+  color:#fff;
+  font-weight:950;
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--pink));
+}
+.help{font-size:10px;color:#686878}
+
+/* FOOTER */
+footer{
+  padding:35px 0;
+  color:#666677;
+  font-size:9px;
+  letter-spacing:.7px;
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+
+/* RESPONSIVE */
+@media(max-width:980px){
+  .packages{grid-template-columns:repeat(2,1fr)}
+  .services{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .links{display:none}
+  .hero{padding-top:105px}
+  .hero-logo{letter-spacing:5px}
+  .hero h1{letter-spacing:-2.5px}
+  .services,.process,.split,.start,.packages{grid-template-columns:1fr}
+  .section-banner-sub{margin-left:0}
+  .card{min-height:420px}
+  footer{display:block}
+  footer div+div{margin-top:9px}
+}
+
+/* CLIENT + ADMIN DESKS */
+.secure-area{padding:95px 0;border-top:1px solid rgba(255,255,255,.07)}
+.desk-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px}
+.desk-card{
+  background:#000;
+  border:1px solid rgba(255,255,255,.13);
+  padding:30px;
+  position:relative;
+  overflow:hidden;
+}
+.desk-card:before{
+  content:"";position:absolute;left:0;right:0;top:0;height:4px;
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--pink),var(--red));
+}
+.desk-card h3{font-size:25px;font-weight:950;margin:9px 0 10px}
+.desk-card p{color:#9292a5;font-size:13px;margin-bottom:20px}
+.desk-form{display:grid;gap:10px}
+.desk-form input{
+  width:100%;background:#050509;border:1px solid #292936;color:#fff;
+  padding:14px;border-radius:3px;font:inherit;outline:none
+}
+.desk-form input:focus{border-color:var(--blue)}
+.desk-btn{
+  border:0;padding:14px;color:#fff;font-weight:950;cursor:pointer;
+  background:linear-gradient(90deg,var(--blue),var(--violet),var(--pink))
+}
+.desk-message{margin-top:12px;font-size:12px;min-height:18px}
+.admin-gate{display:none;margin-top:18px}
+.admin-gate.open{display:block}
+.admin-note{font-size:9px;color:#626273;margin-top:12px}
+.admin-link{
+  display:inline-block;margin-top:28px;padding:10px 14px;
+  border:1px solid rgba(255,255,255,.12);color:#666677;font-size:9px;
+  letter-spacing:2px;font-weight:900;text-transform:uppercase
+}
+.admin-panel{
+  display:none;margin-top:18px;padding:18px;border:1px solid rgba(22,119,255,.35);
+  background:linear-gradient(135deg,rgba(22,119,255,.08),rgba(160,68,255,.06))
+}
+.admin-panel.open{display:block}
+.admin-panel strong{display:block;color:#fff;margin-bottom:7px}
+.admin-panel span{color:#8c8c9d;font-size:11px}
+@media(max-width:760px){.desk-grid{grid-template-columns:1fr}}
 </style>
 </head>
+
 <body>
-<nav><div class="container nav">
-<a class="logo" href="#top">GABRIX<span>(R)</span></a>
-<div class="links"><a href="#services">Services</a><a href="#network">Network</a><a href="#packages">Packages</a><a href="#process">Process</a><a href="#start">Contact</a><a class="cta-small" href="#packages">Choose a Campaign</a></div>
-</div></nav>
 
-<header class="hero" id="top"><div class="container hero-inner">
-<div class="eyebrow">GABRIX NETWORK / DIGITAL CAMPAIGNS</div>
-<div class="hero-logo">GABRIX<span>(R)</span></div>
-<div class="hero-line"></div>
-<h1>THE NETWORK BEHIND<br><span class="gold">THE NEXT BIG THING.</span></h1>
-<p>Built for artists, creators and brands ready to move further. Strategic digital promotion, YouTube growth and campaign support through one connected network.</p>
-<div class="hero-services">YouTube Growth &nbsp;•&nbsp; Music Promotion &nbsp;•&nbsp; Digital Campaigns</div>
-<div class="buttons"><a class="btn primary" href="#packages">EXPLORE CAMPAIGNS</a><a class="btn" href="#network">DISCOVER GABRIX</a></div>
-<div class="trust">CREATORS &nbsp;•&nbsp; ARTISTS &nbsp;•&nbsp; BRANDS &nbsp;•&nbsp; DIGITAL PROJECTS</div>
-</div></header>
-
-<section id="services"><div class="container">
-<div class="label">01 / Services</div><h2>BUILT TO<br>MOVE.</h2>
-<p class="lead">GABRIX turns promotion into a structured campaign — giving projects a clear direction, stronger presentation and coordinated digital support.</p>
-<div class="services">
-<div class="service"><div class="number">01</div><h3>Music Promotion</h3><p>Campaign support for releases, music videos and independent artists seeking wider discovery.</p></div>
-<div class="service"><div class="number">02</div><h3>YouTube Growth</h3><p>Campaigns focused on channel visibility, content discovery and audience development.</p></div>
-<div class="service"><div class="number">03</div><h3>Digital Campaigns</h3><p>Structured promotion for creators, launches, brands and digital projects.</p></div>
-<div class="service"><div class="number">04</div><h3>Audience Engagement</h3><p>Campaign support around subscribers, likes, comments and content interaction.</p></div>
-<div class="service"><div class="number">05</div><h3>Watch-Time Strategy</h3><p>Promotion planning designed to encourage content discovery and viewing.</p></div>
-<div class="service"><div class="number">06</div><h3>Campaign Support</h3><p>Clear communication, pacing and progress tracking throughout an agreed campaign.</p></div>
-</div>
-</div></section>
-
-<section id="network"><div class="container split">
-<div><div class="label">02 / The Movement</div><h2>THE GABRIX<br>NETWORK.</h2>
-<p class="lead">A growing digital network built around promotion, creators, music and opportunity. One vision connects different voices, audiences and projects.</p>
-<div class="network-box"><strong>THE NETWORK BEHIND THE NEXT BIG THING.</strong><span>GABRIX NETWORK</span></div></div>
-<div class="quote">More than promotion.<br><br><b>A network built to move ideas, music and talent further.</b></div>
-</div></section>
-
-<section id="packages"><div class="container">
-<div class="packages-head"><div><div class="label">03 / Campaign Packages</div><h2>CHOOSE<br>YOUR LEVEL.</h2></div><p class="lead">Four campaign levels. Select your direction and connect with GABRIX directly.</p></div>
-<div class="packages">
-<article class="card"><h3>THE SPARK</h3><div class="tier package-label">(BEGINNER)</div><div class="price">KSh 899</div><ul class="features"><li><span>Subscribers</span><b>40</b></li><li><span>Likes</span><b>50</b></li><li><span>Comments</span><b>39</b></li><li><span>Watch-time target</span><b>18 hrs</b></li></ul><p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p><a class="card-btn" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27m%20interested%20in%20THE%20SPARK%20package%20(KSh%20899).">CHAT ON WHATSAPP -></a></article>
-<article class="card popular"><div class="badge">MOST POPULAR</div><h3>THE RISE</h3><div class="tier package-label">(POPULAR)</div><div class="price">KSh 1,500</div><ul class="features"><li><span>Subscribers</span><b>70</b></li><li><span>Likes</span><b>70</b></li><li><span>Comments</span><b>50</b></li><li><span>Watch-time target</span><b>25 hrs</b></li></ul><p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p><a class="card-btn" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27m%20interested%20in%20THE%20RISE%20package%20(KSh%201%2C500).">CHAT ON WHATSAPP -></a></article>
-<article class="card"><h3>THE MOVEMENT</h3><div class="tier package-label">(VIP)</div><div class="price">KSh 2,500</div><ul class="features"><li><span>Subscribers</span><b>150</b></li><li><span>Likes</span><b>120</b></li><li><span>Comments</span><b>100</b></li><li><span>Watch-time target</span><b>40 hrs</b></li></ul><p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p><a class="card-btn" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27m%20interested%20in%20THE%20MOVEMENT%20package%20(KSh%202%2C500).">CHAT ON WHATSAPP -></a></article>
-<article class="card"><h3>THE NEXT BIG THING</h3><div class="tier package-label">(PREMIUM VIP)</div><div class="price">KSh 5,000</div><ul class="features"><li><span>Subscribers</span><b>250</b></li><li><span>Likes</span><b>300</b></li><li><span>Comments</span><b>150</b></li><li><span>Watch-time target</span><b>70 hrs</b></li></ul><p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p><a class="card-btn" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27m%20interested%20in%20THE%20NEXT%20BIG%20THING%20package%20(KSh%205%2C000).">CHAT ON WHATSAPP -></a></article>
-</div>
-<p class="disclaimer">Campaign figures are promotional targets/estimates, not guaranteed platform outcomes. Audience response and platform policies can affect final results.</p>
-</div></section>
-
-
-<section id="payment" class="payment-pro-section">
-<div class="container">
-<div class="label">04 / PAYMENT DESK</div>
-<div class="payment-head"><div><h2>READY TO<br>MOVE FORWARD?</h2><p class="lead">Use the official GABRIX payment channel below. After payment, send your confirmation so the campaign can be verified.</p></div><div class="payment-badge">GABRIX NETWORK<br><span>OFFICIAL PAYMENT</span></div></div>
-<div class="payment-grid">
-<div class="payment-number-card">
-<div class="payment-small">M-PESA / PAYMENT NUMBER</div>
-<div class="payment-number">0702 880 452</div>
-<div class="payment-name">GABRIX NETWORK</div>
-<button class="copy-payment" onclick="navigator.clipboard&&navigator.clipboard.writeText('0702880452');this.textContent='PAYMENT NUMBER COPIED ✓'">COPY PAYMENT NUMBER</button>
-</div>
-<div class="payment-confirm-card">
-<div class="payment-small">AFTER PAYMENT</div>
-<h3>Confirm your payment</h3>
-<p>Send your campaign ID, package and amount directly to the GABRIX team.</p>
-<a class="direct payment-whatsapp" href="https://wa.me/254113630612?text=GABRIX%20PAYMENT%20CONFIRMATION%0ACampaign%20ID%3A%20%0APackage%3A%20%0AAmount%3A%20KSh%20%0AI%20have%20made%20payment%20and%20would%20like%20to%20confirm.">CONFIRM PAYMENT ON WHATSAPP →</a>
-</div>
-</div>
-<div class="payment-foot"><span>✓ Official GABRIX payment channel</span><span>✓ Keep your payment confirmation</span><span>✓ Campaign activated after verification</span></div>
-</div>
-</section>
-<section id="process"><div class="container">
-<div class="label">05 / How It Works</div><h2>FROM IDEA<br>TO REACH.</h2>
-<div class="process"><div class="step"><strong>01</strong><h3>Choose</h3><p>Select the campaign level that fits your project.</p></div><div class="step"><strong>02</strong><h3>Chat</h3><p>One tap opens WhatsApp directly with GABRIX NETWORK.</p></div><div class="step"><strong>03</strong><h3>Plan</h3><p>Share your project name and campaign goals.</p></div><div class="step"><strong>04</strong><h3>Activate</h3><p>Your agreed campaign is coordinated through the network.</p></div></div>
-</div></section>
-
-<section id="start"><div class="container start">
-<div><div class="label">06 / Start a Campaign</div><h2>LET'S<br>MOVE IT.</h2><p class="lead">No complicated URLs. Give us your YouTube channel, artist or project name and tell us what you want to achieve.</p><a class="direct" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27d%20like%20to%20discuss%20a%20campaign.">CHAT CHAT DIRECTLY ON WHATSAPP</a></div>
-<div class="formbox"><form id="campaignForm"><input id="name" required placeholder="Your name"><input id="project" required placeholder="YouTube / Project Name"><select id="package" required><option value="">Choose a package</option><option>THE SPARK — KSh 899</option><option>THE RISE — KSh 1,500</option><option>THE MOVEMENT — KSh 2,500</option><option>THE NEXT BIG THING — KSh 5,000</option></select><textarea id="details" placeholder="Tell us briefly about your campaign"></textarea><button type="submit">CHAT CHAT WITH GABRIX NETWORK</button><p class="help">Enter the name only — no https:// or www. required.</p></form></div>
-</div></section>
-
-<footer class="container"><div>© 2026 GABRIX NETWORK(R). ALL RIGHTS RESERVED.</div><div>THE NETWORK BEHIND THE NEXT BIG THING.</div></footer>
-<script>
-document.getElementById('campaignForm').addEventListener('submit',function(e){
-e.preventDefault();
-const name=document.getElementById('name').value.trim(),project=document.getElementById('project').value.trim(),pkg=document.getElementById('package').value,details=document.getElementById('details').value.trim();
-const msg=`Hello GABRIX NETWORK HELLO\n\nMy name is ${name}.\nYouTube / Project: ${project}\nPackage: ${pkg}\n\nCampaign details:\n${details||'I would like to discuss this campaign.'}`;
-window.location.href='https://wa.me/254113630612?text='+encodeURIComponent(msg);
-});
-</script>
-  <div style="text-align:center;padding:25px 15px 35px;">
-  <a href="/report.html"
-     style="color:#8fa3ad;font-size:12px;text-decoration:none;opacity:.75;">
-    🔐 Client Campaign Desk
-  </a>
-</div>
-  <!-- GABRIX PRIVATE CLIENT DESK -->
-<section id="clientDesk" style="padding:45px 20px;text-align:center;background:#071018;">
-  <div style="max-width:430px;margin:auto;padding:25px;border:1px solid #243842;border-radius:20px;background:#0b1720;">
-    <div style="font-size:11px;letter-spacing:3px;color:#00d9ff;font-weight:bold;">
-      GABRIX NETWORK
+<nav>
+  <div class="container nav">
+    <a class="logo" href="#top">GABRIX<span>(R)</span></a>
+    <div class="links">
+      <a href="#services">Services</a>
+      <a href="#network">Network</a>
+      <a href="#packages">Packages</a>
+      <a href="#process">Process</a>
+      <a href="#start">Contact</a>
+      <a class="nav-btn" href="#packages">Choose a Campaign</a>
     </div>
+  </div>
+</nav>
 
-    <h2 style="margin:10px 0 8px;color:white;">
-      🔐 Client Campaign Desk
-    </h2>
+<header class="hero" id="top">
+  <div class="container hero-inner">
+    <div class="hero-logo">GABRIX<span>(R)</span></div>
+    <div class="gradient-line"></div>
 
-    <p style="color:#9daab2;font-size:14px;line-height:1.5;">
-      Private access for GABRIX clients. Enter the campaign code provided after payment.
+    <h1>
+      THE NETWORK<br>
+      BEHIND<br>
+      <span class="gradient">THE NEXT BIG<br>THING.</span>
+    </h1>
+
+    <p>
+      Built for artists, creators and brands ready to move further.
+      Strategic digital promotion, YouTube growth and campaign support
+      through one connected network.
     </p>
 
-    <input
-      id="gabrixCode"
-      type="password"
-      placeholder="Enter private campaign code"
-      style="width:100%;padding:14px;margin:12px 0;border-radius:10px;border:1px solid #304650;background:#071018;color:white;"
-    >
+    <div class="hero-services">
+      YOUTUBE GROWTH &nbsp;•&nbsp; MUSIC PROMOTION &nbsp;•&nbsp; DIGITAL CAMPAIGNS
+    </div>
 
-    <button
-      onclick="gabrixClientLogin()"
-      style="width:100%;padding:14px;border:0;border-radius:10px;background:#00d9ff;color:#031017;font-weight:bold;">
-      ACCESS MY CAMPAIGN
-    </button>
+    <div class="buttons">
+      <a class="btn primary" href="#packages">EXPLORE CAMPAIGNS</a>
+      <a class="btn" href="#network">DISCOVER GABRIX</a>
+    </div>
 
-    <div id="gabrixMessage" style="margin-top:14px;font-size:13px;"></div>
-    <div id="gabrixClientResult" style="display:none;text-align:left;margin-top:20px;"></div>
+    <div class="trust">
+      CREATORS &nbsp;•&nbsp; ARTISTS &nbsp;•&nbsp; BRANDS &nbsp;•&nbsp; DIGITAL PROJECTS
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="container">
+    <div class="label">01 / Services</div>
+    <h2>BUILT TO<br>MOVE.</h2>
+    <p class="lead">
+      GABRIX turns promotion into a structured campaign — giving projects
+      a clear direction, stronger presentation and coordinated digital support.
+    </p>
+
+    <div class="services">
+      <div class="service">
+        <div class="service-number">01</div>
+        <h3>Music Promotion</h3>
+        <p>Campaign support for releases, music videos and independent artists seeking wider discovery.</p>
+      </div>
+      <div class="service">
+        <div class="service-number">02</div>
+        <h3>YouTube Growth</h3>
+        <p>Campaigns focused on channel visibility, content discovery and audience development.</p>
+      </div>
+      <div class="service">
+        <div class="service-number">03</div>
+        <h3>Digital Campaigns</h3>
+        <p>Structured promotion for creators, launches, brands and digital projects.</p>
+      </div>
+      <div class="service">
+        <div class="service-number">04</div>
+        <h3>Audience Engagement</h3>
+        <p>Campaign support around meaningful audience interaction and content discovery.</p>
+      </div>
+      <div class="service">
+        <div class="service-number">05</div>
+        <h3>Watch-Time Strategy</h3>
+        <p>Promotion planning designed to encourage content discovery and genuine viewing.</p>
+      </div>
+      <div class="service">
+        <div class="service-number">06</div>
+        <h3>Campaign Support</h3>
+        <p>Clear communication, pacing and progress tracking throughout an agreed campaign.</p>
+      </div>
+    </div>
   </div>
 </section>
 
+<section id="network">
+  <div class="container">
+    <div class="label">02 / The Movement</div>
+    <h2>CHOOSE<br>YOUR LEVEL.</h2>
+    <p class="lead">Four campaign levels. Select your direction and connect with GABRIX directly.</p>
+
+    <div class="packages">
+      <article class="card">
+        <h3>THE SPARK</h3>
+        <div class="package-label vip1">(BEGINNER)</div>
+        <div class="price">KSh 899</div>
+        <ul class="features">
+          <li><span>Subscribers</span><b>40</b></li>
+          <li><span>Likes</span><b>50</b></li>
+          <li><span>Comments</span><b>39</b></li>
+          <li><span>Watch-time target</span><b>18 hrs</b></li>
+        </ul>
+        <p class="card-note">Campaign figures are promotional targets/estimates and may vary by platform.</p>
+      </article>
+
+      <article class="card">
+        <h3>THE RISE</h3>
+        <div class="package-label vip2">(POPULAR)</div>
+        <div class="price">KSh 1,500</div>
+        <ul class="features">
+          <li><span>Subscribers</span><b>70</b></li>
+          <li><span>Likes</span><b>70</b></li>
+          <li><span>Comments</span><b>50</b></li>
+          <li><span>Watch-time target</span><b>25 hrs</b></li>
+        </ul>
+        <p class="card-note">Campaign figures are promotional targets/estimates and may vary by platform.</p>
+      </article>
+
+      <article class="card">
+        <h3>THE MOVEMENT</h3>
+        <div class="package-label vip3">(VIP)</div>
+        <div class="price">KSh 2,500</div>
+        <ul class="features">
+          <li><span>Subscribers</span><b>150</b></li>
+          <li><span>Likes</span><b>120</b></li>
+          <li><span>Comments</span><b>100</b></li>
+          <li><span>Watch-time target</span><b>40 hrs</b></li>
+        </ul>
+        <p class="card-note">Campaign figures are promotional targets/estimates and may vary by platform.</p>
+      </article>
+
+      <article class="card">
+        <h3>THE NEXT BIG THING</h3>
+        <div class="package-label vip4">(PREMIUM VIP)</div>
+        <div class="price">KSh 5,000</div>
+        <ul class="features">
+          <li><span>Subscribers</span><b>250</b></li>
+          <li><span>Likes</span><b>300</b></li>
+          <li><span>Comments</span><b>150</b></li>
+          <li><span>Watch-time target</span><b>70 hrs</b></li>
+        </ul>
+        <p class="card-note">Campaign figures are promotional targets/estimates and may vary by platform.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="label">04 / How It Works</div>
+    <h2>FROM IDEA<br>TO REACH.</h2>
+
+    <div class="process">
+      <div class="step"><strong>01</strong><h3>Choose</h3><p>Select the campaign level that fits your project.</p></div>
+      <div class="step"><strong>02</strong><h3>Chat</h3><p>Connect directly with GABRIX and share your project.</p></div>
+      <div class="step"><strong>03</strong><h3>Plan</h3><p>Agree on the campaign direction and scope.</p></div>
+      <div class="step"><strong>04</strong><h3>Activate</h3><p>Your agreed campaign is coordinated through the network.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="start">
+  <div class="container">
+  </div>
+  <div class="container start">
+    <div>
+      <div class="label">05 / Start a Campaign</div>
+      <h2>LET'S<br>MOVE IT.</h2>
+      <p class="lead">
+        No complicated URLs. Give us your YouTube channel, artist or project name
+        and tell us what you want to achieve.
+      </p>
+      <a class="direct" href="https://wa.me/254113630612">CHAT DIRECTLY ON WHATSAPP</a>
+    </div>
+
+    <div class="formbox">
+      <form id="campaignForm">
+        <input id="name" required placeholder="Your name">
+        <input id="project" required placeholder="YouTube / Project Name">
+        <select id="package" required>
+          <option value="">Choose a package</option>
+          <option>THE SPARK — KSh 899</option>
+          <option>THE RISE — KSh 1,500</option>
+          <option>THE MOVEMENT — KSh 2,500</option>
+          <option>THE NEXT BIG THING — KSh 5,000</option>
+        </select>
+        <textarea id="details" placeholder="Tell us briefly about your campaign"></textarea>
+        <button type="submit">CHAT WITH GABRIX NETWORK</button>
+        <p class="help">Enter the name only — no https:// or www. required.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<section class="secure-area" id="client-desk">
+  <div class="container">
+
+    <div class="desk-grid">
+      <div class="desk-card">
+        <div class="label">PRIVATE CLIENT ACCESS</div>
+        <h3>YOUR CAMPAIGN DESK</h3>
+        <p>Enter the private 4-digit campaign code provided by GABRIX after your campaign has been verified.</p>
+        <div class="desk-form">
+          <input id="clientCode" type="password" inputmode="numeric" maxlength="4" placeholder="ENTER 4-DIGIT CODE">
+          <button class="desk-btn" type="button" onclick="gabrixClientLogin()">ACCESS MY CAMPAIGN</button>
+        </div>
+        <div id="clientMessage" class="desk-message"></div>
+        <div id="clientResult" class="admin-panel"></div>
+      </div>
+
+      <div class="desk-card">
+        <div class="label">GABRIX ADMIN</div>
+        <h3>SECRET DASHBOARD</h3>
+        <p>The admin dashboard is protected behind a private PIN. The dashboard itself stays hidden until the correct PIN is accepted.</p>
+
+        <button class="desk-btn" type="button" onclick="openAdminGate()">ENTER ADMIN PIN</button>
+
+        <div id="adminGate" class="admin-gate">
+          <div class="desk-form">
+            <input id="adminPin" type="password" inputmode="numeric" maxlength="4" placeholder="ENTER 4-DIGIT ADMIN PIN">
+            <button class="desk-btn" type="button" onclick="gabrixAdminLogin()">UNLOCK ADMIN DASHBOARD</button>
+          </div>
+          <div id="adminMessage" class="desk-message"></div>
+          <div id="adminPanel" class="admin-panel">
+            <strong>GABRIX ADMIN DASHBOARD ACCESS GRANTED</strong>
+            <span>The protected dashboard route should now be opened by the server.</span>
+          </div>
+        </div>
+
+        <div class="admin-note">Security note: the PIN must be verified server-side before production use. Do not store the real PIN in this HTML file.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="container">
+  <div>© 2026 GABRIX NETWORK(R). ALL RIGHTS RESERVED.</div>
+  <div>THE NETWORK BEHIND THE NEXT BIG THING.</div>
+</footer>
+
 <script>
-async function gabrixClientLogin() {
-  const code = document.getElementById("gabrixCode").value.trim();
-  const message = document.getElementById("gabrixMessage");
-  const result = document.getElementById("gabrixClientResult");
+document.getElementById('campaignForm').addEventListener('submit',function(e){
+  e.preventDefault();
 
-  result.style.display = "none";
+  const name=document.getElementById('name').value.trim();
+  const project=document.getElementById('project').value.trim();
+  const pkg=document.getElementById('package').value;
+  const details=document.getElementById('details').value.trim();
 
-  if (!code) {
-    message.textContent = "Please enter your private campaign code.";
-    message.style.color = "#ff9d9d";
+  const msg =
+`Hello GABRIX NETWORK 👋🏽
+
+My name is ${name}.
+YouTube / Project: ${project}
+Package: ${pkg}
+
+Campaign details:
+${details || 'I would like to discuss this campaign.'}`;
+
+  window.location.href='https://wa.me/254113630612?text='+encodeURIComponent(msg);
+});
+async function gabrixClientLogin(){
+  const code=document.getElementById('clientCode').value.trim();
+  const msg=document.getElementById('clientMessage');
+  const result=document.getElementById('clientResult');
+
+  result.classList.remove('open');
+  result.innerHTML='';
+
+  if(!/^\d{4}$/.test(code)){
+    msg.textContent='Please enter your 4-digit campaign code.';
+    msg.style.color='#ff4b55';
     return;
   }
 
-  message.textContent = "Checking campaign access...";
-  message.style.color = "#9daab2";
+  msg.textContent='Checking campaign access...';
+  msg.style.color='#aaaabd';
 
-  try {
-    const response = await fetch("/api/client/login", {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({code})
+  try{
+    const response=await fetch('/api/client/login',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({code})
     });
+    const data=await response.json();
 
-    const data = await response.json();
+    if(!response.ok) throw new Error(data.error||'Invalid campaign code.');
 
-    if (!response.ok) {
-      throw new Error(data.error || "Invalid campaign code.");
-    }
-
-    const c = data.client;
-
-    result.innerHTML = `
-      <div style="padding:14px;border-bottom:1px solid #20323b;">
-        <small style="color:#81909b;">CLIENT</small>
-        <div style="color:white;font-weight:bold;margin-top:5px;">${escapeGabrix(c.name)}</div>
-      </div>
-
-      <div style="padding:14px;border-bottom:1px solid #20323b;">
-        <small style="color:#81909b;">CAMPAIGN</small>
-        <div style="color:white;font-weight:bold;margin-top:5px;">${escapeGabrix(c.campaign)}</div>
-      </div>
-
-      <div style="padding:14px;border-bottom:1px solid #20323b;">
-        <small style="color:#81909b;">PACKAGE</small>
-        <div style="color:white;font-weight:bold;margin-top:5px;">${escapeGabrix(c.package)}</div>
-      </div>
-
-      <div style="padding:14px;border-bottom:1px solid #20323b;">
-        <small style="color:#81909b;">STATUS</small>
-        <div style="color:#00d9ff;font-weight:bold;margin-top:5px;">${escapeGabrix(c.status)}</div>
-      </div>
-
-      <div style="padding:14px;border-bottom:1px solid #20323b;">
-        <small style="color:#81909b;">PROGRESS</small>
-        <div style="color:white;font-weight:bold;margin-top:5px;">${escapeGabrix(c.progress)}</div>
-      </div>
-
-      <div style="padding:14px;">
-        <small style="color:#81909b;">LATEST UPDATE</small>
-        <div style="color:white;margin-top:5px;">${escapeGabrix(c.update_note)}</div>
-      </div>
-    `;
-
-    result.style.display = "block";
-    message.textContent = "✓ Private access granted.";
-    message.style.color = "#00d9ff";
-
-  } catch (error) {
-    message.textContent = error.message;
-    message.style.color = "#ff9d9d";
+    const c=data.client||{};
+    result.innerHTML=
+      '<strong>PRIVATE ACCESS GRANTED</strong>'+
+      '<span>Client: '+escapeGabrix(c.name)+'</span><br>'+
+      '<span>Campaign: '+escapeGabrix(c.campaign)+'</span><br>'+
+      '<span>Package: '+escapeGabrix(c.package)+'</span><br>'+
+      '<span>Status: '+escapeGabrix(c.status)+'</span><br>'+
+      '<span>Progress: '+escapeGabrix(c.progress)+'</span>';
+    result.classList.add('open');
+    msg.textContent='✓ Campaign found.';
+    msg.style.color='#6daeff';
+  }catch(error){
+    msg.textContent=error.message||'Unable to access campaign.';
+    msg.style.color='#ff4b55';
   }
 }
 
-function escapeGabrix(value) {
-  return String(value ?? "").replace(/[&<>"']/g, function(char) {
+function openAdminGate(){
+  document.getElementById('adminGate').classList.add('open');
+  document.getElementById('adminPin').focus();
+}
+
+async function gabrixAdminLogin(){
+  const pin=document.getElementById('adminPin').value.trim();
+  const msg=document.getElementById('adminMessage');
+  const panel=document.getElementById('adminPanel');
+
+  panel.classList.remove('open');
+
+  if(!/^\d{4}$/.test(pin)){
+    msg.textContent='Enter the 4-digit admin PIN.';
+    msg.style.color='#ff4b55';
+    return;
+  }
+
+  msg.textContent='Verifying secure access...';
+  msg.style.color='#aaaabd';
+
+  try{
+    const response=await fetch('/api/admin/login',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({pin})
+    });
+    const data=await response.json();
+
+    if(!response.ok) throw new Error(data.error||'Incorrect admin PIN.');
+
+    msg.textContent='✓ Secure access granted.';
+    msg.style.color='#6daeff';
+    panel.classList.add('open');
+
+    if(data.redirect){
+      setTimeout(()=>{window.location.href=data.redirect;},500);
+    }
+  }catch(error){
+    msg.textContent=error.message||'Admin access denied.';
+    msg.style.color='#ff4b55';
+  }
+}
+
+function escapeGabrix(value){
+  return String(value??'').replace(/[&<>"']/g,function(char){
     return {
-      "&":"&amp;",
-      "<":"&lt;",
-      ">":"&gt;",
-      '"':"&quot;",
-      "'":"&#39;"
+      '&':'&amp;',
+      '<':'&lt;',
+      '>':'&gt;',
+      '"':'&quot;',
+      "'":'&#39;'
     }[char];
   });
 }
+
 </script>
-  <div style="text-align:center;padding:30px 15px;">
-  <a href="/admin.html"
-     style="display:inline-block;padding:14px 22px;border-radius:10px;background:#ff3333;color:#061018;text-decoration:none;font-weight:800;">
-    🔐 GABRIX ADMIN DASHBOARD
-  </a>
-</div>
-</body></html>
+
+</body>
+</html>
