@@ -3,15 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="GABRIX NETWORK â€” Digital promotion, YouTube growth, music promotion and campaign support.">
-<title>GABRIX NETWORK â€” The Network Behind the Next Big Thing.</title>
+<meta name="description" content="GABRIX NETWORK — Digital promotion, YouTube growth, music promotion and campaign support.">
+<title>GABRIX NETWORK — The Network Behind the Next Big Thing.</title>
 
 <style>
-/* =========================================================
-   GABRIX NETWORK â€” POLISHED FROM-SCRATCH EDITION
-   Same core idea as the supplied GABRIX HTML, rebuilt cleanly.
-   ========================================================= */
-
 :root{
   --bg:#040711;
   --bg-soft:#07101f;
@@ -32,8 +27,16 @@
   --shadow:0 24px 80px rgba(0,0,0,.34);
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   background:
     radial-gradient(circle at 80% 5%,rgba(37,120,255,.14),transparent 28rem),
@@ -43,6 +46,7 @@ body{
   font-family:Inter,Arial,Helvetica,sans-serif;
   line-height:1.6;
 }
+
 body:before{
   content:"";
   position:fixed;
@@ -55,16 +59,68 @@ body:before{
     linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
   background-size:64px 64px;
 }
-a{text-decoration:none;color:inherit}
-button,input,textarea,select{font:inherit}
-button{cursor:pointer}
-.container{width:min(1160px,92%);margin:auto}
- .gold{color:var(--gold-light)}
-.title-accent{background:linear-gradient(90deg,var(--gold-light),#ffffff 58%,var(--blue-light));-webkit-background-clip:text;background-clip:text;color:transparent}
-.section-label{background:linear-gradient(90deg,var(--blue-light),var(--gold-light));-webkit-background-clip:text;background-clip:text;color:transparent}
-.subtitle{color:var(--blue-light);font-weight:800;letter-spacing:1.4px}
-h3{color:#f4f7ff}
-.hidden{display:none!important}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.container{
+  width:min(1160px,92%);
+  margin:auto;
+}
+
+.gold{
+  color:var(--gold-light);
+}
+
+.title-accent{
+  background:linear-gradient(
+    90deg,
+    var(--gold-light),
+    #ffffff 58%,
+    var(--blue-light)
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.section-label{
+  background:linear-gradient(
+    90deg,
+    var(--blue-light),
+    var(--gold-light)
+  );
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.subtitle{
+  color:var(--blue-light);
+  font-weight:800;
+  letter-spacing:1.4px;
+}
+
+h3{
+  color:#f4f7ff;
+}
+
+.hidden{
+  display:none!important;
+}
 
 /* ================= NAVIGATION ================= */
 
@@ -77,6 +133,7 @@ nav{
   backdrop-filter:blur(18px);
   border-bottom:1px solid var(--line);
 }
+
 .nav{
   height:100%;
   display:flex;
@@ -84,17 +141,23 @@ nav{
   justify-content:space-between;
   gap:20px;
 }
+
 .logo{
   font-size:22px;
   font-weight:950;
   letter-spacing:3px;
 }
-.logo span{color:var(--gold)}
+
+.logo span{
+  color:var(--gold);
+}
+
 .links{
   display:flex;
   align-items:center;
   gap:4px;
 }
+
 .links a{
   color:#afbdd1;
   font-size:10px;
@@ -104,15 +167,18 @@ nav{
   border-radius:9px;
   transition:.2s;
 }
+
 .links a:hover{
   color:#fff;
   background:rgba(255,255,255,.055);
 }
+
 .links .nav-cta{
   color:#07101b!important;
   background:linear-gradient(135deg,var(--gold),var(--gold-light));
   margin-left:5px;
 }
+
 .menu-toggle{
   display:none;
   color:#fff;
@@ -132,6 +198,7 @@ nav{
   overflow:hidden;
   padding:130px 0 90px;
 }
+
 .hero:before{
   content:"";
   position:absolute;
@@ -140,9 +207,14 @@ nav{
   right:-320px;
   top:40px;
   border-radius:50%;
-  background:radial-gradient(circle,rgba(37,120,255,.25),transparent 68%);
+  background:radial-gradient(
+    circle,
+    rgba(37,120,255,.25),
+    transparent 68%
+  );
   z-index:-1;
 }
+
 .hero:after{
   content:"";
   position:absolute;
@@ -151,22 +223,34 @@ nav{
   left:-300px;
   bottom:-300px;
   border-radius:50%;
-  background:radial-gradient(circle,rgba(233,189,87,.12),transparent 68%);
+  background:radial-gradient(
+    circle,
+    rgba(233,189,87,.12),
+    transparent 68%
+  );
   z-index:-1;
 }
+
 .hero-inner{
   width:100%;
   max-width:1010px;
   text-align:center;
 }
-.eyebrow,.section-label,.desk-tag{
+
+.eyebrow,
+.section-label,
+.desk-tag{
   color:var(--blue-light);
   font-size:9px;
   font-weight:900;
   letter-spacing:3.5px;
   text-transform:uppercase;
 }
-.eyebrow{margin-bottom:22px}
+
+.eyebrow{
+  margin-bottom:22px;
+}
+
 .hero-logo{
   font-size:clamp(54px,9vw,105px);
   font-weight:950;
@@ -174,25 +258,37 @@ nav{
   line-height:.9;
   text-shadow:0 0 55px rgba(37,120,255,.17);
 }
-.hero-logo span{color:var(--gold)}
+
+.hero-logo span{
+  color:var(--gold);
+}
+
 .hero-line{
   width:min(460px,68%);
   height:1px;
   margin:26px auto;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
 }
+
 h1{
   font-size:clamp(40px,6.5vw,80px);
   line-height:.96;
   letter-spacing:-3.5px;
   text-transform:uppercase;
 }
+
 .hero-copy{
   max-width:700px;
   margin:25px auto 0;
   color:var(--muted);
   font-size:15px;
 }
+
 .hero-services{
   margin-top:16px;
   color:#dce6f5;
@@ -201,6 +297,7 @@ h1{
   letter-spacing:2px;
   text-transform:uppercase;
 }
+
 .hero-buttons{
   display:flex;
   justify-content:center;
@@ -208,6 +305,7 @@ h1{
   gap:11px;
   margin-top:31px;
 }
+
 .btn{
   min-height:48px;
   display:inline-flex;
@@ -221,15 +319,18 @@ h1{
   letter-spacing:.7px;
   transition:.2s;
 }
+
 .btn:hover{
   transform:translateY(-2px);
   box-shadow:0 12px 35px rgba(0,0,0,.2);
 }
+
 .btn-primary{
   background:linear-gradient(135deg,var(--gold),var(--gold-light));
   color:#07101a;
   border-color:var(--gold);
 }
+
 .trust{
   margin-top:34px;
   color:#657994;
@@ -244,12 +345,17 @@ section{
   padding:105px 0;
   border-top:1px solid rgba(126,161,207,.12);
 }
-.section-label{margin-bottom:14px}
+
+.section-label{
+  margin-bottom:14px;
+}
+
 h2{
   font-size:clamp(39px,5.6vw,72px);
   line-height:.94;
   letter-spacing:-3px;
 }
+
 .lead{
   max-width:720px;
   color:var(--muted);
@@ -265,6 +371,7 @@ h2{
   gap:14px;
   margin-top:46px;
 }
+
 .service{
   min-height:215px;
   padding:27px;
@@ -272,31 +379,44 @@ h2{
   overflow:hidden;
   border:1px solid var(--line);
   border-radius:var(--radius);
-  background:linear-gradient(145deg,rgba(12,31,57,.92),rgba(6,13,27,.96));
+  background:linear-gradient(
+    145deg,
+    rgba(12,31,57,.92),
+    rgba(6,13,27,.96)
+  );
   transition:.25s;
 }
+
 .service:before{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(135deg,rgba(37,120,255,.08),transparent 55%);
+  background:linear-gradient(
+    135deg,
+    rgba(37,120,255,.08),
+    transparent 55%
+  );
   pointer-events:none;
 }
+
 .service:hover{
   transform:translateY(-5px);
   border-color:rgba(104,173,255,.4);
   box-shadow:var(--shadow);
 }
+
 .number{
   color:var(--gold);
   font-size:9px;
   font-weight:900;
   letter-spacing:2px;
 }
+
 .service h3{
   font-size:19px;
   margin:39px 0 8px;
 }
+
 .service p{
   color:#8192aa;
   font-size:11px;
@@ -310,18 +430,25 @@ h2{
   gap:75px;
   align-items:center;
 }
+
 .network-box{
   margin-top:28px;
   padding:25px;
   border:1px solid rgba(233,189,87,.27);
   border-radius:14px;
-  background:linear-gradient(135deg,rgba(21,52,90,.48),rgba(5,13,27,.8));
+  background:linear-gradient(
+    135deg,
+    rgba(21,52,90,.48),
+    rgba(5,13,27,.8)
+  );
 }
+
 .network-box strong{
   display:block;
   font-size:21px;
   line-height:1.2;
 }
+
 .network-box span{
   display:block;
   margin-top:7px;
@@ -330,12 +457,16 @@ h2{
   font-weight:900;
   letter-spacing:3px;
 }
+
 .quote{
   font-size:clamp(29px,4.1vw,56px);
   line-height:1.04;
   letter-spacing:-2px;
 }
-.quote b{color:var(--gold-light)}
+
+.quote b{
+  color:var(--gold-light);
+}
 
 /* ================= PACKAGES ================= */
 
@@ -345,12 +476,14 @@ h2{
   align-items:end;
   gap:35px;
 }
+
 .packages{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:14px;
   margin-top:45px;
 }
+
 .card{
   min-height:470px;
   padding:25px;
@@ -360,14 +493,24 @@ h2{
   flex-direction:column;
   border:1px solid var(--line);
   border-radius:17px;
-  background:linear-gradient(155deg,#0b1c34,#050c19);
+  background:linear-gradient(
+    155deg,
+    #0b1c34,
+    #050c19
+  );
   transition:.25s;
 }
+
+.card[data-package]{
+  cursor:pointer;
+}
+
 .card:hover{
   transform:translateY(-5px);
   border-color:rgba(104,173,255,.4);
   box-shadow:var(--shadow);
 }
+
 .card:after{
   content:"";
   position:absolute;
@@ -378,16 +521,33 @@ h2{
   border-radius:50%;
   background:rgba(37,120,255,.11);
 }
-.card:nth-child(1){border-top:2px solid #36d5d0}
-.card:nth-child(2){border-top:2px solid var(--blue)}
-.card:nth-child(3){border-top:2px solid #b44dff}
-.card:nth-child(4){border-top:2px solid var(--gold)}
+
+.card:nth-child(1){
+  border-top:2px solid #36d5d0;
+}
+
+.card:nth-child(2){
+  border-top:2px solid var(--blue);
+}
+
+.card:nth-child(3){
+  border-top:2px solid #b44dff;
+}
+
+.card:nth-child(4){
+  border-top:2px solid var(--gold);
+}
+
 .card.popular{
   transform:translateY(-8px);
   border-color:rgba(37,120,255,.6);
   box-shadow:0 22px 70px rgba(37,120,255,.14);
 }
-.card.popular:hover{transform:translateY(-12px)}
+
+.card.popular:hover{
+  transform:translateY(-12px);
+}
+
 .badge{
   align-self:flex-start;
   padding:6px 9px;
@@ -398,11 +558,16 @@ h2{
   font-weight:950;
   letter-spacing:1.3px;
 }
+
 .icon{
   margin:13px 0 7px;
   font-size:25px;
 }
-.card h3{font-size:19px}
+
+.card h3{
+  font-size:19px;
+}
+
 .tier{
   margin-top:3px;
   color:#71839a;
@@ -411,17 +576,20 @@ h2{
   letter-spacing:1.8px;
   text-transform:uppercase;
 }
+
 .price{
   margin:19px 0 14px;
   color:var(--gold-light);
   font-size:29px;
   font-weight:950;
 }
+
 .features{
   list-style:none;
   border-top:1px solid var(--line);
   padding-top:10px;
 }
+
 .features li{
   display:flex;
   justify-content:space-between;
@@ -430,12 +598,17 @@ h2{
   color:#bdc8d8;
   font-size:10px;
 }
-.features b{color:#eef3fb}
+
+.features b{
+  color:#eef3fb;
+}
+
 .card-note{
   margin-top:11px;
   color:#6d7f96;
   font-size:8px;
 }
+
 .card-btn{
   margin-top:auto;
   padding:12px;
@@ -446,6 +619,7 @@ h2{
   font-size:9px;
   font-weight:950;
 }
+
 .disclaimer{
   margin-top:16px;
   color:#60738a;
@@ -460,1648 +634,2535 @@ h2{
   gap:13px;
   margin-top:44px;
 }
+
 .step{
   padding:25px;
   border:1px solid var(--line);
   border-radius:14px;
   background:var(--panel);
 }
+
 .step strong{
   color:var(--gold);
   font-size:10px;
 }
+
 .step h3{
-  margin:18px 0 6px;
-  font-size:17px;
+  margin:18px 0 7px;
+  font-size:16px;
 }
+
 .step p{
-  color:#8191a7;
+  color:#7f91a9;
   font-size:10px;
 }
 
-/* ================= WHY GABRIX â€” SECTION 05 ================= */
-.why-head{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:end;margin-bottom:42px}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.why-card{background:linear-gradient(145deg,#09192d,#050c18);border:1px solid rgba(104,173,255,.16);padding:28px;min-height:220px;position:relative;overflow:hidden}
-.why-card:after{content:"";position:absolute;width:130px;height:130px;right:-55px;bottom:-55px;border-radius:50%;border:1px solid rgba(231,189,91,.13)}
-.why-card>span{font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:900}
-.why-card h3{margin-top:42px;font-size:17px;letter-spacing:1px}
-.why-card p{margin-top:12px;color:var(--muted);font-size:13px;line-height:1.7}
-@media(max-width:760px){.why-head{grid-template-columns:1fr;gap:10px}.why-grid{grid-template-columns:1fr}}
+/* ================= CONTACT ================= */
 
-/* ================= START CAMPAIGN â€” SECTION 06 ================= */
-
-.start{
+.contact-grid{
   display:grid;
-  grid-template-columns:.82fr 1.18fr;
-  gap:60px;
-  align-items:start;
-}
-.start-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  padding:7px 10px;
-  margin-bottom:17px;
-  border:1px solid rgba(37,120,255,.25);
-  border-radius:999px;
-  color:var(--blue-light);
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:2px;
-}
-.start-title{
-  font-size:clamp(45px,6vw,76px);
-}
-.formbox{
-  padding:29px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:linear-gradient(145deg,#0a1b32,#050c18);
-  box-shadow:var(--shadow);
-}
-.formbox-head{
-  margin-bottom:20px;
-}
-.formbox-head h3{
-  font-size:21px;
-}
-.formbox-head p{
-  margin-top:5px;
-  color:var(--muted);
-  font-size:10px;
-}
-form{
-  display:grid;
-  gap:11px;
-}
-input,textarea,select{
-  width:100%;
-  padding:13px;
-  outline:none;
-  color:#eef4ff;
-  background:#050c17;
-  border:1px solid #203b5d;
-  border-radius:9px;
-}
-input:focus,textarea:focus,select:focus{
-  border-color:var(--blue);
-  box-shadow:0 0 0 3px rgba(37,120,255,.1);
-}
-textarea{
-  min-height:120px;
-  resize:vertical;
-}
-.form-submit{
-  padding:14px;
-  border:0;
-  border-radius:9px;
-  background:linear-gradient(135deg,var(--gold),var(--gold-light));
-  color:#07101b;
-  font-weight:950;
-}
-.help{
-  color:#6e8096;
-  font-size:8px;
-}
-.direct{
-  display:inline-flex;
-  margin-top:24px;
-  padding:13px 17px;
-  border:1px solid rgba(233,189,87,.5);
-  border-radius:9px;
-  color:var(--gold-light);
-  font-size:9px;
-  font-weight:900;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  margin-top:45px;
 }
 
-/* ================= PRIVATE CLIENT DESK â€” AFTER START ================= */
-
-.client-desk{
-  background:linear-gradient(180deg,rgba(8,20,39,.7),rgba(4,7,17,.25));
-  position:relative;
-  overflow:hidden;
-}
-.client-desk:before{
-  content:"";
-  position:absolute;
-  width:600px;
-  height:600px;
-  right:-300px;
-  top:-180px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(37,120,255,.15),transparent 68%);
-  pointer-events:none;
-}
-.desk-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  gap:30px;
-}
-.desk-lock{font-size:29px}
-.private-arena{margin-top:40px}
-.desk-login,.private-dashboard{
-  padding:29px;
+.contact-box{
+  padding:28px;
   border:1px solid var(--line);
-  border-radius:17px;
-  background:linear-gradient(145deg,#0a1930,#050c18);
+  border-radius:16px;
+  background:linear-gradient(
+    145deg,
+    rgba(12,29,53,.9),
+    rgba(5,12,25,.95)
+  );
 }
-.standalone-login{max-width:620px}
-.desk-login h3{
-  margin:8px 0;
-  font-size:23px;
+
+.contact-box h3{
+  margin-bottom:9px;
 }
-.desk-login p{
+
+.contact-box p{
   color:var(--muted);
   font-size:11px;
 }
+
+.contact-link{
+  display:block;
+  margin-top:18px;
+  color:var(--gold-light);
+  font-size:13px;
+  font-weight:900;
+}
+
+/* ================= FORM ================= */
+
+.form{
+  display:grid;
+  gap:13px;
+  margin-top:20px;
+}
+
+.field{
+  display:grid;
+  gap:6px;
+}
+
+.field label{
+  color:#8798ae;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.field input,
+.field textarea,
+.field select{
+  width:100%;
+  border:1px solid var(--line-strong);
+  border-radius:10px;
+  padding:12px 13px;
+  outline:none;
+  background:#050d1b;
+  color:#fff;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+  border-color:var(--blue-light);
+  box-shadow:0 0 0 3px rgba(37,120,255,.1);
+}
+
+.field textarea{
+  min-height:125px;
+  resize:vertical;
+}
+
+.form-message{
+  min-height:20px;
+  font-size:10px;
+}
+
+/* ================= DESKS ================= */
+
+.private-desk{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(37,120,255,.05),
+      transparent 30%
+    );
+}
+
+.desk-shell{
+  max-width:900px;
+  margin:35px auto 0;
+}
+
+.desk-login,
+.dashboard{
+  padding:30px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:linear-gradient(
+    145deg,
+    rgba(10,27,49,.95),
+    rgba(4,10,21,.98)
+  );
+  box-shadow:var(--shadow);
+}
+
+.desk-login h3{
+  font-size:22px;
+}
+
+.desk-login p{
+  margin-top:7px;
+  color:var(--muted);
+  font-size:11px;
+}
+
 .code-boxes{
   display:flex;
   gap:9px;
-  margin:18px 0 13px;
+  margin:20px 0;
 }
+
 .code-input{
-  width:58px!important;
-  height:60px;
-  padding:0!important;
+  width:58px;
+  height:62px;
   text-align:center;
-  font-size:24px;
-  font-weight:950;
+  font-size:25px;
+  font-weight:900;
+  color:#fff;
+  background:#050d1b;
+  border:1px solid var(--line-strong);
+  border-radius:10px;
+  outline:none;
 }
-.desk-login button{
-  width:100%;
-  border:0;
-  border-radius:9px;
-  padding:13px;
+
+.code-input:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(233,189,87,.08);
 }
-.desk-error{
-  min-height:16px;
+
+.login-error{
   color:var(--red);
-  font-size:9px;
-  margin-top:8px;
+  font-size:10px;
+  min-height:18px;
 }
-.desk-demo{
-  margin-top:14px!important;
-  color:#657891!important;
-  font-size:8px!important;
-}
-.dashboard-top{
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-head{
   display:flex;
   justify-content:space-between;
-  align-items:start;
-  gap:15px;
+  align-items:flex-start;
+  gap:20px;
 }
-.dashboard-top h3{font-size:22px}
-.campaign-id{
+
+.dashboard-head h3{
+  font-size:25px;
+}
+
+.dashboard-head small{
+  display:block;
+  color:#73859c;
   margin-top:3px;
-  color:var(--blue-light);
-  font-size:8px;
-  letter-spacing:2px;
 }
-.live{
-  padding:6px 9px;
-  border:1px solid #21885c;
-  border-radius:999px;
-  color:#5ce5a3;
-  font-size:7px;
+
+.close-btn{
+  border:1px solid var(--line-strong);
+  background:transparent;
+  color:#a9b7ca;
+  border-radius:9px;
+  padding:8px 12px;
+  font-size:9px;
   font-weight:900;
-  letter-spacing:1px;
 }
-.dashboard-nav{
+
+.dash-tabs,
+.admin-tabs{
   display:flex;
   flex-wrap:wrap;
   gap:7px;
-  margin:24px 0 18px;
-  padding-bottom:13px;
+  margin:25px 0;
   border-bottom:1px solid var(--line);
+  padding-bottom:10px;
 }
-.dash-tab,.admin-tab{
+
+.dash-tab,
+.admin-tab{
+  border:0;
+  background:transparent;
+  color:#72859d;
   padding:9px 12px;
-  border:1px solid #27496e;
   border-radius:8px;
-  background:#07162b;
-  color:#a9b9cd;
-  font-size:8px;
-  font-weight:900;
-}
-.dash-tab.active,.admin-tab.active{
-  background:linear-gradient(135deg,var(--blue),var(--blue-light));
-  color:#fff;
-  border-color:var(--blue);
-}
-.client-welcome{
-  margin-bottom:17px;
-  padding-left:11px;
-  border-left:2px solid var(--gold);
-  color:#9ba9bd;
-  font-size:10px;
-}
-.client-stats{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-}
-.client-stat{
-  padding:14px;
-  border:1px solid var(--line);
-  border-radius:10px;
-  background:#060f1e;
-}
-.client-stat small{
-  color:#71839a;
-  font-size:7px;
-  font-weight:800;
-  letter-spacing:1.3px;
-  text-transform:uppercase;
-}
-.client-stat strong{
-  display:block;
-  margin-top:4px;
-  color:var(--gold-light);
-  font-size:21px;
-}
-.progress-wrap{
-  margin-top:10px;
-  padding:14px;
-  border:1px solid var(--line);
-  border-radius:10px;
-}
-.progress-line{
-  display:flex;
-  justify-content:space-between;
-  color:#9ba9bd;
-  font-size:8px;
-}
-.progress-bar{
-  height:7px;
-  margin-top:9px;
-  overflow:hidden;
-  border-radius:999px;
-  background:#0b192c;
-}
-.progress-fill{
-  width:0;
-  height:100%;
-  border-radius:999px;
-  background:linear-gradient(90deg,var(--blue),var(--gold));
-  transition:width .5s;
-}
-.client-meta{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-top:10px;
-}
-.client-meta>div{
-  padding:13px;
-  border:1px solid var(--line);
-  border-radius:10px;
-  background:#060f1e;
-}
-.client-meta small{
-  color:#71839a;
-  font-size:7px;
-  letter-spacing:1.3px;
-}
-.client-meta strong{
-  display:block;
-  margin-top:3px;
-  color:#e4edf9;
-  font-size:10px;
-}
-.dash-page{min-height:250px}
-.page-title{
-  margin-bottom:14px;
-  color:var(--blue-light);
   font-size:9px;
   font-weight:900;
-  letter-spacing:2.5px;
-}
-.workflow-list{
-  display:grid;
-  gap:9px;
-}
-.workflow-item{
-  display:grid;
-  grid-template-columns:70px 1fr auto;
-  gap:13px;
-  align-items:center;
-  padding:14px;
-  border:1px solid var(--line);
-  border-radius:10px;
-  background:#060f1e;
-}
-.workflow-round{
-  color:var(--gold);
-  font-size:8px;
-  font-weight:900;
-}
-.workflow-item strong{font-size:10px}
-.workflow-item p{
-  margin-top:3px;
-  color:#8392a6;
-  font-size:8px;
-}
-.workflow-status{
-  padding:5px 7px;
-  border:1px solid #1b8a5b;
-  border-radius:999px;
-  color:#57e6a2;
-  font-size:7px;
-  letter-spacing:1px;
-}
-.report{
-  margin-top:8px;
-  padding:12px;
-  border:1px solid var(--line);
-  border-radius:9px;
-}
-.report small{
-  color:var(--blue-light);
-  font-size:7px;
-}
-.report strong{
-  display:block;
-  margin:3px 0;
-  font-size:10px;
-}
-.report p{
-  color:#8392a6;
-  font-size:8px;
-}
-.status-big{
-  margin:14px 0 4px;
-  color:var(--gold-light);
-  font-size:32px;
-  font-weight:950;
-}
-.status-timeline{
-  display:grid;
-  gap:8px;
-  margin-top:20px;
-}
-.status-timeline div{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  padding:10px;
-  border:1px solid var(--line);
-  border-radius:9px;
-  color:#9ba9bd;
-  font-size:8px;
-}
-.status-timeline b{color:var(--gold)}
-.desk-logout{
-  margin-top:18px;
-  padding:9px 12px;
-  border:1px solid #34557d;
-  border-radius:8px;
-  background:transparent;
-  color:#dce7f6;
-  font-size:8px;
-  font-weight:900;
 }
 
-/* ================= ADMIN â€” AFTER PRIVATE CLIENT ================= */
+.dash-tab.active,
+.admin-tab.active{
+  color:#07101b;
+  background:var(--gold);
+}
 
-.dashboard-divider{
-  margin:100px 0 58px;
-  border-top:1px solid rgba(126,161,207,.16);
-  position:relative;
-  text-align:center;
-}
-.dashboard-divider span{
-  position:relative;
-  top:-9px;
-  padding:0 16px;
-  background:var(--bg);
-  color:#62758d;
-  font-size:7px;
-  letter-spacing:2.5px;
-}
-.admin-section-title{margin-bottom:30px}
-.admin-section-title p{
-  max-width:710px;
-  margin-top:15px;
-  color:var(--muted);
-  font-size:12px;
-}
-.admin-arena .desk-login,.admin-arena .private-dashboard{
-  border-color:rgba(233,189,87,.25);
-}
+.client-stats,
 .admin-stats{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:10px;
 }
-.admin-message{
-  margin-top:14px;
+
+.stat{
   padding:17px;
   border:1px solid var(--line);
-  border-radius:10px;
-  color:#9ba9bd;
-  font-size:10px;
+  border-radius:12px;
+  background:rgba(255,255,255,.025);
 }
-.admin-form-grid{
+
+.stat span{
+  display:block;
+  color:#708198;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.stat strong{
+  display:block;
+  margin-top:5px;
+  font-size:22px;
+}
+
+.progress-wrap{
+  margin:20px 0;
+}
+
+.progress-meta{
+  display:flex;
+  justify-content:space-between;
+  color:#899bb2;
+  font-size:9px;
+  margin-bottom:7px;
+}
+
+.progress{
+  height:8px;
+  overflow:hidden;
+  border-radius:99px;
+  background:#07101f;
+  border:1px solid var(--line);
+}
+
+.progress-fill{
+  width:0;
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    var(--blue),
+    var(--gold)
+  );
+  transition:width .4s;
+}
+
+.status-card{
+  padding:22px;
+  margin-top:18px;
+  border:1px solid rgba(37,120,255,.22);
+  border-radius:14px;
+  background:rgba(37,120,255,.05);
+}
+
+.status-card strong{
+  display:block;
+  font-size:25px;
+  color:var(--gold-light);
+}
+
+.status-card p{
+  color:var(--muted);
+  font-size:11px;
+  margin-top:4px;
+}
+
+.workflow{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
   gap:10px;
 }
-.admin-form-grid label{
-  color:#8da0b8;
-  font-size:8px;
+
+.workflow-item{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:15px;
+  align-items:center;
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:rgba(255,255,255,.02);
 }
-.admin-form-grid input,.admin-form-grid select{margin-top:5px}
-.admin-success{
-  min-height:16px;
-  margin-top:9px;
-  color:#57e6a2;
+
+.workflow-round{
+  color:var(--gold);
+  font-size:8px;
+  font-weight:950;
+  letter-spacing:1px;
+}
+
+.workflow-item strong{
+  font-size:11px;
+}
+
+.workflow-item p{
+  color:#7f91a9;
   font-size:9px;
 }
+
+.workflow-status{
+  color:#70d6a0;
+  font-size:8px;
+  font-weight:900;
+}
+
+.report{
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:rgba(255,255,255,.02);
+  margin-bottom:9px;
+}
+
+.report small{
+  display:block;
+  color:#71839a;
+  font-size:8px;
+}
+
+.report strong{
+  display:block;
+  margin-top:4px;
+  font-size:11px;
+}
+
+.report p{
+  color:#8b9cb1;
+  font-size:9px;
+  margin-top:5px;
+}
+
+/* ================= ADMIN ================= */
+
+.admin-shell{
+  max-width:1050px;
+  margin:35px auto 0;
+}
+
 .admin-client{
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:15px;
-  margin-top:8px;
-  padding:13px;
+  padding:15px;
   border:1px solid var(--line);
-  border-radius:10px;
-  background:#060f1e;
+  border-radius:12px;
+  margin-bottom:9px;
 }
-.admin-client strong{font-size:10px}
+
+.admin-client strong{
+  display:block;
+  font-size:11px;
+}
+
 .admin-client small{
   display:block;
-  margin-top:2px;
-  color:#75879e;
-  font-size:7px;
+  color:#71839a;
+  font-size:8px;
+  margin-top:3px;
 }
+
 .admin-client-code{
-  padding:6px 8px;
-  border:1px solid #604d1f;
-  border-radius:7px;
   color:var(--gold-light);
   font-size:9px;
-  letter-spacing:1.5px;
+  font-weight:900;
 }
-.admin-note{
-  color:#8495aa;
-  font-size:9px;
-  margin-bottom:12px;
-}
-#adminUpdate textarea{margin-top:10px}
 
-/* ================= FINAL CTA â€” SECTION 09 ================= */
-.final-cta{padding:125px 0 115px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(37,120,255,.12),transparent 38rem)}
-.final-cta:before{content:"";position:absolute;inset:22px 6%;border:1px solid rgba(233,189,87,.13);border-radius:28px;pointer-events:none}
-.final-cta .section-label{margin-bottom:18px}
-.final-cta h2{font-size:clamp(48px,7vw,92px);margin:auto;max-width:900px}
-.final-cta p{max-width:620px;margin:20px auto 0;color:var(--muted);font-size:14px}
-.final-cta .cta-button{display:inline-flex;margin-top:30px;min-height:54px;padding:0 25px;align-items:center;justify-content:center;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#07101b;font-size:10px;font-weight:950;letter-spacing:1px;box-shadow:0 14px 40px rgba(233,189,87,.12)}
-.final-cta .cta-button:hover{transform:translateY(-3px);box-shadow:0 18px 50px rgba(233,189,87,.18)}
-.final-cta .micro{margin-top:15px;color:#63758b;font-size:8px;letter-spacing:1.8px;text-transform:uppercase}
+.admin-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.admin-form .full{
+  grid-column:1/-1;
+}
+
+.admin-form textarea{
+  min-height:120px;
+}
+
+/* ================= PAYMENT ================= */
+
+.payment-box{
+  margin-top:25px;
+  padding:25px;
+  border:1px solid rgba(37,120,255,.24);
+  border-radius:16px;
+  background:linear-gradient(
+    145deg,
+    rgba(9,30,56,.9),
+    rgba(4,11,22,.96)
+  );
+}
+
+.payment-box h3{
+  font-size:21px;
+}
+
+.payment-box p{
+  color:var(--muted);
+  font-size:10px;
+  margin-top:5px;
+}
+
+.mpesa-number{
+  display:inline-block;
+  margin-top:15px;
+  color:var(--gold-light);
+  font-size:24px;
+  font-weight:950;
+  letter-spacing:2px;
+  user-select:text;
+}
+
+.payment-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+
+.payment-status-hidden{
+  display:none;
+}
+
+.payment-status-visible{
+  display:block;
+}
+
+.payment-status{
+  margin-top:18px;
+  padding:17px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:rgba(255,255,255,.025);
+}
+
+.payment-status strong{
+  display:block;
+  color:var(--gold-light);
+  font-size:17px;
+}
+
+.payment-status span{
+  display:block;
+  color:#8d9eb3;
+  margin-top:3px;
+  font-size:10px;
+}
 
 /* ================= FOOTER ================= */
 
 footer{
+  padding:45px 0;
+  border-top:1px solid var(--line);
+}
+
+.footer-inner{
   display:flex;
   justify-content:space-between;
+  align-items:center;
   gap:20px;
-  padding:31px 0;
-  border-top:1px solid var(--line);
-  color:#63758b;
+}
+
+.footer-inner p{
+  color:#60738a;
   font-size:8px;
-  letter-spacing:.6px;
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:1000px){
-  .packages{grid-template-columns:repeat(2,1fr)}
-  .services{grid-template-columns:repeat(2,1fr)}
-  .process{grid-template-columns:repeat(2,1fr)}
-  .start{grid-template-columns:1fr}
+.footer-logo{
+  font-size:18px;
+  font-weight:950;
+  letter-spacing:2px;
 }
-@media(max-width:760px){
-  nav{height:68px}
+
+.footer-logo span{
+  color:var(--gold);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
   .links{
     display:none;
     position:absolute;
-    top:68px;
-    left:4%;
-    right:4%;
-    padding:11px;
+    top:76px;
+    left:0;
+    right:0;
+    padding:12px 4%;
+    background:rgba(4,7,17,.97);
+    border-bottom:1px solid var(--line);
     flex-direction:column;
     align-items:stretch;
-    background:#081225;
-    border:1px solid var(--line);
-    border-radius:14px;
-    box-shadow:var(--shadow);
   }
-  .links.open{display:flex}
-  .links a{padding:12px}
-  .links .nav-cta{margin-left:0;text-align:center}
-  .menu-toggle{display:block}
-  .hero{padding-top:110px}
-  .hero-logo{letter-spacing:4px}
-  h1{letter-spacing:-2px}
-  .services,.process,.split,.packages{grid-template-columns:1fr}
-  .packages-head,.desk-head{display:block}
-  .packages-head .lead{margin-top:14px}
-  .card.popular,.card.popular:hover{transform:none}
-  .client-stats,.client-meta{grid-template-columns:1fr 1fr}
-  .admin-stats{grid-template-columns:1fr 1fr}
-  .admin-form-grid{grid-template-columns:1fr}
-  .workflow-item{grid-template-columns:55px 1fr}
-  .workflow-status{grid-column:2;justify-self:start}
-  footer{display:block}
-  footer div+div{margin-top:8px}
-}
-@media(max-width:450px){
-  .container{width:94%}
-  .hero-logo{font-size:49px}
-  .hero-copy{font-size:13px}
-  .client-stats,.client-meta,.admin-stats{grid-template-columns:1fr}
-  .code-input{width:51px!important;height:55px}
-}
-</style>
 
+  .links.open{
+    display:flex;
+  }
 
+  .links a{
+    text-align:center;
+  }
 
+  .menu-toggle{
+    display:block;
+  }
 
-<style id="gabrix-payment-style">
-.payment-desk{position:relative}
-.payment-kicker{color:#f5c451!important;font-weight:900!important;letter-spacing:.16em!important}
-.payment-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin-top:30px;width:100%;box-sizing:border-box;margin-left:0;margin-right:0}
-.payment-card{background:linear-gradient(145deg,rgba(9,23,42,.96),rgba(6,14,27,.98));border:1px solid rgba(22,135,255,.28);border-radius:22px;padding:28px;box-shadow:0 20px 70px rgba(0,0,0,.24)}
-.payment-main{border-color:rgba(22,135,255,.55);box-shadow:0 20px 70px rgba(22,135,255,.12)}
-.payment-summary{border-color:rgba(245,196,81,.38);box-shadow:0 20px 70px rgba(245,196,81,.08)}
-.payment-badge{display:inline-flex;padding:7px 11px;border-radius:999px;background:rgba(22,135,255,.12);color:#65bcff;font-size:.72rem;font-weight:900;letter-spacing:.13em}
-.payment-summary .payment-badge{background:rgba(245,196,81,.10);color:#f5c451}
-.payment-card h3{font-size:1.7rem;margin:18px 0 8px;color:#fff}
-.payment-number-label{font-size:.72rem;font-weight:900;letter-spacing:.14em;color:#91a9c2;margin:22px 0 8px}
-.mpesa-number{font-size:clamp(2rem,5vw,3.4rem);font-weight:950;letter-spacing:.04em;color:#fff;background:linear-gradient(90deg,#36a9ff,#f5c451);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.payment-instruction{color:#9eb2c8;line-height:1.65}
-.payment-fields{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
-.payment-fields label{display:grid;gap:7px;color:#dbe9f7;font-size:.82rem;font-weight:800}
-.payment-fields input{width:100%;box-sizing:border-box;background:#071322;border:1px solid rgba(130,165,200,.24);border-radius:12px;color:#fff;padding:13px 12px;outline:none}
-.payment-fields input:focus{border-color:#1687ff;box-shadow:0 0 0 3px rgba(22,135,255,.12)}
-.payment-submit{margin-top:18px;width:100%;border:0;border-radius:13px;padding:15px 18px;background:linear-gradient(90deg,#087cf0,#f0b93f);color:#06101d;font-weight:950;letter-spacing:.05em;cursor:pointer}
-.payment-message{min-height:22px;color:#70d6a0;font-weight:700;margin-top:12px}
-.payment-status-hidden{display:none}
-.payment-status-visible{display:block;animation:gabrixStatusReveal .7s cubic-bezier(.2,.8,.2,1)}
-.status-row{display:flex;justify-content:space-between;gap:18px;padding:16px 0;border-bottom:1px solid rgba(150,175,205,.12);color:#8fa7bf}
-.status-row strong{color:#fff;text-align:right}
-.status-row:first-of-type strong{color:#f5c451}
-.payment-note{margin-top:22px;padding:15px;border-radius:13px;background:rgba(245,196,81,.07);border:1px solid rgba(245,196,81,.16);color:#aebfd1;line-height:1.55}
-.payment-note strong{color:#f5c451}
-@keyframes gabrixStatusReveal{
-  0%{opacity:0;transform:translateY(28px) scale(.98);filter:blur(3px)}
-  60%{opacity:1;transform:translateY(-3px) scale(1.005);filter:blur(0)}
-  100%{opacity:1;transform:translateY(0) scale(1)}
-}
-@media(max-width:700px){
-  .payment-fields{grid-template-columns:1fr}
-}
-</style>
-<style id="gabrix-payment-spacing">
-.payment-desk > .container{width:100%;box-sizing:border-box}
-.payment-desk h2{max-width:900px}
-.payment-desk .section-subtitle{max-width:720px}
-@media(max-width:760px){
-  .payment-desk{padding-top:86px;padding-bottom:86px}
-  .payment-desk .container{width:94%;max-width:none;margin:0 auto}
-  .payment-desk h2{font-size:clamp(36px,11vw,58px);line-height:.96;letter-spacing:-2.2px}
-  .payment-desk .section-subtitle{font-size:14px;line-height:1.65}
-  .payment-card{padding:24px 20px;border-radius:20px}
-  .mpesa-number{font-size:clamp(1.9rem,9vw,3rem)}
-}
-</style>
+  .services,
+  .packages,
+  .process{
+    grid-template-columns:1fr 1fr;
+  }
 
+  .split,
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
 
-<style id="gabrix-payment-confirmed-style">
-.payment-confirmed-pop{animation:gabrixPaymentPop .75s ease}
-@keyframes gabrixPaymentPop{
-  0%{transform:scale(1)}
-  45%{transform:scale(1.012);box-shadow:0 0 0 5px rgba(112,214,160,.12),0 24px 80px rgba(22,135,255,.18)}
-  100%{transform:scale(1)}
+  .client-stats,
+  .admin-stats{
+    grid-template-columns:1fr 1fr;
+  }
 }
-</style>
 
+@media(max-width:600px){
 
-<style id="gabrix-copy-mpesa-style">
-.copy-mpesa-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:9px;
-  margin-top:14px;
-  padding:10px 16px;
-  border:1px solid rgba(91,182,255,.42);
-  border-radius:999px;
-  background:rgba(22,135,255,.09);
-  color:#8ed0ff;
-  font-weight:900;
-  font-size:.76rem;
-  letter-spacing:.1em;
-  cursor:pointer;
-  transition:all .2s ease;
-}
-.copy-mpesa-btn:hover{
-  transform:translateY(-1px);
-  background:rgba(22,135,255,.18);
-  border-color:rgba(245,196,81,.6);
-  color:#f5c451;
-}
-.copy-mpesa-btn:active{transform:translateY(0) scale(.98)}
-.copy-icon{font-size:1rem;line-height:1}
-.copy-mpesa-message{
-  display:inline-block;
-  margin-left:10px;
-  color:#70d6a0;
-  font-size:.78rem;
-  font-weight:800;
-}
-@media(max-width:520px){
-  .copy-mpesa-message{display:block;margin:8px 0 0}
+  section{
+    padding:75px 0;
+  }
+
+  .hero{
+    padding-top:110px;
+  }
+
+  .hero-logo{
+    letter-spacing:4px;
+  }
+
+  h1,
+  h2{
+    letter-spacing:-2px;
+  }
+
+  .services,
+  .packages,
+  .process,
+  .admin-form{
+    grid-template-columns:1fr;
+  }
+
+  .packages-head{
+    display:block;
+  }
+
+  .card.popular{
+    transform:none;
+  }
+
+  .card.popular:hover{
+    transform:translateY(-5px);
+  }
+
+  .code-boxes{
+    gap:6px;
+  }
+
+  .code-input{
+    width:52px;
+    height:56px;
+  }
+
+  .dashboard,
+  .desk-login{
+    padding:20px;
+  }
+
+  .dashboard-head{
+    display:block;
+  }
+
+  .close-btn{
+    margin-top:12px;
+  }
+
+  .workflow-item{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+
+  .admin-client{
+    display:block;
+  }
+
+  .admin-client-code{
+    margin-top:8px;
+  }
+
+  .footer-inner{
+    display:block;
+  }
 }
 </style>
-
-
-<style id="gabrix-copy-help-style">
-.copy-help{
-  margin-top:8px;
-  color:#7189a2;
-  font-size:.72rem;
-  line-height:1.5;
-}
-.copy-help strong{color:#9ccfff}
-</style>
-
 </head>
 
-<body data-gabrix-mpesa="0702880452">
+<body>
 
-<!-- ================= NAV ================= -->
+<!-- ================= NAVIGATION ================= -->
+
 <nav>
   <div class="container nav">
-    <a class="logo" href="#top">GABRIX<span>Â®</span></a>
 
-    <button class="menu-toggle" type="button" aria-label="Open navigation" onclick="toggleMenu()">â˜°</button>
+    <a href="#home" class="logo">
+      GABRIX<span>.</span>
+    </a>
 
-    <div class="links">
-      <a href="#services">Services</a>
-      <a href="#network">Network</a>
-      <a href="#packages">Packages</a>
-      <a href="#process">Process</a>
-      <a href="#start">Start</a>
-      <a href="#client-desk">Client Desk</a>
-      <a href="#admin">Admin</a><a href="#final-cta">Final</a>
-      <a class="nav-cta" href="#packages">Choose a Campaign</a>
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      MENU
+    </button>
+
+    <div class="links" id="navLinks">
+      <a href="#home">HOME</a>
+      <a href="#services">SERVICES</a>
+      <a href="#network">NETWORK</a>
+      <a href="#packages">PACKAGES</a>
+      <a href="#process">PROCESS</a>
+      <a href="#contact">CONTACT</a>
+      <a href="#private-desk">CLIENT DESK</a>
+      <a href="#admin">ADMIN</a>
+      <a href="#contact" class="nav-cta">START CAMPAIGN</a>
     </div>
+
   </div>
 </nav>
 
 <!-- ================= HERO ================= -->
-<header class="hero" id="top">
-  <div class="container hero-inner">
-    <div class="eyebrow">GABRIX NETWORK / DIGITAL CAMPAIGNS</div>
 
-    <div class="hero-logo">GABRIX<span>Â®</span></div>
+<main id="home">
+
+<section class="hero">
+
+  <div class="container hero-inner">
+
+    <div class="eyebrow">
+      GABRIX NETWORK
+    </div>
+
+    <div class="hero-logo">
+      GABRIX<span>.</span>
+    </div>
+
     <div class="hero-line"></div>
 
     <h1>
-      THE NETWORK BEHIND<br>
-      <span class="gold">THE NEXT BIG THING.</span>
+      THE NETWORK
+      <span class="title-accent">BEHIND THE NEXT BIG THING.</span>
     </h1>
 
     <p class="hero-copy">
-      Built for artists, creators and brands ready to move further.
-      Strategic digital promotion, YouTube growth and campaign support
-      through one connected network.
+      Digital promotion, YouTube growth, music promotion,
+      creator campaigns and strategic audience development.
     </p>
 
     <div class="hero-services">
-      YouTube Growth &nbsp;â€¢&nbsp; Music Promotion &nbsp;â€¢&nbsp; Digital Campaigns
+      YOUTUBE • MUSIC • CREATORS • DIGITAL CAMPAIGNS
     </div>
 
     <div class="hero-buttons">
-      <a class="btn btn-primary" href="#packages">EXPLORE CAMPAIGNS</a>
-      <a class="btn" href="#network">DISCOVER GABRIX</a>
+      <a href="#packages" class="btn btn-primary">
+        VIEW CAMPAIGNS
+      </a>
+
+      <a href="#contact" class="btn">
+        START A CAMPAIGN
+      </a>
     </div>
 
     <div class="trust">
-      CREATORS &nbsp;â€¢&nbsp; ARTISTS &nbsp;â€¢&nbsp; BRANDS &nbsp;â€¢&nbsp; DIGITAL PROJECTS
+      STRATEGY • NETWORK • EXECUTION • REPORTING
     </div>
-  </div>
-</header>
 
-<!-- ================= 01 SERVICES ================= -->
+  </div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
 <section id="services">
+
   <div class="container">
-    <div class="section-label">01 / Services</div>
-    <h2>BUILT TO<br>MOVE.</h2>
+
+    <div class="section-label">
+      WHAT WE DO
+    </div>
+
+    <h2>
+      BUILT FOR
+      <span class="title-accent">ATTENTION.</span>
+    </h2>
 
     <p class="lead">
-      GABRIX turns promotion into a structured campaign â€” giving projects
-      a clear direction, stronger presentation and coordinated digital support.
+      GABRIX NETWORK connects campaigns with digital audiences
+      through structured promotion, creator activity and campaign
+      coordination.
     </p>
 
     <div class="services">
+
       <article class="service">
         <div class="number">01</div>
-        <h3>Music Promotion</h3>
-        <p>Campaign support for releases, music videos and independent artists seeking wider discovery.</p>
+        <h3>YouTube Growth</h3>
+        <p>
+          Campaign support designed around visibility,
+          audience discovery and measurable channel activity.
+        </p>
       </article>
 
       <article class="service">
         <div class="number">02</div>
-        <h3>YouTube Growth</h3>
-        <p>Campaigns focused on channel visibility, content discovery and audience development.</p>
+        <h3>Music Promotion</h3>
+        <p>
+          Structured digital promotion for artists, releases,
+          songs and music campaigns.
+        </p>
       </article>
 
       <article class="service">
         <div class="number">03</div>
-        <h3>Digital Campaigns</h3>
-        <p>Structured promotion for creators, launches, brands and digital projects.</p>
+        <h3>Creator Campaigns</h3>
+        <p>
+          Coordinate creator-focused campaigns and connect
+          projects with relevant digital audiences.
+        </p>
       </article>
 
       <article class="service">
         <div class="number">04</div>
-        <h3>Audience Engagement</h3>
-        <p>Campaign support around subscribers, likes, comments and content interaction.</p>
+        <h3>Digital Promotion</h3>
+        <p>
+          Campaign execution across digital channels with
+          clear objectives and structured reporting.
+        </p>
       </article>
 
       <article class="service">
         <div class="number">05</div>
-        <h3>Watch-Time Strategy</h3>
-        <p>Promotion planning designed to encourage content discovery and viewing.</p>
+        <h3>Campaign Strategy</h3>
+        <p>
+          Plan campaign targets, packages, workflow and
+          progress milestones before execution.
+        </p>
       </article>
 
       <article class="service">
         <div class="number">06</div>
-        <h3>Campaign Support</h3>
-        <p>Clear communication, pacing and progress tracking throughout an agreed campaign.</p>
+        <h3>Campaign Reporting</h3>
+        <p>
+          Keep clients updated through campaign progress,
+          workflow updates and private reporting.
+        </p>
       </article>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- ================= 02 NETWORK ================= -->
+<!-- ================= NETWORK ================= -->
+
 <section id="network">
+
   <div class="container split">
+
     <div>
-      <div class="section-label">02 / The Movement</div>
-      <h2>THE GABRIX<br>NETWORK.</h2>
+
+      <div class="section-label">
+        THE NETWORK
+      </div>
+
+      <h2>
+        MORE THAN
+        <span class="title-accent">PROMOTION.</span>
+      </h2>
 
       <p class="lead">
-        A growing digital network built around promotion, creators, music and opportunity.
-        One vision connects different voices, audiences and projects.
+        GABRIX NETWORK is built around coordinated digital
+        campaigns, audience reach and structured execution.
       </p>
 
       <div class="network-box">
-        <strong>THE NETWORK BEHIND THE NEXT BIG THING.</strong>
-        <span>GABRIX NETWORK</span>
+        <strong>
+          The network behind the next big thing.
+        </strong>
+
+        <span>
+          STRATEGY • PEOPLE • DIGITAL • RESULTS
+        </span>
       </div>
+
     </div>
 
-    <div class="quote">
-      More than promotion.<br><br>
-      <b>A network built to move ideas, music and talent further.</b>
+    <div>
+
+      <div class="quote">
+        We don't just
+        <b>push content.</b>
+        We build campaigns
+        around attention.
+      </div>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- ================= 03 PACKAGES ================= -->
+<!-- ================= PACKAGES ================= -->
+
 <section id="packages">
+
   <div class="container">
+
     <div class="packages-head">
+
       <div>
-        <div class="section-label">03 / Campaign Packages</div>
-        <h2>CHOOSE<br>YOUR LEVEL.</h2>
+
+        <div class="section-label">
+          CAMPAIGNS
+        </div>
+
+        <h2>
+          CHOOSE YOUR
+          <span class="title-accent">LEVEL.</span>
+        </h2>
+
       </div>
 
       <p class="lead">
-        Four campaign levels. Select your direction and connect with GABRIX directly.
+        Select a campaign package and continue to the campaign
+        request form.
       </p>
+
     </div>
 
     <div class="packages">
 
-      <article class="card">
-        <div class="icon">âš¡</div>
-        <h3>THE SPARK</h3>
-        <div class="tier">Starter Campaign</div>
-        <div class="price">KSh 899</div>
+      <article class="card" data-package="STARTER">
+
+        <div class="icon">◈</div>
+
+        <h3>STARTER</h3>
+
+        <div class="tier">
+          ENTRY CAMPAIGN
+        </div>
+
+        <div class="price">
+          KSh 2,500
+        </div>
 
         <ul class="features">
-          <li><span>Subscribers</span><b>40</b></li>
-          <li><span>Likes</span><b>50</b></li>
-          <li><span>Comments</span><b>39</b></li>
-          <li><span>Watch-time target</span><b>18 hrs</b></li>
+          <li>
+            <span>Campaign Duration</span>
+            <b>7 Days</b>
+          </li>
+
+          <li>
+            <span>YouTube Promotion</span>
+            <b>Included</b>
+          </li>
+
+          <li>
+            <span>Campaign Updates</span>
+            <b>Basic</b>
+          </li>
+
+          <li>
+            <span>Private Desk</span>
+            <b>Yes</b>
+          </li>
         </ul>
 
-        <p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p>
-        
+        <p class="card-note">
+          Designed for smaller campaigns and testing.
+        </p>
+
+        <a href="#contact" class="card-btn package-select">
+          SELECT PACKAGE
+        </a>
+
       </article>
 
-      <article class="card popular">
-        <div class="badge">MOST POPULAR</div>
-        <div class="icon">ðŸš€</div>
-        <h3>THE RISE</h3>
-        <div class="tier">Growth Campaign</div>
-        <div class="price">KSh 1,500</div>
+      <article class="card popular" data-package="GROWTH">
+
+        <div class="badge">
+          MOST POPULAR
+        </div>
+
+        <div class="icon">✦</div>
+
+        <h3>GROWTH</h3>
+
+        <div class="tier">
+          GROWTH CAMPAIGN
+        </div>
+
+        <div class="price">
+          KSh 5,000
+        </div>
 
         <ul class="features">
-          <li><span>Subscribers</span><b>70</b></li>
-          <li><span>Likes</span><b>70</b></li>
-          <li><span>Comments</span><b>50</b></li>
-          <li><span>Watch-time target</span><b>25 hrs</b></li>
+          <li>
+            <span>Campaign Duration</span>
+            <b>14 Days</b>
+          </li>
+
+          <li>
+            <span>YouTube Promotion</span>
+            <b>Included</b>
+          </li>
+
+          <li>
+            <span>Campaign Updates</span>
+            <b>Weekly</b>
+          </li>
+
+          <li>
+            <span>Private Desk</span>
+            <b>Yes</b>
+          </li>
         </ul>
 
-        <p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p>
-        
+        <p class="card-note">
+          Built for creators and projects looking for stronger reach.
+        </p>
+
+        <a href="#contact" class="card-btn package-select">
+          SELECT PACKAGE
+        </a>
+
       </article>
 
-      <article class="card">
-        <div class="icon">ðŸ”¥</div>
-        <h3>THE MOVEMENT</h3>
-        <div class="tier">Professional Campaign</div>
-        <div class="price">KSh 2,500</div>
+      <article class="card" data-package="PRO">
+
+        <div class="icon">◆</div>
+
+        <h3>PRO</h3>
+
+        <div class="tier">
+          ADVANCED CAMPAIGN
+        </div>
+
+        <div class="price">
+          KSh 10,000
+        </div>
 
         <ul class="features">
-          <li><span>Subscribers</span><b>150</b></li>
-          <li><span>Likes</span><b>120</b></li>
-          <li><span>Comments</span><b>100</b></li>
-          <li><span>Watch-time target</span><b>40 hrs</b></li>
+          <li>
+            <span>Campaign Duration</span>
+            <b>21 Days</b>
+          </li>
+
+          <li>
+            <span>Digital Promotion</span>
+            <b>Included</b>
+          </li>
+
+          <li>
+            <span>Campaign Updates</span>
+            <b>Priority</b>
+          </li>
+
+          <li>
+            <span>Private Desk</span>
+            <b>Yes</b>
+          </li>
         </ul>
 
-        <p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p>
-        
+        <p class="card-note">
+          For projects that require a larger campaign structure.
+        </p>
+
+        <a href="#contact" class="card-btn package-select">
+          SELECT PACKAGE
+        </a>
+
       </article>
 
-      <article class="card">
-        <div class="icon">ðŸ‘‘</div>
-        <h3>THE NEXT BIG THING</h3>
-        <div class="tier">Premium Campaign</div>
-        <div class="price">KSh 5,000</div>
+      <article class="card" data-package="ELITE">
+
+        <div class="icon">♛</div>
+
+        <h3>ELITE</h3>
+
+        <div class="tier">
+          CUSTOM CAMPAIGN
+        </div>
+
+        <div class="price">
+          CUSTOM
+        </div>
 
         <ul class="features">
-          <li><span>Subscribers</span><b>250</b></li>
-          <li><span>Likes</span><b>300</b></li>
-          <li><span>Comments</span><b>150</b></li>
-          <li><span>Watch-time target</span><b>70 hrs</b></li>
+          <li>
+            <span>Campaign Duration</span>
+            <b>Custom</b>
+          </li>
+
+          <li>
+            <span>Strategy</span>
+            <b>Custom</b>
+          </li>
+
+          <li>
+            <span>Reporting</span>
+            <b>Priority</b>
+          </li>
+
+          <li>
+            <span>Private Desk</span>
+            <b>Yes</b>
+          </li>
         </ul>
 
-        <p class="card-note">Campaign figures are targets/estimates and may vary by platform.</p>
-        
+        <p class="card-note">
+          Designed around individual campaign requirements.
+        </p>
+
+        <a href="#contact" class="card-btn package-select">
+          REQUEST PACKAGE
+        </a>
+
       </article>
 
     </div>
 
     <p class="disclaimer">
-      Campaign figures are promotional targets/estimates, not guaranteed platform outcomes.
-      Audience response and platform policies can affect final results.
+      Campaign performance varies depending on content, audience,
+      platform conditions and campaign objectives.
     </p>
+
   </div>
+
 </section>
 
-<!-- ================= 04 PROCESS ================= -->
+<!-- ================= PROCESS ================= -->
+
 <section id="process">
+
   <div class="container">
-    <div class="section-label">04 / How It Works</div>
-    <h2>FROM IDEA<br>TO REACH.</h2>
+
+    <div class="section-label">
+      HOW IT WORKS
+    </div>
+
+    <h2>
+      SIMPLE.
+      <span class="title-accent">STRUCTURED.</span>
+    </h2>
 
     <div class="process">
+
       <article class="step">
         <strong>01</strong>
-        <h3>Choose</h3>
-        <p>Select the campaign level that fits your project.</p>
+        <h3>Submit</h3>
+        <p>
+          Tell GABRIX about your project and select a campaign.
+        </p>
       </article>
 
       <article class="step">
         <strong>02</strong>
-        <h3>Chat</h3>
-        <p>One tap opens WhatsApp directly with GABRIX NETWORK.</p>
+        <h3>Plan</h3>
+        <p>
+          Campaign requirements and targets are reviewed.
+        </p>
       </article>
 
       <article class="step">
         <strong>03</strong>
-        <h3>Plan</h3>
-        <p>Share your project name and campaign goals.</p>
+        <h3>Execute</h3>
+        <p>
+          The campaign is coordinated according to the agreed
+          campaign structure.
+        </p>
       </article>
 
       <article class="step">
         <strong>04</strong>
-        <h3>Activate</h3>
-        <p>Your agreed campaign is coordinated through the network.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 05 WHY GABRIX ================= -->
-<section id="why-gabrix" class="why-gabrix">
-  <div class="container">
-    <div class="section-label">05 / Why GABRIX</div>
-    <div class="why-head">
-      <div>
-        <h2>BUILT FOR<br><span class="title-accent">MOVEMENT.</span></h2>
-      </div>
-      <p class="lead">
-        One clear path from choosing a campaign to getting it moving â€” without scattering your next step across the website.
-      </p>
-    </div>
-    <div class="why-grid">
-      <article class="why-card"><span>01</span><h3>ONE CLEAR START</h3><p>Choose your campaign, give us the project details and move straight into the campaign desk.</p></article>
-      <article class="why-card"><span>02</span><h3>DIRECT COMMUNICATION</h3><p>WhatsApp lives where it belongs: in the dedicated Start Your Campaign section, ready when you're ready.</p></article>
-      <article class="why-card"><span>03</span><h3>PRIVATE FOLLOW-THROUGH</h3><p>Once a campaign is active, clients can use the private desk for workflow, reports and status updates.</p></article>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 06 START CAMPAIGN ================= -->
-<section id="start">
-  <div class="container start">
-
-    <div>
-      <div class="start-badge">06 / START YOUR CAMPAIGN</div>
-
-      <h2 class="start-title">
-        LET'S<br>
-        <span class="title-accent">MOVE IT.</span>
-      </h2>
-
-      <p class="lead">
-        No complicated URLs. Give us your YouTube channel, artist or project name
-        and tell us what you want to achieve.
-      </p>
-
-      <a class="direct" href="https://wa.me/254113630612?text=Hello%20GABRIX%20NETWORK%20%F0%9F%91%8B%F0%9F%8F%BD%20I%27d%20like%20to%20discuss%20a%20campaign.">
-        ðŸ’¬ CHAT DIRECTLY ON WHATSAPP
-      </a>
-    </div>
-
-    <div class="formbox">
-      <div class="formbox-head">
-        <h3>Start a GABRIX Campaign</h3>
-        <p>Send your details and continue directly to WhatsApp.</p>
-      </div>
-
-      <form id="campaignForm">
-        <input id="name" required placeholder="Your name">
-        <input id="project" required placeholder="YouTube / Project Name">
-
-        <select id="package" required>
-          <option value="">Choose a package</option>
-          <option>THE SPARK â€” KSh 899</option>
-          <option>THE RISE â€” KSh 1,500</option>
-          <option>THE MOVEMENT â€” KSh 2,500</option>
-          <option>THE NEXT BIG THING â€” KSh 5,000</option>
-        </select>
-
-        <textarea id="details" placeholder="Tell us briefly about your campaign"></textarea>
-
-        <button class="form-submit" type="submit">
-          ðŸ’¬ CHAT WITH GABRIX NETWORK
-        </button>
-
-        <p class="help">Enter the name only â€” no https:// or www. required.</p>
-      </form>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= PRIVATE CLIENT DESK ================= -->
-
-<section id="gabrix-payment-desk" class="section payment-desk">
-  <div class="container">
-
-  <div class="section-kicker payment-kicker">PAYMENT DESK</div>
-  <h2>GABRIX <span>PAYMENT DASHBOARD</span></h2>
-  <p class="section-subtitle">Make your M-Pesa payment, then submit your name and amount. Your payment status will appear right here.</p>
-
-  <div class="payment-layout payment-layout-single">
-    <div class="payment-card payment-main">
-      <div class="payment-badge">M-PESA PAYMENT</div>
-      <h3>Pay via M-Pesa</h3>
-
-      <p class="payment-number-label">GABRIX M-PESA NUMBER</p>
-      <div class="mpesa-number">0702880452</div>
-      <button class="copy-mpesa-btn" type="button" onclick="copyGabrixMpesa()" aria-label="Copy GABRIX M-Pesa number">
-        <span class="copy-icon">â§‰</span> COPY NUMBER
-      </button>
-      <span id="copyMpesaMessage" class="copy-mpesa-message" aria-live="polite"></span>
-<div class="copy-help">Tap <strong>COPY NUMBER</strong>. If your browser blocks automatic copying, the number will be selected so you can use your phoneâ€™s <strong>Copy</strong> menu.</div>
-
-      <p class="payment-instruction">
-        Send your campaign payment to the number above. After paying, enter only your name and the amount you paid below.
-      </p>
-
-      <div class="payment-fields">
-        <label>Campaign / Client Name
-          <input id="paymentClient" type="text" placeholder="Enter your name">
-        </label>
-        <label>Amount Paid (KSh)
-          <input id="paymentAmount" type="number" min="1" placeholder="e.g. 15000">
-        </label>
-      </div>
-
-      <button class="payment-submit" type="button" onclick="submitGabrixPayment()">I HAVE PAID â€” SHOW PAYMENT STATUS â†’</button>
-      <p id="paymentMessage" class="payment-message" aria-live="polite"></p>
-    </div>
-
-    <div id="paymentStatusPanel" class="payment-card payment-summary payment-status-hidden" aria-hidden="true">
-      <div class="payment-badge">PAYMENT STATUS</div>
-
-      <div class="status-row">
-        <span>Status</span>
-        <strong id="paymentStatus">PENDING VERIFICATION</strong>
-      </div>
-
-      <div class="status-row">
-        <span>Method</span>
-        <strong>M-Pesa</strong>
-      </div>
-
-      <div class="status-row">
-        <span>Destination</span>
-        <strong>0702880452</strong>
-      </div>
-
-      <div class="status-row">
-        <span>Amount</span>
-        <strong id="paymentStatusAmount">Not submitted</strong>
-      </div>
-
-      <div class="payment-note">
-        <strong>Important:</strong> Your payment is not marked as confirmed until GABRIX verifies the transaction.
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-
-<section id="client-desk" class="client-desk">
-  <div class="container">
-
-    <div class="desk-head">
-      <div>
-        <div class="section-label">07 / PRIVATE CLIENTS</div>
-        <h2>PRIVATE CLIENTS<br><span class="gold">DESK.</span></h2>
-
-        <p class="lead">
-          Enter your private 4-digit client code to open your campaign workspace,
-          workflow and reports.
+        <h3>Report</h3>
+        <p>
+          Progress and campaign updates are posted to the
+          client's private desk.
         </p>
-      </div>
+      </article>
 
-      <div class="desk-lock">ðŸ”</div>
     </div>
 
-    <div class="private-arena">
+  </div>
 
-      <!-- CLIENT LOGIN -->
-      <div id="clientLogin" class="desk-login standalone-login">
-        <div class="desk-tag">CLIENT ACCESS / 4 DIGIT CODE</div>
-        <h3>PRIVATE CLIENTS DESK</h3>
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="section-label">
+      START A CAMPAIGN
+    </div>
+
+    <h2>
+      LET'S BUILD
+      <span class="title-accent">ATTENTION.</span>
+    </h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-box">
+
+        <h3>
+          GABRIX NETWORK
+        </h3>
 
         <p>
-          Enter your private four-digit client code to open your campaign workspace,
-          workflow and reports.
+          Tell us about your project, campaign objective and
+          selected package. Your request will be prepared for
+          WhatsApp.
         </p>
 
-        <div class="code-boxes" id="clientCodeBoxes">
-          <input maxlength="1" inputmode="numeric" class="code-input" aria-label="Client code digit 1">
-          <input maxlength="1" inputmode="numeric" class="code-input" aria-label="Client code digit 2">
-          <input maxlength="1" inputmode="numeric" class="code-input" aria-label="Client code digit 3">
-          <input maxlength="1" inputmode="numeric" class="code-input" aria-label="Client code digit 4">
+        <a
+          class="contact-link"
+          href="https://wa.me/254113630612"
+          target="_blank"
+          rel="noopener"
+        >
+          WHATSAPP GABRIX →
+        </a>
+
+        <div class="payment-box">
+
+          <h3>
+            M-PESA
+          </h3>
+
+          <p>
+            Use the number below for payment after confirming
+            your campaign details.
+          </p>
+
+          <div class="mpesa-number">
+            0702880452
+          </div>
+
+          <div class="payment-actions">
+
+            <button
+              type="button"
+              class="btn"
+              onclick="copyGabrixMpesa()"
+            >
+              COPY M-PESA NUMBER
+            </button>
+
+          </div>
+
+          <div
+            id="copyMpesaMessage"
+            class="form-message"
+            aria-live="polite"
+          ></div>
+
         </div>
 
-        <button type="button" onclick="openClientDashboard()">
-          ENTER PRIVATE CLIENTS DESK â†’
-        </button>
-
-        <div id="clientLoginError" class="desk-error"></div>
-
-        <p class="desk-demo">
-          Demo preview code: <strong>8472</strong>.
-          Replace with secure server-side authentication before production.
-        </p>
       </div>
 
-      <!-- CLIENT DASHBOARD -->
-      <div id="clientDashboard" class="private-dashboard hidden">
+      <div class="contact-box">
 
-        <div class="dashboard-top">
+        <h3>
+          CAMPAIGN REQUEST
+        </h3>
+
+        <form
+          class="form"
+          id="campaignForm"
+        >
+
+          <div class="field">
+            <label for="name">
+              Your Name
+            </label>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label for="project">
+              YouTube / Project
+            </label>
+
+            <input
+              id="project"
+              name="project"
+              type="text"
+              placeholder="Channel, artist or project"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label for="package">
+              Package
+            </label>
+
+            <select
+              id="package"
+              name="package"
+              required
+            >
+              <option value="">Select a package</option>
+              <option value="STARTER — KSh 2,500">
+                STARTER — KSh 2,500
+              </option>
+              <option value="GROWTH — KSh 5,000">
+                GROWTH — KSh 5,000
+              </option>
+              <option value="PRO — KSh 10,000">
+                PRO — KSh 10,000
+              </option>
+              <option value="ELITE — CUSTOM">
+                ELITE — CUSTOM
+              </option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="details">
+              Campaign Details
+            </label>
+
+            <textarea
+              id="details"
+              name="details"
+              placeholder="Tell us about your campaign..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+          >
+            SEND CAMPAIGN REQUEST
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CLIENT DESK ================= -->
+
+<section
+  id="private-desk"
+  class="private-desk"
+>
+
+  <div class="container">
+
+    <div class="section-label">
+      PRIVATE CLIENT DESK
+    </div>
+
+    <h2>
+      TRACK YOUR
+      <span class="title-accent">CAMPAIGN.</span>
+    </h2>
+
+    <p class="lead">
+      Enter your private four-digit client code to access
+      campaign information and updates.
+    </p>
+
+    <div class="desk-shell">
+
+      <div
+        class="desk-login"
+        id="clientLogin"
+      >
+
+        <h3>
+          CLIENT LOGIN
+        </h3>
+
+        <p>
+          Enter the four-digit access code provided by
+          GABRIX NETWORK.
+        </p>
+
+        <div
+          class="code-boxes"
+          id="clientCodeBoxes"
+        >
+          <input
+            class="code-input"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Client code digit 1"
+          >
+
+          <input
+            class="code-input"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Client code digit 2"
+          >
+
+          <input
+            class="code-input"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Client code digit 3"
+          >
+
+          <input
+            class="code-input"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Client code digit 4"
+          >
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="openClientDashboard()"
+        >
+          OPEN CLIENT DESK
+        </button>
+
+        <div
+          id="clientLoginError"
+          class="login-error"
+          aria-live="polite"
+        ></div>
+
+      </div>
+
+      <div
+        class="dashboard hidden"
+        id="clientDashboard"
+      >
+
+        <div class="dashboard-head">
+
           <div>
-            <div class="desk-tag">PRIVATE CLIENT / OVERVIEW</div>
-            <h3 id="cProject">Client Campaign</h3>
-            <div class="campaign-id" id="cCampaignId">CAMPAIGN â€”</div>
+            <div class="desk-tag">
+              PRIVATE CAMPAIGN DESK
+            </div>
+
+            <h3 id="cProject">
+              Campaign
+            </h3>
+
+            <small id="cCampaignId">
+              CAMPAIGN
+            </small>
           </div>
 
-          <div><span class="live" id="cStatus">ACTIVE</span></div>
+          <button
+            type="button"
+            class="close-btn"
+            onclick="closePrivateDesk()"
+          >
+            LOG OUT
+          </button>
+
         </div>
 
-        <div class="dashboard-nav">
-          <button class="dash-tab active" onclick="clientPage('overview')">OVERVIEW</button>
-          <button class="dash-tab" onclick="clientPage('workflow')">WORK FLOW</button>
-          <button class="dash-tab" onclick="clientPage('reports')">REPORTS</button>
-          <button class="dash-tab" onclick="clientPage('status')">STATUS</button>
+        <div class="dash-tabs">
+
+          <button
+            type="button"
+            class="dash-tab active"
+            onclick="clientPage('overview')"
+          >
+            OVERVIEW
+          </button>
+
+          <button
+            type="button"
+            class="dash-tab"
+            onclick="clientPage('workflow')"
+          >
+            WORKFLOW
+          </button>
+
+          <button
+            type="button"
+            class="dash-tab"
+            onclick="clientPage('reports')"
+          >
+            REPORTS
+          </button>
+
+          <button
+            type="button"
+            class="dash-tab"
+            onclick="clientPage('status')"
+          >
+            STATUS
+          </button>
+
         </div>
 
-        <div id="clientOverview" class="dash-page">
-          <div class="client-welcome">
-            Welcome to your private GABRIX campaign space.
-          </div>
+        <div id="clientOverview">
 
           <div class="client-stats">
-            <div class="client-stat">
-              <small>Subscribers</small>
-              <strong id="cSubs">â€”</strong>
+
+            <div class="stat">
+              <span>Subscribers</span>
+              <strong id="cSubs">0 / 0</strong>
             </div>
-            <div class="client-stat">
-              <small>Likes</small>
-              <strong id="cLikes">â€”</strong>
+
+            <div class="stat">
+              <span>Likes</span>
+              <strong id="cLikes">0 / 0</strong>
             </div>
-            <div class="client-stat">
-              <small>Comments</small>
-              <strong id="cComments">â€”</strong>
+
+            <div class="stat">
+              <span>Comments</span>
+              <strong id="cComments">0 / 0</strong>
             </div>
-            <div class="client-stat">
-              <small>Watch Time</small>
-              <strong id="cWatch">â€”</strong>
+
+            <div class="stat">
+              <span>Watch Hours</span>
+              <strong id="cWatch">0 / 0 hrs</strong>
             </div>
+
           </div>
 
           <div class="progress-wrap">
-            <div class="progress-line">
-              <span>CAMPAIGN PROGRESS</span>
+
+            <div class="progress-meta">
+              <span>Campaign Progress</span>
               <strong id="cPercent">0%</strong>
             </div>
-            <div class="progress-bar">
-              <div class="progress-fill" id="cFill"></div>
+
+            <div class="progress">
+              <div
+                class="progress-fill"
+                id="cFill"
+              ></div>
             </div>
+
           </div>
 
-          <div class="client-meta">
-            <div>
-              <small>CLIENT</small>
-              <strong id="cClient">â€”</strong>
-            </div>
-            <div>
-              <small>PACKAGE</small>
-              <strong id="cPackage">â€”</strong>
-            </div>
+          <div class="status-card">
+
+            <strong id="cStatusBig">
+              ACTIVE
+            </strong>
+
+            <p id="cStatusText">
+              Your campaign is currently being coordinated
+              by GABRIX NETWORK.
+            </p>
+
           </div>
+
+          <div class="network-box">
+
+            <strong id="cClient">
+              Client
+            </strong>
+
+            <span id="cPackage">
+              Campaign Package
+            </span>
+
+          </div>
+
         </div>
 
-        <div id="clientWorkflow" class="dash-page hidden">
-          <div class="page-title">CAMPAIGN WORK FLOW</div>
-          <div id="cWorkflow" class="workflow-list"></div>
+        <div
+          id="clientWorkflow"
+          class="hidden"
+        >
+
+          <div
+            id="cWorkflow"
+            class="workflow"
+          ></div>
+
         </div>
 
-        <div id="clientReports" class="dash-page hidden">
-          <div class="page-title">WORK REPORTS</div>
+        <div
+          id="clientReports"
+          class="hidden"
+        >
+
           <div id="cReports"></div>
+
         </div>
 
-        <div id="clientStatus" class="dash-page hidden">
-          <div class="page-title">CAMPAIGN STATUS</div>
-          <div class="status-big" id="cStatusBig">ACTIVE</div>
-          <p class="muted" id="cStatusText">Your campaign is currently active.</p>
+        <div
+          id="clientStatus"
+          class="hidden"
+        >
 
-          <div class="status-timeline">
-            <div><b>01</b><span>Campaign created</span></div>
-            <div><b>02</b><span>Campaign activated</span></div>
-            <div><b>03</b><span>Work in progress</span></div>
-            <div><b>04</b><span>Campaign completion</span></div>
+          <div class="status-card">
+
+            <strong id="cStatus">
+              ACTIVE
+            </strong>
+
+            <p>
+              Campaign status is updated by GABRIX NETWORK
+              through the administration desk.
+            </p>
+
           </div>
+
         </div>
 
-        <button type="button" class="desk-logout" onclick="closePrivateDesk()">
-          CLOSE PRIVATE DESK
-        </button>
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- ================= ADMIN DASHBOARD ================= -->
+<!-- ================= ADMIN ================= -->
+
 <section id="admin">
+
   <div class="container">
 
-    <div class="dashboard-divider">
-      <span>GABRIX NETWORK / AUTHORISED ACCESS</span>
+    <div class="section-label">
+      ADMINISTRATION
     </div>
 
-    <div class="admin-section-title">
-      <div class="section-label">08 / GABRIX ADMINISTRATION</div>
-      <h2>GABRIX ADMIN<br><span class="gold">DASHBOARD.</span></h2>
+    <h2>
+      GABRIX
+      <span class="title-accent">CONTROL.</span>
+    </h2>
 
-      <p>
-        Private management headquarters for authorised GABRIX administration,
-        client access codes, campaign workflow and reports.
-      </p>
-    </div>
+    <p class="lead">
+      Private campaign administration area.
+    </p>
 
-    <div class="private-arena admin-arena">
+    <div class="admin-shell">
 
-      <!-- ADMIN LOGIN -->
-      <div id="adminLogin" class="desk-login standalone-login">
-        <div class="desk-tag">ADMIN ACCESS / 4 DIGIT SECRET</div>
-        <h3>GABRIX ADMIN DASHBOARD</h3>
+      <div
+        class="desk-login"
+        id="adminLogin"
+      >
+
+        <h3>
+          ADMIN LOGIN
+        </h3>
 
         <p>
-          This arena is for authorised GABRIX administration only.
-          Enter your four-digit secret code.
+          Enter the administrator four-digit code.
         </p>
 
-        <div class="code-boxes" id="adminCodeBoxes">
-          <input maxlength="1" inputmode="numeric" class="code-input" aria-label="Admin code digit 1">
-          <input maxlength="1" inputmode="numeric" class="code-input" aria-label="Admin code digit 2">
-          <input maxlength="1" inputmode="numeric" class="code-input" aria-label="Admin code digit 3">
-          <input maxlength="1" inputmode="numeric" class="code-input" aria-label="Admin code digit 4">
+        <div
+          class="code-boxes"
+          id="adminCodeBoxes"
+        >
+
+          <input
+            class="code-input"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Admin code digit 1"
+          >
+
+          <input
+            class="code-input"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Admin code digit 2"
+          >
+
+          <input
+            class="code-input"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Admin code digit 3"
+          >
+
+          <input
+            class="code-input"
+            type="text"
+            inputmode="numeric"
+            maxlength="1"
+            aria-label="Admin code digit 4"
+          >
+
         </div>
 
-        <button type="button" onclick="openAdminDashboard()">
-          OPEN GABRIX ADMIN DASHBOARD â†’
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="openAdminDashboard()"
+        >
+          OPEN ADMIN
         </button>
 
-        <div id="adminLoginError" class="desk-error"></div>
+        <div
+          id="adminLoginError"
+          class="login-error"
+          aria-live="polite"
+        ></div>
 
-        <p class="desk-demo">
-          Demo admin code: <strong>1937</strong>.
-          Replace with server-side authentication before production use.
-        </p>
       </div>
 
-      <!-- ADMIN DASHBOARD -->
-      <div id="adminDashboard" class="private-dashboard hidden">
+      <div
+        class="dashboard hidden"
+        id="adminDashboard"
+      >
 
-        <div class="dashboard-top">
+        <div class="dashboard-head">
+
           <div>
-            <div class="desk-tag">GABRIX / AUTHORISED ADMIN</div>
-            <h3>GABRIX ADMIN DASHBOARD</h3>
-            <div class="campaign-id">PRIVATE MANAGEMENT ARENA</div>
+
+            <div class="desk-tag">
+              GABRIX ADMINISTRATION
+            </div>
+
+            <h3>
+              CAMPAIGN CONTROL
+            </h3>
+
           </div>
-          <div><span class="live">ADMIN ONLY</span></div>
+
+          <button
+            type="button"
+            class="close-btn"
+            onclick="closeAdminDashboard()"
+          >
+            LOG OUT
+          </button>
+
         </div>
 
-        <div class="dashboard-nav">
-          <button class="admin-tab active" onclick="adminPage('home')">DASHBOARD</button>
-          <button class="admin-tab" onclick="adminPage('create')">NEW CLIENT</button>
-          <button class="admin-tab" onclick="adminPage('clients')">CLIENTS</button>
-          <button class="admin-tab" onclick="adminPage('update')">UPDATE WORK</button>
-          <button class="admin-tab" onclick="adminPage('reports')">REPORTS</button>
+        <div class="admin-tabs">
+
+          <button
+            type="button"
+            class="admin-tab active"
+            onclick="adminPage('home')"
+          >
+            HOME
+          </button>
+
+          <button
+            type="button"
+            class="admin-tab"
+            onclick="adminPage('create')"
+          >
+            CREATE
+          </button>
+
+          <button
+            type="button"
+            class="admin-tab"
+            onclick="adminPage('clients')"
+          >
+            CLIENTS
+          </button>
+
+          <button
+            type="button"
+            class="admin-tab"
+            onclick="adminPage('update')"
+          >
+            UPDATE
+          </button>
+
+          <button
+            type="button"
+            class="admin-tab"
+            onclick="adminPage('reports')"
+          >
+            REPORTS
+          </button>
+
         </div>
 
-        <div id="adminHome" class="dash-page">
+        <!-- ADMIN HOME -->
+
+        <div id="adminHome">
+
           <div class="admin-stats">
-            <div class="client-stat"><small>Total Clients</small><strong id="aTotal">1</strong></div>
-            <div class="client-stat"><small>Active Campaigns</small><strong id="aActive">1</strong></div>
-            <div class="client-stat"><small>Completed</small><strong id="aCompleted">0</strong></div>
-            <div class="client-stat"><small>Updates Posted</small><strong id="aReports">2</strong></div>
+
+            <div class="stat">
+              <span>Total Clients</span>
+              <strong id="aTotal">0</strong>
+            </div>
+
+            <div class="stat">
+              <span>Active</span>
+              <strong id="aActive">0</strong>
+            </div>
+
+            <div class="stat">
+              <span>Completed</span>
+              <strong id="aCompleted">0</strong>
+            </div>
+
+            <div class="stat">
+              <span>Reports</span>
+              <strong id="aReports">0</strong>
+            </div>
+
           </div>
 
-          <div class="admin-message">
-            You are inside the authorised GABRIX management arena.
-            Create clients, issue their 4-digit codes and publish campaign
-            workflow updates from here.
-          </div>
         </div>
 
-        <div id="adminCreate" class="dash-page hidden">
-          <div class="page-title">CREATE NEW CLIENT</div>
+        <!-- CREATE CLIENT -->
 
-          <div class="admin-form-grid">
-            <label>
-              Client Name
-              <input id="newClient" placeholder="Client name">
-            </label>
+        <div
+          id="adminCreate"
+          class="hidden"
+        >
 
-            <label>
-              Project / YouTube Name
-              <input id="newProject" placeholder="Project or channel">
-            </label>
+          <div class="admin-form">
 
-            <label>
-              Package
-              <input id="newPackage" placeholder="THE RISE â€” KSh 1,500">
-            </label>
+            <div class="field">
+              <label for="newClient">
+                Client Name
+              </label>
 
-            <label>
-              Campaign ID
-              <input id="newCampaign" placeholder="GAB-001">
-            </label>
+              <input
+                id="newClient"
+                type="text"
+                placeholder="Client name"
+              >
+            </div>
 
-            <label>
-              4-Digit Client Code
-              <input id="newCode" maxlength="4" inputmode="numeric" placeholder="e.g. 4821">
-            </label>
+            <div class="field">
+              <label for="newProject">
+                Project
+              </label>
 
-            <label>
-              Subscriber Target
-              <input id="newSubs" type="number" value="70">
-            </label>
+              <input
+                id="newProject"
+                type="text"
+                placeholder="Project name"
+              >
+            </div>
 
-            <label>
-              Likes Target
-              <input id="newLikes" type="number" value="70">
-            </label>
+            <div class="field">
+              <label for="newPackage">
+                Package
+              </label>
 
-            <label>
-              Comments Target
-              <input id="newComments" type="number" value="50">
-            </label>
+              <input
+                id="newPackage"
+                type="text"
+                placeholder="Package name"
+              >
+            </div>
 
-            <label>
-              Watch-Time Target
-              <input id="newWatch" type="number" value="25">
-            </label>
+            <div class="field">
+              <label for="newCampaign">
+                Campaign ID
+              </label>
+
+              <input
+                id="newCampaign"
+                type="text"
+                placeholder="Campaign ID"
+              >
+            </div>
+
+            <div class="field">
+              <label for="newCode">
+                Client Code
+              </label>
+
+              <input
+                id="newCode"
+                type="text"
+                inputmode="numeric"
+                maxlength="4"
+                placeholder="4 digits"
+              >
+            </div>
+
+            <div class="field">
+              <label for="newSubs">
+                Subscriber Target
+              </label>
+
+              <input
+                id="newSubs"
+                type="number"
+                min="0"
+                value="0"
+              >
+            </div>
+
+            <div class="field">
+              <label for="newLikes">
+                Like Target
+              </label>
+
+              <input
+                id="newLikes"
+                type="number"
+                min="0"
+                value="0"
+              >
+            </div>
+
+            <div class="field">
+              <label for="newComments">
+                Comment Target
+              </label>
+
+              <input
+                id="newComments"
+                type="number"
+                min="0"
+                value="0"
+              >
+            </div>
+
+            <div class="field">
+              <label for="newWatch">
+                Watch Hours Target
+              </label>
+
+              <input
+                id="newWatch"
+                type="number"
+                min="0"
+                value="0"
+              >
+            </div>
+
+            <div class="full">
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="createClient()"
+              >
+                CREATE CLIENT
+              </button>
+
+            </div>
+
           </div>
 
-          <button class="form-submit" type="button" onclick="createClient()">
-            CREATE CLIENT + ISSUE CODE
-          </button>
+          <div
+            id="createClientMsg"
+            class="form-message"
+            aria-live="polite"
+          ></div>
 
-          <div id="createClientMsg" class="admin-success"></div>
         </div>
 
-        <div id="adminClients" class="dash-page hidden">
-          <div class="page-title">CLIENTS</div>
+        <!-- CLIENT LIST -->
+
+        <div
+          id="adminClients"
+          class="hidden"
+        >
+
           <div id="adminClientList"></div>
+
         </div>
 
-        <div id="adminUpdate" class="dash-page hidden">
-          <div class="page-title">UPDATE CLIENT WORK</div>
+        <!-- UPDATE CLIENT -->
 
-          <label class="admin-note">
-            Choose Client
-            <select id="updateClientSelect"></select>
-          </label>
+        <div
+          id="adminUpdate"
+          class="hidden"
+        >
 
-          <div class="admin-form-grid">
-            <label>Subscribers Done<input id="uSubs" type="number" value="0"></label>
-            <label>Likes Done<input id="uLikes" type="number" value="0"></label>
-            <label>Comments Done<input id="uComments" type="number" value="0"></label>
-            <label>Watch Hours Done<input id="uWatch" type="number" value="0"></label>
+          <div class="admin-form">
 
-            <label>
-              Status
+            <div class="field full">
+
+              <label for="updateClientSelect">
+                Client
+              </label>
+
+              <select id="updateClientSelect"></select>
+
+            </div>
+
+            <div class="field">
+              <label for="uSubs">
+                Subscribers Done
+              </label>
+
+              <input
+                id="uSubs"
+                type="number"
+                min="0"
+                value="0"
+              >
+            </div>
+
+            <div class="field">
+              <label for="uLikes">
+                Likes Done
+              </label>
+
+              <input
+                id="uLikes"
+                type="number"
+                min="0"
+                value="0"
+              >
+            </div>
+
+            <div class="field">
+              <label for="uComments">
+                Comments Done
+              </label>
+
+              <input
+                id="uComments"
+                type="number"
+                min="0"
+                value="0"
+              >
+            </div>
+
+            <div class="field">
+              <label for="uWatch">
+                Watch Hours Done
+              </label>
+
+              <input
+                id="uWatch"
+                type="number"
+                min="0"
+                value="0"
+              >
+            </div>
+
+            <div class="field">
+              <label for="uStatus">
+                Status
+              </label>
+
               <select id="uStatus">
-                <option>ACTIVE</option>
-                <option>IN PROGRESS</option>
-                <option>COMPLETED</option>
-                <option>PAUSED</option>
+                <option value="ACTIVE">ACTIVE</option>
+                <option value="IN PROGRESS">
+                  IN PROGRESS
+                </option>
+                <option value="COMPLETED">
+                  COMPLETED
+                </option>
               </select>
-            </label>
+            </div>
 
-            <label>Round / Stage<input id="uRound" placeholder="Round 01"></label>
+            <div class="field">
+              <label for="uRound">
+                Round
+              </label>
+
+              <input
+                id="uRound"
+                type="text"
+                placeholder="ROUND 01"
+              >
+            </div>
+
+            <div class="field full">
+
+              <label for="uDetails">
+                Update Details
+              </label>
+
+              <textarea
+                id="uDetails"
+                placeholder="Write campaign update..."
+              ></textarea>
+
+            </div>
+
+            <div class="full">
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="postWorkUpdate()"
+              >
+                POST UPDATE
+              </button>
+
+            </div>
+
           </div>
 
-          <textarea id="uDetails" placeholder="Describe the work completed in this update..."></textarea>
+          <div
+            id="updateMsg"
+            class="form-message"
+            aria-live="polite"
+          ></div>
 
-          <button class="form-submit" type="button" onclick="postWorkUpdate()">
-            POST WORK UPDATE
-          </button>
-
-          <div id="updateMsg" class="admin-success"></div>
         </div>
 
-        <div id="adminReports" class="dash-page hidden">
-          <div class="page-title">REPORT CENTER</div>
+        <!-- ADMIN REPORTS -->
 
-          <p class="admin-note">
-            Select a client below to review the workflow and reports that
-            their private desk will display.
-          </p>
+        <div
+          id="adminReports"
+          class="hidden"
+        >
 
           <div id="adminReportList"></div>
+
         </div>
 
-        <button type="button" class="desk-logout" onclick="closeAdminDashboard()">
-          CLOSE ADMIN DASHBOARD
-        </button>
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- ================= 09 FINAL CTA ================= -->
+</main>
 
+<!-- ================= FOOTER ================= -->
 
-<!-- ================= END ================= -->
+<footer>
 
-<footer class="container">
-  <div>Â© 2026 GABRIX NETWORKÂ®. ALL RIGHTS RESERVED.</div>
-  <div>THE NETWORK BEHIND THE NEXT BIG THING.</div>
+  <div class="container footer-inner">
+
+    <div class="footer-logo">
+      GABRIX<span>.</span>
+    </div>
+
+    <p>
+      © 2026 GABRIX NETWORK. All rights reserved.
+    </p>
+
+  </div>
+
 </footer>
 
+<!-- ================= MAIN SCRIPT ================= -->
+
 <script>
-  // Centralise package selection: package cards lead to the single campaign desk.
-  document.querySelectorAll('[data-package]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const select = document.getElementById('package');
-      if (select) { select.value = btn.dataset.package; }
-    });
-  });
+"use strict";
 
-
-/* =========================================================
-   GABRIX CLIENT + ADMIN DEMO SYSTEM
-   Production note:
-   Move authentication and client records to a secure backend
-   before using this with real client data.
-   ========================================================= */
+/* ================= CONFIG ================= */
 
 const GABRIX_API_BASE = "";
-const DEMO_ADMIN_CODE = "1937";
 
-const demoClients = {
-  "GAB-001":{
-    clientName:"Gabrix Demo Client",
-    projectName:"Gabrix Demo Channel",
-    packageName:"THE RISE â€” KSh 1,500",
-    campaignId:"GAB-001",
-    code:"8472",
-    status:"ACTIVE",
-    subsTarget:70,
-    likesTarget:70,
-    commentsTarget:50,
-    watchTarget:25,
-    subsDone:42,
-    likesDone:51,
-    commentsDone:31,
-    watchDone:18,
-    reports:[
-      {
-        date:"17 AUG 2026",
-        round:"ROUND 01",
-        status:"Completed",
-        details:"Campaign activated and initial promotion work completed."
-      },
-      {
-        date:"17 AUG 2026",
-        round:"ROUND 02",
-        status:"In Progress",
-        details:"Audience campaign is currently being coordinated. Further work will appear here."
-      }
-    ]
-  }
-};
+const DEMO_ADMIN_CODE = "2026";
 
-let currentClient = null;
-let adminUnlocked = false;
+/* ================= HELPERS ================= */
 
 function $(id){
   return document.getElementById(id);
 }
 
 function esc(value){
-  return String(value ?? "").replace(/[&<>"']/g, char => ({
-    "&":"&amp;",
-    "<":"&lt;",
-    ">":"&gt;",
-    '"':"&quot;",
-    "'":"&#039;"
-  }[char]));
+  return String(value ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 }
 
-function toggleMenu(){
-  document.querySelector(".links")?.classList.toggle("open");
-}
+/* ================= DEMO CLIENT DATA ================= */
 
-document.querySelectorAll(".links a").forEach(link=>{
-  link.addEventListener("click",()=>{
-    document.querySelector(".links")?.classList.remove("open");
+const demoClients = {
+
+  "CAM001":{
+    clientName:"Demo Client",
+    projectName:"Demo YouTube Project",
+    packageName:"GROWTH",
+    campaignId:"CAM001",
+    code:"1234",
+    status:"IN PROGRESS",
+
+    subsTarget:1000,
+    likesTarget:500,
+    commentsTarget:100,
+    watchTarget:100,
+
+    subsDone:450,
+    likesDone:210,
+    commentsDone:48,
+    watchDone:35,
+
+    reports:[
+      {
+        date:"17 AUG 2026",
+        round:"ROUND 01",
+        status:"In Progress",
+        details:"Campaign coordination is currently in progress."
+      }
+    ]
+  }
+
+};
+
+/* ================= STATE ================= */
+
+let currentClient = null;
+let adminUnlocked = false;
+
+/* ================= NAVIGATION ================= */
+
+const menuToggle = $("menuToggle");
+const navLinks = $("navLinks");
+
+if(menuToggle && navLinks){
+
+  menuToggle.addEventListener("click",function(){
+
+    const opened = navLinks.classList.toggle("open");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(opened)
+    );
+
   });
+
+  navLinks.querySelectorAll("a").forEach(link=>{
+
+    link.addEventListener("click",function(){
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded","false");
+    });
+
+  });
+
+}
+
+/* ================= PACKAGE SELECTION ================= */
+
+document.querySelectorAll(".card[data-package]").forEach(card=>{
+
+  card.addEventListener("click",function(event){
+
+    if(event.target.closest(".package-select")){
+      return;
+    }
+
+    const packageName = card.dataset.package;
+
+    const select = $("package");
+
+    if(select){
+
+      const option = [...select.options].find(
+        option =>
+          option.textContent
+            .toUpperCase()
+            .startsWith(packageName)
+      );
+
+      if(option){
+        select.value = option.value;
+      }
+
+    }
+
+    const contact = $("contact");
+
+    if(contact){
+      contact.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+    }
+
+  });
+
 });
 
-function calcProgress(client){
-  const values = [
-    (client.subsDone || 0) / (client.subsTarget || 1),
-    (client.likesDone || 0) / (client.likesTarget || 1),
-    (client.commentsDone || 0) / (client.commentsTarget || 1),
-    (client.watchDone || 0) / (client.watchTarget || 1)
-  ].map(value => Math.min(1,Math.max(0,value)));
+document.querySelectorAll(".package-select").forEach(button=>{
 
-  return Math.round(
-    values.reduce((a,b)=>a+b,0) / values.length * 100
-  );
+  button.addEventListener("click",function(){
+
+    const card = button.closest(".card");
+
+    if(!card){
+      return;
+    }
+
+    const packageName = card.dataset.package;
+    const select = $("package");
+
+    if(select){
+
+      const option = [...select.options].find(
+        option =>
+          option.textContent
+            .toUpperCase()
+            .startsWith(packageName)
+      );
+
+      if(option){
+        select.value = option.value;
+      }
+
+    }
+
+  });
+
+});
+
+/* ================= PROGRESS ================= */
+
+function calcProgress(client){
+
+  const values = [
+
+    client.subsTarget
+      ? (client.subsDone || 0) / client.subsTarget
+      : null,
+
+    client.likesTarget
+      ? (client.likesDone || 0) / client.likesTarget
+      : null,
+
+    client.commentsTarget
+      ? (client.commentsDone || 0) / client.commentsTarget
+      : null,
+
+    client.watchTarget
+      ? (client.watchDone || 0) / client.watchTarget
+      : null
+
+  ].filter(value=>value !== null);
+
+  if(!values.length){
+    return 0;
+  }
+
+  const average =
+    values.reduce(
+      (total,value)=>total + Math.min(value,1),
+      0
+    ) / values.length;
+
+  return Math.round(average * 100);
 }
 
-/* ================= CODE INPUTS ================= */
+/* ================= CODE BOXES ================= */
 
 function setupCodeBoxes(containerId){
-  const box = $(containerId);
-  if(!box) return;
 
-  const inputs = [...box.querySelectorAll(".code-input")];
+  const box = $(containerId);
+
+  if(!box){
+    return;
+  }
+
+  const inputs = [
+    ...box.querySelectorAll(".code-input")
+  ];
 
   inputs.forEach((input,index)=>{
-    input.addEventListener("input",()=>{
-      input.value = input.value.replace(/\D/g,"").slice(0,1);
 
-      if(input.value && inputs[index+1]){
-        inputs[index+1].focus();
+    input.addEventListener("input",function(){
+
+      input.value =
+        input.value
+          .replace(/\D/g,"")
+          .slice(0,1);
+
+      if(input.value && inputs[index + 1]){
+        inputs[index + 1].focus();
       }
+
     });
 
-    input.addEventListener("keydown",event=>{
-      if(event.key === "Backspace" && !input.value && inputs[index-1]){
-        inputs[index-1].focus();
+    input.addEventListener("keydown",function(event){
+
+      if(
+        event.key === "Backspace" &&
+        !input.value &&
+        inputs[index - 1]
+      ){
+        inputs[index - 1].focus();
       }
+
     });
+
   });
+
 }
 
 function getCode(containerId){
-  return [...$(containerId).querySelectorAll(".code-input")]
+
+  const container = $(containerId);
+
+  if(!container){
+    return "";
+  }
+
+  return [
+    ...container.querySelectorAll(".code-input")
+  ]
     .map(input=>input.value)
     .join("");
+
 }
 
 /* ================= CLIENT ================= */
 
 function openClientDashboard(){
+
   const code = getCode("clientCodeBoxes");
   const error = $("clientLoginError");
+
+  if(!error){
+    return;
+  }
 
   error.textContent = "";
 
   if(!/^\d{4}$/.test(code)){
-    error.textContent = "Enter all 4 digits.";
+
+    error.textContent =
+      "Enter all 4 digits.";
+
     return;
   }
 
   if(GABRIX_API_BASE){
-    fetch(GABRIX_API_BASE + "/api/client-login",{
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({accessCode:code})
-    })
+
+    fetch(
+      GABRIX_API_BASE + "/api/client-login",
+      {
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          accessCode:code
+        })
+      }
+    )
     .then(async response=>{
+
       const data = await response.json();
 
       if(!response.ok){
-        throw new Error(data.error || "Access denied.");
+        throw new Error(
+          data.error || "Access denied."
+        );
       }
 
-      sessionStorage.setItem("gabrix_client_token",data.token);
+      sessionStorage.setItem(
+        "gabrix_client_token",
+        data.token
+      );
+
+      currentClient = data.campaign;
+
       renderClient(data.campaign);
+
     })
     .catch(error=>{
-      $("clientLoginError").textContent = error.message;
+
+      $("clientLoginError").textContent =
+        error.message;
+
     });
 
     return;
   }
 
-  const found = Object.values(demoClients)
-    .find(client=>client.code === code);
+  const found =
+    Object.values(demoClients)
+      .find(client=>client.code === code);
 
   if(!found){
-    error.textContent = "Incorrect client code. Please contact GABRIX NETWORK.";
+
+    error.textContent =
+      "Incorrect client code. Please contact GABRIX NETWORK.";
+
     return;
   }
 
-  currentClient = JSON.parse(JSON.stringify(found));
+  currentClient =
+    JSON.parse(JSON.stringify(found));
+
   renderClient(currentClient);
+
 }
 
 function renderClient(client){
+
   $("clientLogin").classList.add("hidden");
   $("clientDashboard").classList.remove("hidden");
 
-  $("cProject").textContent = client.projectName;
-  $("cCampaignId").textContent = "CAMPAIGN â€” " + client.campaignId;
-  $("cStatus").textContent = client.status;
+  $("cProject").textContent =
+    client.projectName || "Campaign";
+
+  $("cCampaignId").textContent =
+    "CAMPAIGN — " +
+    (client.campaignId || "");
+
+  $("cStatus").textContent =
+    client.status || "ACTIVE";
 
   $("cSubs").textContent =
-    (client.subsDone || 0) + " / " + (client.subsTarget || 0);
+    (client.subsDone || 0) +
+    " / " +
+    (client.subsTarget || 0);
 
   $("cLikes").textContent =
-    (client.likesDone || 0) + " / " + (client.likesTarget || 0);
+    (client.likesDone || 0) +
+    " / " +
+    (client.likesTarget || 0);
 
   $("cComments").textContent =
-    (client.commentsDone || 0) + " / " + (client.commentsTarget || 0);
+    (client.commentsDone || 0) +
+    " / " +
+    (client.commentsTarget || 0);
 
   $("cWatch").textContent =
-    (client.watchDone || 0) + " / " + (client.watchTarget || 0) + " hrs";
+    (client.watchDone || 0) +
+    " / " +
+    (client.watchTarget || 0) +
+    " hrs";
 
-  const progress = calcProgress(client);
+  const progress =
+    calcProgress(client);
 
-  $("cPercent").textContent = progress + "%";
-  $("cFill").style.width = progress + "%";
+  $("cPercent").textContent =
+    progress + "%";
 
-  $("cClient").textContent = client.clientName;
-  $("cPackage").textContent = client.packageName;
+  $("cFill").style.width =
+    progress + "%";
 
-  $("cStatusBig").textContent = client.status;
+  $("cClient").textContent =
+    client.clientName || "Client";
+
+  $("cPackage").textContent =
+    client.packageName || "Campaign Package";
+
+  $("cStatusBig").textContent =
+    client.status || "ACTIVE";
 
   $("cStatusText").textContent =
     client.status === "COMPLETED"
@@ -2110,96 +3171,200 @@ function renderClient(client){
 
   renderClientWorkflow(client);
   renderClientReports(client);
+
   clientPage("overview");
 
   $("clientDashboard").scrollIntoView({
     behavior:"smooth",
     block:"start"
   });
+
 }
 
 function renderClientWorkflow(client){
+
   const box = $("cWorkflow");
 
-  if(!client.reports || !client.reports.length){
-    box.innerHTML =
-      '<div class="report"><p>No workflow updates have been posted yet.</p></div>';
+  if(!box){
     return;
   }
 
-  box.innerHTML = client.reports.map(report=>`
-    <div class="workflow-item">
-      <div class="workflow-round">${esc(report.round || "ROUND")}</div>
-      <div>
-        <strong>${esc(report.date)}</strong>
-        <p>${esc(report.details)}</p>
-      </div>
-      <div class="workflow-status">${esc(report.status)}</div>
-    </div>
-  `).join("");
+  if(
+    !client.reports ||
+    !client.reports.length
+  ){
+
+    box.innerHTML =
+      '<div class="report"><p>No workflow updates have been posted yet.</p></div>';
+
+    return;
+  }
+
+  box.innerHTML =
+    client.reports
+      .map(report=>`
+
+        <div class="workflow-item">
+
+          <div class="workflow-round">
+            ${esc(report.round || "ROUND")}
+          </div>
+
+          <div>
+
+            <strong>
+              ${esc(report.date || "")}
+            </strong>
+
+            <p>
+              ${esc(report.details || "")}
+            </p>
+
+          </div>
+
+          <div class="workflow-status">
+            ${esc(report.status || "")}
+          </div>
+
+        </div>
+
+      `)
+      .join("");
+
 }
 
 function renderClientReports(client){
+
   const box = $("cReports");
 
-  if(!client.reports || !client.reports.length){
-    box.innerHTML =
-      '<div class="report"><p>No reports have been posted yet.</p></div>';
+  if(!box){
     return;
   }
 
-  box.innerHTML = client.reports.map(report=>`
-    <div class="report">
-      <small>${esc(report.date)} â€¢ ${esc(report.status)}</small>
-      <strong>${esc(report.round || "Campaign Update")}</strong>
-      <p>${esc(report.details)}</p>
-    </div>
-  `).join("");
+  if(
+    !client.reports ||
+    !client.reports.length
+  ){
+
+    box.innerHTML =
+      '<div class="report"><p>No reports have been posted yet.</p></div>';
+
+    return;
+  }
+
+  box.innerHTML =
+    client.reports
+      .map(report=>`
+
+        <div class="report">
+
+          <small>
+            ${esc(report.date || "")}
+            •
+            ${esc(report.status || "")}
+          </small>
+
+          <strong>
+            ${esc(report.round || "Campaign Update")}
+          </strong>
+
+          <p>
+            ${esc(report.details || "")}
+          </p>
+
+        </div>
+
+      `)
+      .join("");
+
 }
 
 function clientPage(page){
-  ["overview","workflow","reports","status"].forEach(name=>{
-    $("client" + name.charAt(0).toUpperCase() + name.slice(1))
-      .classList.toggle("hidden",name !== page);
+
+  const pages = [
+    "overview",
+    "workflow",
+    "reports",
+    "status"
+  ];
+
+  pages.forEach(name=>{
+
+    const element =
+      $("client" +
+        name.charAt(0).toUpperCase() +
+        name.slice(1));
+
+    if(element){
+      element.classList.toggle(
+        "hidden",
+        name !== page
+      );
+    }
+
   });
 
-  document.querySelectorAll(".dash-tab").forEach((button,index)=>{
-    button.classList.toggle(
-      "active",
-      ["overview","workflow","reports","status"][index] === page
-    );
-  });
+  document
+    .querySelectorAll(".dash-tab")
+    .forEach((button,index)=>{
+
+      button.classList.toggle(
+        "active",
+        pages[index] === page
+      );
+
+    });
+
 }
 
 function closePrivateDesk(){
+
   currentClient = null;
 
-  $("clientDashboard").classList.add("hidden");
-  $("clientLogin").classList.remove("hidden");
-  $("clientLoginError").textContent = "";
+  $("clientDashboard")
+    .classList.add("hidden");
+
+  $("clientLogin")
+    .classList.remove("hidden");
+
+  $("clientLoginError")
+    .textContent = "";
 
   $("clientCodeBoxes")
     .querySelectorAll("input")
-    .forEach(input=>input.value="");
+    .forEach(input=>{
+      input.value = "";
+    });
+
 }
 
 /* ================= ADMIN ================= */
 
 function openAdminDashboard(){
-  const code = getCode("adminCodeBoxes");
-  const error = $("adminLoginError");
+
+  const code =
+    getCode("adminCodeBoxes");
+
+  const error =
+    $("adminLoginError");
 
   error.textContent = "";
 
   if(code !== DEMO_ADMIN_CODE){
-    error.textContent = "Incorrect administrator code.";
+
+    error.textContent =
+      "Incorrect administrator code.";
+
     return;
   }
 
   adminUnlocked = true;
 
-  $("adminLogin").classList.add("hidden");
-  $("adminDashboard").classList.remove("hidden");
+  $("adminLogin")
+    .classList.add("hidden");
+
+  $("adminDashboard")
+    .classList.remove("hidden");
 
   refreshAdmin();
 
@@ -2207,194 +3372,387 @@ function openAdminDashboard(){
     behavior:"smooth",
     block:"start"
   });
+
 }
 
 function adminPage(page){
+
   const pages = {
+
     home:"adminHome",
     create:"adminCreate",
     clients:"adminClients",
     update:"adminUpdate",
     reports:"adminReports"
+
   };
 
   Object.values(pages).forEach(id=>{
-    $(id).classList.add("hidden");
+
+    const element = $(id);
+
+    if(element){
+      element.classList.add("hidden");
+    }
+
   });
 
-  $(pages[page]).classList.remove("hidden");
-
-  document.querySelectorAll(".admin-tab").forEach((button,index)=>{
-    button.classList.toggle(
-      "active",
-      ["home","create","clients","update","reports"][index] === page
-    );
-  });
-
-  if(["clients","reports","update"].includes(page)){
-    refreshAdmin();
+  if(!pages[page]){
+    return;
   }
+
+  const selected =
+    $(pages[page]);
+
+  if(selected){
+    selected.classList.remove("hidden");
+  }
+
+  const tabNames = [
+    "home",
+    "create",
+    "clients",
+    "update",
+    "reports"
+  ];
+
+  document
+    .querySelectorAll(".admin-tab")
+    .forEach((button,index)=>{
+
+      button.classList.toggle(
+        "active",
+        tabNames[index] === page
+      );
+
+    });
+
+  if(
+    [
+      "clients",
+      "reports",
+      "update"
+    ].includes(page)
+  ){
+
+    refreshAdmin();
+
+  }
+
 }
 
 function allClients(){
+
   return Object.values(demoClients);
+
 }
 
 function refreshAdmin(){
-  const clients = allClients();
 
-  $("aTotal").textContent = clients.length;
+  const clients =
+    allClients();
+
+  $("aTotal").textContent =
+    clients.length;
 
   $("aActive").textContent =
-    clients.filter(client =>
+    clients.filter(client=>
       client.status === "ACTIVE" ||
       client.status === "IN PROGRESS"
     ).length;
 
   $("aCompleted").textContent =
-    clients.filter(client=>client.status === "COMPLETED").length;
+    clients.filter(client=>
+      client.status === "COMPLETED"
+    ).length;
 
   $("aReports").textContent =
-    clients.reduce((total,client)=>total + (client.reports?.length || 0),0);
+    clients.reduce(
+      (total,client)=>
+        total +
+        (client.reports?.length || 0),
+      0
+    );
 
-  $("adminClientList").innerHTML = clients.map(client=>`
-    <div class="admin-client">
-      <div>
-        <strong>${esc(client.clientName)}</strong>
-        <small>
-          ${esc(client.campaignId)} â€¢
-          ${esc(client.projectName)} â€¢
-          ${esc(client.status)}
-        </small>
+  $("adminClientList").innerHTML =
+    clients.map(client=>`
+
+      <div class="admin-client">
+
+        <div>
+
+          <strong>
+            ${esc(client.clientName)}
+          </strong>
+
+          <small>
+            ${esc(client.campaignId)}
+            •
+            ${esc(client.projectName)}
+            •
+            ${esc(client.status)}
+          </small>
+
+        </div>
+
+        <div class="admin-client-code">
+          CODE ${esc(client.code)}
+        </div>
+
       </div>
-      <div class="admin-client-code">
-        CODE ${esc(client.code)}
+
+    `).join("");
+
+  $("updateClientSelect").innerHTML =
+    clients.map(client=>`
+
+      <option value="${esc(client.campaignId)}">
+        ${esc(client.campaignId)}
+        —
+        ${esc(client.projectName)}
+      </option>
+
+    `).join("");
+
+  $("adminReportList").innerHTML =
+    clients.map(client=>`
+
+      <div class="report">
+
+        <strong>
+          ${esc(client.campaignId)}
+          —
+          ${esc(client.projectName)}
+        </strong>
+
+        <p>
+          ${client.reports?.length || 0}
+          report(s)
+          •
+          ${calcProgress(client)}%
+          complete
+        </p>
+
       </div>
-    </div>
-  `).join("");
 
-  $("updateClientSelect").innerHTML = clients.map(client=>`
-    <option value="${esc(client.campaignId)}">
-      ${esc(client.campaignId)} â€” ${esc(client.projectName)}
-    </option>
-  `).join("");
+    `).join("");
 
-  $("adminReportList").innerHTML = clients.map(client=>`
-    <div class="report">
-      <strong>${esc(client.campaignId)} â€” ${esc(client.projectName)}</strong>
-      <p>${client.reports?.length || 0} report(s) â€¢ ${calcProgress(client)}% complete</p>
-    </div>
-  `).join("");
 }
 
 function createClient(){
-  const name = $("newClient").value.trim();
-  const project = $("newProject").value.trim();
-  const packageName = $("newPackage").value.trim();
-  const id = $("newCampaign").value.trim();
-  const code = $("newCode").value.trim();
-  const message = $("createClientMsg");
+
+  const name =
+    $("newClient").value.trim();
+
+  const project =
+    $("newProject").value.trim();
+
+  const packageName =
+    $("newPackage").value.trim();
+
+  const id =
+    $("newCampaign").value.trim();
+
+  const code =
+    $("newCode").value.trim();
+
+  const message =
+    $("createClientMsg");
 
   message.textContent = "";
 
-  if(!name || !project || !id || !/^\d{4}$/.test(code)){
+  if(
+    !name ||
+    !project ||
+    !id ||
+    !/^\d{4}$/.test(code)
+  ){
+
     message.textContent =
       "Enter client, project, campaign ID and a valid 4-digit code.";
+
     return;
   }
 
   if(demoClients[id]){
-    message.textContent = "That Campaign ID already exists.";
+
+    message.textContent =
+      "That Campaign ID already exists.";
+
     return;
   }
 
-  if(Object.values(demoClients).some(client=>client.code === code)){
-    message.textContent = "That client code is already in use.";
+  if(
+    Object.values(demoClients)
+      .some(client=>client.code === code)
+  ){
+
+    message.textContent =
+      "That client code is already in use.";
+
     return;
   }
 
   demoClients[id] = {
+
     clientName:name,
     projectName:project,
-    packageName:packageName || "Custom Campaign",
+    packageName:
+      packageName || "Custom Campaign",
+
     campaignId:id,
-    code,
+    code:code,
+
     status:"ACTIVE",
-    subsTarget:+$("newSubs").value || 0,
-    likesTarget:+$("newLikes").value || 0,
-    commentsTarget:+$("newComments").value || 0,
-    watchTarget:+$("newWatch").value || 0,
+
+    subsTarget:
+      Number($("newSubs").value) || 0,
+
+    likesTarget:
+      Number($("newLikes").value) || 0,
+
+    commentsTarget:
+      Number($("newComments").value) || 0,
+
+    watchTarget:
+      Number($("newWatch").value) || 0,
+
     subsDone:0,
     likesDone:0,
     commentsDone:0,
     watchDone:0,
+
     reports:[]
+
   };
 
   message.textContent =
-    "Client created. Their private 4-digit code is " + code + ".";
+    "Client created. Their private 4-digit code is " +
+    code +
+    ".";
 
   refreshAdmin();
+
 }
 
 function postWorkUpdate(){
-  const id = $("updateClientSelect").value;
-  const client = demoClients[id];
-  const message = $("updateMsg");
+
+  const id =
+    $("updateClientSelect").value;
+
+  const client =
+    demoClients[id];
+
+  const message =
+    $("updateMsg");
 
   if(!client){
-    message.textContent = "Select a client.";
+
+    message.textContent =
+      "Select a client.";
+
     return;
   }
 
-  client.subsDone = +$("uSubs").value || 0;
-  client.likesDone = +$("uLikes").value || 0;
-  client.commentsDone = +$("uComments").value || 0;
-  client.watchDone = +$("uWatch").value || 0;
-  client.status = $("uStatus").value;
+  client.subsDone =
+    Number($("uSubs").value) || 0;
+
+  client.likesDone =
+    Number($("uLikes").value) || 0;
+
+  client.commentsDone =
+    Number($("uComments").value) || 0;
+
+  client.watchDone =
+    Number($("uWatch").value) || 0;
+
+  client.status =
+    $("uStatus").value;
 
   client.reports.unshift({
-    date:new Date().toLocaleDateString("en-GB",{
-      day:"2-digit",
-      month:"short",
-      year:"numeric"
-    }).toUpperCase(),
-    round:$("uRound").value.trim() || "CAMPAIGN UPDATE",
-    status:client.status === "COMPLETED" ? "Completed" : "In Progress",
-    details:$("uDetails").value.trim() ||
+
+    date:
+      new Date()
+        .toLocaleDateString(
+          "en-GB",
+          {
+            day:"2-digit",
+            month:"short",
+            year:"numeric"
+          }
+        )
+        .toUpperCase(),
+
+    round:
+      $("uRound").value.trim() ||
+      "CAMPAIGN UPDATE",
+
+    status:
+      client.status === "COMPLETED"
+        ? "Completed"
+        : "In Progress",
+
+    details:
+      $("uDetails").value.trim() ||
       "GABRIX campaign update posted."
+
   });
 
   message.textContent =
     "Work update posted to the client's private desk.";
 
   refreshAdmin();
+
 }
 
 function closeAdminDashboard(){
+
   adminUnlocked = false;
 
-  $("adminDashboard").classList.add("hidden");
-  $("adminLogin").classList.remove("hidden");
-  $("adminLoginError").textContent = "";
+  $("adminDashboard")
+    .classList.add("hidden");
+
+  $("adminLogin")
+    .classList.remove("hidden");
+
+  $("adminLoginError")
+    .textContent = "";
 
   $("adminCodeBoxes")
     .querySelectorAll("input")
-    .forEach(input=>input.value="");
+    .forEach(input=>{
+      input.value = "";
+    });
+
 }
 
 /* ================= CAMPAIGN FORM ================= */
 
-$("campaignForm").addEventListener("submit",function(event){
-  event.preventDefault();
+const campaignForm =
+  $("campaignForm");
 
-  const name = $("name").value.trim();
-  const project = $("project").value.trim();
-  const packageName = $("package").value;
-  const details = $("details").value.trim();
+if(campaignForm){
 
-  const message =
-`Hello GABRIX NETWORK ðŸ‘‹ðŸ½
+  campaignForm.addEventListener(
+    "submit",
+    function(event){
+
+      event.preventDefault();
+
+      const name =
+        $("name").value.trim();
+
+      const project =
+        $("project").value.trim();
+
+      const packageName =
+        $("package").value;
+
+      const details =
+        $("details").value.trim();
+
+      const message =
+`Hello GABRIX NETWORK 👋🏽
 
 My name is ${name}.
 YouTube / Project: ${project}
@@ -2403,33 +3761,82 @@ Package: ${packageName}
 Campaign details:
 ${details || "I would like to discuss this campaign."}`;
 
-  window.location.href =
-    "https://wa.me/254113630612?text=" +
-    encodeURIComponent(message);
-});
+      window.location.href =
+        "https://wa.me/254113630612?text=" +
+        encodeURIComponent(message);
+
+    }
+  );
+
+}
 
 /* ================= CODE PASTE SUPPORT ================= */
 
-document.querySelectorAll(".code-input").forEach(input=>{
-  input.addEventListener("paste",event=>{
-    const text =
-      (event.clipboardData || window.clipboardData)
-        .getData("text")
-        .replace(/\D/g,"")
-        .slice(0,4);
+document
+  .querySelectorAll(".code-input")
+  .forEach(input=>{
 
-    if(!text) return;
+    input.addEventListener(
+      "paste",
+      function(event){
 
-    event.preventDefault();
+        const clipboard =
+          event.clipboardData ||
+          window.clipboardData;
 
-    const parent = input.parentElement;
-    const inputs = [...parent.querySelectorAll(".code-input")];
+        if(!clipboard){
+          return;
+        }
 
-    text.split("").forEach((character,index)=>{
-      if(inputs[index]) inputs[index].value = character;
-    });
+        const text =
+          clipboard
+            .getData("text")
+            .replace(/\D/g,"")
+            .slice(0,4);
+
+        if(!text){
+          return;
+        }
+
+        event.preventDefault();
+
+        const parent =
+          input.parentElement;
+
+        const inputs =
+          [
+            ...parent.querySelectorAll(
+              ".code-input"
+            )
+          ];
+
+        text
+          .split("")
+          .forEach(
+            (character,index)=>{
+
+              if(inputs[index]){
+                inputs[index].value =
+                  character;
+              }
+
+            }
+          );
+
+        const nextIndex =
+          Math.min(
+            text.length,
+            inputs.length - 1
+          );
+
+        if(inputs[nextIndex]){
+          inputs[nextIndex].focus();
+        }
+
+      }
+    );
+
   });
-});
 
 /* ================= INITIALISE ================= */
 
@@ -2439,135 +3846,338 @@ setupCodeBoxes("adminCodeBoxes");
 /* ================= OPTIONAL PRODUCTION SESSION HOOK ================= */
 
 if(GABRIX_API_BASE){
-  const token = sessionStorage.getItem("gabrix_client_token");
+
+  const token =
+    sessionStorage.getItem(
+      "gabrix_client_token"
+    );
 
   if(token){
-    fetch(GABRIX_API_BASE + "/api/client-me",{
-      headers:{Authorization:"Bearer " + token}
-    })
-    .then(response=>response.ok ? response.json() : null)
-    .then(data=>{
-      if(data?.campaign){
-        currentClient = data.campaign;
-        renderClient(data.campaign);
+
+    fetch(
+      GABRIX_API_BASE +
+      "/api/client-me",
+      {
+        headers:{
+          Authorization:
+            "Bearer " + token
+        }
       }
+    )
+    .then(
+      response =>
+        response.ok
+          ? response.json()
+          : null
+    )
+    .then(data=>{
+
+      if(data?.campaign){
+
+        currentClient =
+          data.campaign;
+
+        renderClient(
+          data.campaign
+        );
+
+      }
+
     })
     .catch(()=>{});
+
   }
+
 }
 </script>
 
+<!-- ================= PAYMENT SCRIPT ================= -->
 
-<script id="gabrix-payment-script">
+<script>
 function submitGabrixPayment(){
-  const client = document.getElementById('paymentClient')?.value.trim();
-  const amount = document.getElementById('paymentAmount')?.value.trim();
-  const msg = document.getElementById('paymentMessage');
-  const statusPanel = document.getElementById('paymentStatusPanel');
-  const status = document.getElementById('paymentStatus');
-  const statusAmount = document.getElementById('paymentStatusAmount');
 
-  if(!client || !amount || Number(amount) <= 0){
-    msg.textContent = 'Please complete your name and amount.';
-    msg.style.color = '#ff7180';
+  const client =
+    document
+      .getElementById("paymentClient")
+      ?.value
+      .trim();
+
+  const amount =
+    document
+      .getElementById("paymentAmount")
+      ?.value
+      .trim();
+
+  const msg =
+    document.getElementById(
+      "paymentMessage"
+    );
+
+  const statusPanel =
+    document.getElementById(
+      "paymentStatusPanel"
+    );
+
+  const status =
+    document.getElementById(
+      "paymentStatus"
+    );
+
+  const statusAmount =
+    document.getElementById(
+      "paymentStatusAmount"
+    );
+
+  if(
+    !msg ||
+    !statusPanel ||
+    !status ||
+    !statusAmount
+  ){
     return;
   }
 
-  // The front-end cannot independently verify an M-Pesa transaction.
-  // After the client submits, show the payment-status panel as PENDING VERIFICATION.
-  status.textContent = 'PENDING VERIFICATION';
-  status.style.color = '#f5c451';
-  statusAmount.textContent = 'KSh ' + Number(amount).toLocaleString();
+  if(
+    !client ||
+    !amount ||
+    Number(amount) <= 0
+  ){
 
-  statusPanel.classList.remove('payment-status-hidden');
-  statusPanel.classList.add('payment-status-visible');
-  statusPanel.setAttribute('aria-hidden','false');
+    msg.textContent =
+      "Please complete your name and amount.";
 
-  msg.innerHTML = '<strong>âœ“ Payment submitted.</strong> Your payment status is now shown below.';
-  msg.style.color = '#70d6a0';
+    msg.style.color =
+      "#ff7180";
 
-  setTimeout(() => {
-    statusPanel.scrollIntoView({behavior:'smooth', block:'center'});
-  }, 120);
+    return;
+  }
+
+  status.textContent =
+    "PENDING VERIFICATION";
+
+  status.style.color =
+    "#f5c451";
+
+  statusAmount.textContent =
+    "KSh " +
+    Number(amount).toLocaleString();
+
+  statusPanel.classList.remove(
+    "payment-status-hidden"
+  );
+
+  statusPanel.classList.add(
+    "payment-status-visible"
+  );
+
+  statusPanel.setAttribute(
+    "aria-hidden",
+    "false"
+  );
+
+  msg.innerHTML =
+    "<strong>✓ Payment submitted.</strong> " +
+    "Your payment status is now shown below.";
+
+  msg.style.color =
+    "#70d6a0";
+
+  setTimeout(function(){
+
+    statusPanel.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+
+  },120);
+
 }
 </script>
 
+<!-- ================= M-PESA COPY SCRIPT ================= -->
 
-<script id="gabrix-copy-mpesa-script">
+<script>
 function copyGabrixMpesa(){
-  const number = '0702880452';
-  const message = document.getElementById('copyMpesaMessage');
 
-  // First try the modern clipboard API.
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(number).then(function(){
-      showCopySuccess();
-    }).catch(function(){
-      legacyGabrixCopy(number);
-    });
-  } else {
+  const number =
+    "0702880452";
+
+  const message =
+    document.getElementById(
+      "copyMpesaMessage"
+    );
+
+  if(
+    navigator.clipboard &&
+    typeof navigator.clipboard.writeText === "function"
+  ){
+
+    navigator.clipboard
+      .writeText(number)
+      .then(function(){
+
+        showCopySuccess();
+
+      })
+      .catch(function(){
+
+        legacyGabrixCopy(number);
+
+      });
+
+  }else{
+
     legacyGabrixCopy(number);
+
   }
+
 }
 
 function legacyGabrixCopy(text){
-  const helper = document.createElement('textarea');
+
+  const helper =
+    document.createElement(
+      "textarea"
+    );
+
   helper.value = text;
-  helper.setAttribute('readonly', '');
-  helper.style.position = 'fixed';
-  helper.style.left = '-9999px';
-  helper.style.top = '0';
-  helper.style.width = '1px';
-  helper.style.height = '1px';
-  helper.style.opacity = '0';
-  document.body.appendChild(helper);
+
+  helper.setAttribute(
+    "readonly",
+    ""
+  );
+
+  helper.style.position =
+    "fixed";
+
+  helper.style.left =
+    "-9999px";
+
+  helper.style.top =
+    "0";
+
+  helper.style.width =
+    "1px";
+
+  helper.style.height =
+    "1px";
+
+  helper.style.opacity =
+    "0";
+
+  document.body.appendChild(
+    helper
+  );
 
   helper.focus();
   helper.select();
-  helper.setSelectionRange(0, helper.value.length);
+  helper.setSelectionRange(
+    0,
+    helper.value.length
+  );
 
   let copied = false;
-  try {
-    copied = document.execCommand('copy');
-  } catch(e) {
+
+  try{
+
+    copied =
+      document.execCommand(
+        "copy"
+      );
+
+  }catch(error){
+
     copied = false;
+
   }
 
-  document.body.removeChild(helper);
+  document.body.removeChild(
+    helper
+  );
 
   if(copied){
+
     showCopySuccess();
+
   }else{
+
     showCopyManual();
+
   }
+
 }
 
 function showCopySuccess(){
-  const message = document.getElementById('copyMpesaMessage');
-  if(message){
-    message.textContent = 'âœ“ NUMBER COPIED';
-    message.style.color = '#70d6a0';
-    setTimeout(function(){ message.textContent = ''; }, 2500);
+
+  const message =
+    document.getElementById(
+      "copyMpesaMessage"
+    );
+
+  if(!message){
+    return;
   }
+
+  message.textContent =
+    "✓ NUMBER COPIED";
+
+  message.style.color =
+    "#70d6a0";
+
+  setTimeout(function(){
+
+    message.textContent = "";
+
+  },2500);
+
 }
 
 function showCopyManual(){
-  const message = document.getElementById('copyMpesaMessage');
-  const number = document.querySelector('.mpesa-number');
 
-  // Select the visible number so Android can use its native Copy menu.
+  const message =
+    document.getElementById(
+      "copyMpesaMessage"
+    );
+
+  const number =
+    document.querySelector(
+      ".mpesa-number"
+    );
+
   if(number){
-    const range = document.createRange();
-    range.selectNodeContents(number);
-    const selection = window.getSelection();
-    selection.removeAllRanges();
-    selection.addRange(range);
+
+    const range =
+      document.createRange();
+
+    range.selectNodeContents(
+      number
+    );
+
+    const selection =
+      window.getSelection();
+
+    if(selection){
+
+      selection.removeAllRanges();
+
+      selection.addRange(
+        range
+      );
+
+    }
+
   }
 
   if(message){
-    message.textContent = 'NUMBER SELECTED â€” TAP COPY';
-    message.style.color = '#f5c451';
+
+    message.textContent =
+      "NUMBER SELECTED — TAP COPY";
+
+    message.style.color =
+      "#f5c451";
+
   }
+
 }
 </script>
 
