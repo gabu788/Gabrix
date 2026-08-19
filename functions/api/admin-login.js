@@ -11,11 +11,11 @@ export async function onRequestPost(context) {
     }
 
     if (!context.env.ADMIN_SECRET) {
-      return Response.json(
-        { error: "Admin authentication is not configured." },
-        { status: 500 }
-      );
-    }
+  return Response.json(
+    { error: "ADMIN_SECRET is NOT visible to this Function." },
+    { status: 500 }
+  );
+}
 
     if (code !== String(context.env.ADMIN_SECRET).trim()) {
       return Response.json(
