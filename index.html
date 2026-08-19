@@ -1218,7 +1218,7 @@ footer{
    Private client/admin authentication must be connected to a secure backend.
    No demo credentials or client records are stored in this page.
 */
-const GABRIX_API_BASE="";
+const GABRIX_API_BASE="/api";
 function $(id){return document.getElementById(id)}
 function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;", "'":"&#039;"}[m]))}
 function setupCodeBoxes(containerId){
