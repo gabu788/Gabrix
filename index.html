@@ -1286,7 +1286,7 @@ function openAdminDashboard(){
  const err=$('adminLoginError'); err.textContent=''; const code=getCode('adminCodeBoxes');
  if(!/^\d{4}$/.test(code)){err.textContent='Enter all 4 digits.';return;}
  if(!GABRIX_API_BASE){err.textContent='Authorised admin access requires the secure GABRIX backend.';return;}
- fetch(GABRIX_API_BASE+'/api/admin-login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({accessCode:code})})
+ fetch(GABRIX_API_BASE+'/admin-login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({accessCode:code})})
  .then(async r=>{const d=await r.json();if(!r.ok)throw new Error(d.error||'Access denied.');sessionStorage.setItem('gabrix_admin_token',d.token);$('adminLogin').classList.add('hidden');$('adminDashboard').classList.remove('hidden');})
  .catch(e=>err.textContent=e.message);
 }
