@@ -1,1 +1,2614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GABRIX NETWORK® — The Network Behind the Next Big Thing.</title>
+<meta name="description" content="GABRIX NETWORK® — creator growth, campaign strategy and digital reach.">
 
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#050505;color:#f4f4f4;font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.container{width:min(1180px,92%);margin:auto}
+.gold{color:#ffe126}
+.hidden{display:none!important}
+.label{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#ffe126;margin-bottom:18px}
+.lead{color:#bdbdbd;max-width:650px}
+h1,h2,h3,h4{margin-top:0;line-height:1.05}
+h2{font-size:clamp(42px,7vw,90px);letter-spacing:-3px}
+header{position:sticky;top:0;z-index:50;background:rgba(5,5,5,.94);border-bottom:1px solid #202020;backdrop-filter:blur(12px)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:900;letter-spacing:2px}
+.logo span{color:#ffe126}
+.links{display:flex;gap:24px;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+.links a:hover{color:#ffe126}
+.menu{display:none;background:none;border:0;color:white;font-size:28px}
+.hero{min-height:88vh;display:flex;align-items:center;border-bottom:1px solid #222}
+.hero h1{font-size:clamp(58px,10vw,145px);letter-spacing:-7px;margin-bottom:20px}
+.hero h1 span{color:#ffe126}
+.hero p{font-size:19px;color:#aaa;max-width:700px}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border:1px solid #ffe126;text-transform:uppercase;font-weight:800;font-size:12px;letter-spacing:1px}
+.primary{background:#ffe126;color:#050505}
+.secondary{background:transparent;color:white}
+section{padding:100px 0;border-bottom:1px solid #202020}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#0d0d0d;border:1px solid #242424;padding:28px}
+.card .number{color:#ffe126;font-size:12px;letter-spacing:2px}
+.card h3{margin:18px 0 10px;font-size:23px}
+.card p{color:#999}
+.start{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.formbox{background:#0d0d0d;border:1px solid #292929;padding:30px}
+.formbox input,.formbox select,.formbox textarea,
+.admin-form-grid input,.admin-form-grid select,
+#adminUpdate textarea,.admin-form-grid+textarea,
+#adminUpdate>textarea{
+width:100%;background:#050505;color:white;border:1px solid #333;padding:14px;margin-bottom:12px;outline:none
+}
+.formbox input:focus,.formbox select:focus,.formbox textarea:focus,
+.admin-form-grid input:focus,.admin-form-grid select:focus,textarea:focus{border-color:#ffe126}
+.formbox textarea{min-height:130px;resize:vertical}
+.formbox button,.standalone-login>button,
+#adminCreate>button,#adminUpdate>button{
+width:100%;padding:16px;background:#ffe126;border:0;color:#050505;font-weight:900;text-transform:uppercase
+}
+.help{font-size:12px;color:#777}
+.payment-desk-section{background:#080808}
+.payment-head{display:flex;justify-content:space-between;gap:30px;align-items:end}
+.payment-mark{font-size:45px;font-weight:900;color:#ffe126;line-height:.85}
+.payment-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:35px}
+.payment-card{background:#0d0d0d;border:1px solid #292929;padding:35px}
+.payment-tag,.desk-tag,.payment-number-label,.payment-amount-label{
+font-size:11px;letter-spacing:2px;color:#ffe126;text-transform:uppercase
+}
+.payment-number-row{display:flex;gap:10px;align-items:center;margin:15px 0 25px}
+.payment-number{font-size:30px;font-weight:900;letter-spacing:2px}
+.payment-copy{padding:12px 16px;background:transparent;border:1px solid #ffe126;color:#ffe126;font-size:11px;font-weight:800}
+.payment-copy-message{display:block;height:18px;color:#ffe126;font-size:12px}
+.payment-action-row{display:grid;grid-template-columns:1fr 1fr;gap:15px;align-items:end}
+.payment-amount{width:100%;background:#050505;color:white;border:1px solid #333;padding:14px;margin-top:8px}
+.payment-status-button{padding:15px;background:#ffe126;border:0;font-weight:900}
+.payment-status-panel{margin-top:20px;padding:20px;border:1px solid #333;background:#070707}
+.payment-status-line{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.payment-status-title{font-size:11px;letter-spacing:2px;color:#999}
+.payment-status-value{font-weight:900;color:#ffe126}
+.payment-status-dot{width:9px;height:9px;border-radius:50%;background:#ffe126;display:inline-block}
+.payment-status-copy,.payment-note{color:#999}
+.payment-footer-note{display:flex;justify-content:space-between;gap:20px;margin-top:25px;color:#666;font-size:10px;letter-spacing:1.5px}
+.desk-head{display:flex;justify-content:space-between;align-items:start}
+.desk-lock{font-size:35px}
+.private-arena{margin-top:35px}
+.desk-login{max-width:620px;background:#0c0c0c;border:1px solid #292929;padding:35px}
+.desk-login h3{font-size:30px;margin:15px 0}
+.desk-login p{color:#999}
+.code-boxes{display:flex;gap:10px;margin:25px 0}
+.code-input{width:58px;height:65px;text-align:center;font-size:25px;font-weight:900;background:#050505;color:white;border:1px solid #333}
+.code-input:focus{border-color:#ffe126;outline:none}
+.desk-error{color:#ff7180;min-height:20px;margin-top:12px;font-size:13px}
+.desk-demo{font-size:12px}
+.private-dashboard{background:#0b0b0b;border:1px solid #292929;padding:30px}
+.dashboard-top{display:flex;justify-content:space-between;gap:20px;align-items:start}
+.dashboard-top h3{font-size:32px;margin:12px 0}
+.campaign-id{font-size:11px;color:#666;letter-spacing:2px}
+.live{display:inline-block;padding:8px 12px;border:1px solid #ffe126;color:#ffe126;font-size:10px;font-weight:900;letter-spacing:1px}
+.dashboard-nav{display:flex;gap:8px;overflow:auto;margin:30px 0;border-bottom:1px solid #292929}
+.dashboard-nav button{white-space:nowrap;background:transparent;border:0;border-bottom:2px solid transparent;color:#777;padding:13px 14px;font-size:11px;font-weight:900;letter-spacing:1px}
+.dashboard-nav button.active{color:#ffe126;border-bottom-color:#ffe126}
+.client-welcome{padding:15px 0;color:#aaa}
+.client-stats,.admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
+.client-stat{background:#060606;border:1px solid #242424;padding:20px}
+.client-stat small{display:block;color:#777;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+.client-stat strong{font-size:25px}
+.progress-wrap{margin:30px 0}
+.progress-line{display:flex;justify-content:space-between;color:#999;font-size:11px;letter-spacing:1px}
+.progress-bar{height:10px;background:#222;margin-top:10px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:#ffe126;transition:width .5s}
+.client-meta{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.client-meta>div{border-top:1px solid #292929;padding-top:15px}
+.client-meta small{display:block;color:#777;font-size:10px}
+.client-meta strong{font-size:15px}
+.page-title{color:#ffe126;font-size:12px;letter-spacing:2px;font-weight:900;margin-bottom:20px}
+.workflow-item,.report{display:grid;grid-template-columns:120px 1fr 120px;gap:20px;border:1px solid #292929;background:#060606;padding:20px;margin-bottom:12px}
+.workflow-round{color:#ffe126;font-size:11px;letter-spacing:1px}
+.workflow-status{font-size:11px;color:#ffe126;text-align:right}
+.workflow-item p,.report p{color:#999;margin-bottom:0}
+.status-big{font-size:55px;font-weight:900;color:#ffe126}
+.muted{color:#777}
+.status-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}
+.status-timeline div{border:1px solid #292929;padding:20px}
+.status-timeline b{display:block;color:#ffe126;margin-bottom:10px}
+.status-timeline span{color:#999;font-size:13px}
+.desk-logout{margin-top:25px;background:transparent;color:#777;border:1px solid #333;padding:12px 16px;font-size:11px;font-weight:800}
+.dashboard-divider{border-top:1px solid #292929;margin:80px 0 45px;padding-top:20px;color:#555;font-size:10px;letter-spacing:2px}
+.admin-section-title{margin-bottom:30px}
+.admin-section-title h2{font-size:clamp(35px,6vw,70px)}
+.admin-dashboard-word-yellow{color:#ffe126}
+.admin-message{border:1px solid #292929;padding:20px;color:#999;margin:20px 0}
+.admin-form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-bottom:20px}
+.admin-form-grid label{color:#888;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+.admin-form-grid input,.admin-form-grid select{margin-top:7px;margin-bottom:0}
+.admin-form-grid.compact{margin-bottom:20px}
+#adminUpdate>label{display:block;color:#888;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:20px}
+#adminUpdate>label select{display:block;width:100%;margin-top:7px;background:#050505;color:#fff;border:1px solid #333;padding:14px}
+.admin-success{color:#ffe126;margin-top:15px}
+.pending-requests{margin-top:30px}
+.pending-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #292929;padding-bottom:12px}
+.pending-head h4{margin:0;font-size:12px;letter-spacing:2px}
+.pending-badge{background:#ffe126;color:#050505;padding:4px 9px;font-weight:900}
+.pending-item{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid #222}
+.pending-item strong{display:block}
+.pending-item small{display:block;color:#777;margin-top:5px}
+.pending-status{font-size:10px;color:#ffe126}
+.pending-action{margin-top:8px;background:transparent;border:1px solid #333;color:#aaa;padding:7px 9px;font-size:9px}
+.pending-empty{color:#666;padding:20px 0}
+footer{padding:35px 0;display:flex;justify-content:space-between;gap:20px;color:#666;font-size:11px;letter-spacing:1px}
+.launch-badge{margin-top:8px;color:#444}
+.legal-row{display:flex;gap:15px;margin-top:12px}
+.legal-row a:hover{color:#ffe126}
+
+@media(max-width:800px){
+.links{display:none;position:absolute;top:78px;left:0;right:0;background:#080808;border-bottom:1px solid #222;padding:20px;flex-direction:column}
+.links.open{display:flex}
+.menu{display:block}
+.grid,.start{grid-template-columns:1fr}
+.payment-action-row{grid-template-columns:1fr}
+.client-stats,.admin-stats{grid-template-columns:repeat(2,1fr)}
+.client-meta{grid-template-columns:1fr}
+.status-timeline{grid-template-columns:1fr 1fr}
+.workflow-item,.report{grid-template-columns:1fr}
+.workflow-status{text-align:left}
+.admin-form-grid{grid-template-columns:1fr}
+.payment-footer-note{flex-direction:column}
+footer{flex-direction:column}
+}
+@media(max-width:480px){
+.hero h1{letter-spacing:-4px}
+section{padding:70px 0}
+.code-input{width:52px;height:60px}
+.client-stats,.admin-stats,.status-timeline{grid-template-columns:1fr}
+.payment-number-row{align-items:start;flex-direction:column}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+<a href="#" class="logo">GABRIX<span>®</span></a>
+
+<nav class="links">
+<a href="#start">Campaign</a>
+<a href="#payment-desk">Payment</a>
+<a href="#client-desk">Client Desk</a>
+</nav>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container">
+<div class="label">GABRIX NETWORK®</div>
+<h1>THE NETWORK<br>BEHIND THE <span>NEXT BIG THING.</span></h1>
+<p>Creator growth, campaign strategy and digital reach built for artists, creators and projects ready to move.</p>
+
+<div class="hero-buttons">
+<a class="primary" href="#start">START A CAMPAIGN</a>
+<a class="secondary" href="#client-desk">CLIENT DESK</a>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="label">01 / How It Works</div>
+<div class="grid">
+
+<div class="card">
+<div class="number">01</div>
+<h3>CHOOSE YOUR MOVE</h3>
+<p>Select the campaign package that fits your current objective.</p>
+</div>
+
+<div class="card">
+<div class="number">02</div>
+<h3>ACTIVATE</h3>
+<p>One tap opens WhatsApp directly with GABRIX NETWORK.</p>
+</div>
+
+<div class="card">
+<div class="number">03</div>
+<h3>TRACK THE WORK</h3>
+<p>Clients can use the private desk to follow campaign progress and updates.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="label">02 / The Network</div>
+<h2>BUILT TO<br><span class="gold">MOVE.</span></h2>
+<p class="lead">GABRIX NETWORK® connects campaign strategy, creator positioning and digital reach into one focused growth system.</p>
+
+<div class="grid" style="margin-top:35px">
+
+<div class="card">
+<div class="number">CREATOR</div>
+<h3>DISCOVERY</h3>
+<p>Identify projects and creators with room to grow and build stronger digital positioning.</p>
+</div>
+
+<div class="card">
+<div class="number">CAMPAIGN</div>
+<h3>STRATEGY</h3>
+<p>Build a clear campaign direction around the release, project or creator.</p>
+</div>
+
+<div class="card">
+<div class="number">NETWORK</div>
+<h3>REACH</h3>
+<p>Coordinate digital activity around the campaign while keeping communication clear.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="label">03 / Campaign Packages</div>
+<h2>CHOOSE<br>YOUR <span class="gold">MOVE.</span></h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="number">THE SPARK</div>
+<h3>KSh 899</h3>
+<p>For creators looking to start a focused campaign and create initial movement.</p>
+</div>
+
+<div class="card">
+<div class="number">THE RISE</div>
+<h3>KSh 1,500</h3>
+<p>A stronger campaign level designed for creators ready to push further.</p>
+</div>
+
+<div class="card">
+<div class="number">THE MOVEMENT</div>
+<h3>KSh 2,500</h3>
+<p>A wider campaign approach for projects requiring more sustained attention.</p>
+</div>
+
+<div class="card">
+<div class="number">THE NEXT BIG THING</div>
+<h3>KSh 5,000</h3>
+<p>A premium campaign level for projects looking for a larger strategic push.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="label">04 / Why GABRIX</div>
+<h2>MAKE THE<br>MOVE <span class="gold">COUNT.</span></h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>DIRECT</h3>
+<p>Clear communication from campaign onboarding through reporting.</p>
+</div>
+
+<div class="card">
+<h3>FOCUSED</h3>
+<p>Campaign activity is organised around the objective agreed with the client.</p>
+</div>
+
+<div class="card">
+<h3>PRIVATE</h3>
+<p>Client campaign information and updates are handled through a private experience.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<div class="label">05 / Proof & Trust</div>
+<h2>BUILD<br><span class="gold">CREDIBILITY.</span></h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="number">CLIENT STORY 01</div>
+<h3>CAMPAIGN RESULT</h3>
+<p>Highlight a genuine verified campaign result here once the campaign has been completed.</p>
+<div style="margin-top:20px;color:#666;font-size:11px">READY FOR A VERIFIED CASE STUDY</div>
+</div>
+
+<div class="card">
+<div class="number">CLIENT STORY 02</div>
+<h3>CREATOR JOURNEY</h3>
+<p>Highlight a genuine creator or artist experience, including the challenge, campaign approach and outcome.</p>
+<div style="margin-top:20px;color:#666;font-size:11px">READY FOR A VERIFIED TESTIMONIAL</div>
+</div>
+
+<div class="card">
+<div class="number">NETWORK 03</div>
+<h3>PARTNERSHIPS</h3>
+<p>Use this space for verified collaborations, media features, brand partnerships or network milestones.</p>
+<div style="margin-top:20px;color:#666;font-size:11px">ADD VERIFIED PARTNERSHIPS HERE</div>
+</div>
+
+</div>
+
+<div class="grid" style="margin-top:18px">
+
+<div class="card">
+<strong>Clear Campaign Terms</strong>
+<p>Targets are presented as targets. Results can vary with audience response and platform policies.</p>
+</div>
+
+<div class="card">
+<strong>Direct Communication</strong>
+<p>Campaign conversations begin directly with GABRIX so expectations can be agreed before activation.</p>
+</div>
+
+<div class="card">
+<strong>Private Reporting</strong>
+<p>Client progress and campaign updates belong inside the private client experience.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="start">
+<div class="container start">
+
+<div>
+<div class="label">07 / Start a Campaign</div>
+<h2>LET'S<br>MOVE IT.</h2>
+<p class="lead">No complicated URLs. Give us your YouTube channel, artist or project name and tell us what you want to achieve.</p>
+</div>
+
+<div class="formbox">
+<form id="campaignForm">
+
+<input id="name" required placeholder="Your name">
+
+<input id="project" required placeholder="YouTube / Project Name">
+
+<select id="package" required>
+<option value="">Choose a package</option>
+<option>THE SPARK — KSh 899</option>
+<option>THE RISE — KSh 1,500</option>
+<option>THE MOVEMENT — KSh 2,500</option>
+<option>THE NEXT BIG THING — KSh 5,000</option>
+</select>
+
+<textarea id="details" placeholder="Tell us briefly about your campaign"></textarea>
+
+<button type="submit">💬 CHAT WITH GABRIX NETWORK</button>
+
+<p class="help">Enter the name only — no https:// or www. required.</p>
+
+</form>
+</div>
+
+</div>
+</section>
+
+<section id="payment-desk" class="payment-desk-section">
+
+<div class="container">
+
+<div class="label">GABRIX / PAYMENT DESK</div>
+
+<div class="payment-head">
+
+<div>
+<h2>MOVE WITH<br><span class="gold">CONFIDENCE.</span></h2>
+
+<p class="lead">
+A dedicated M-Pesa payment space for GABRIX campaigns.
+Send your agreed amount, keep your confirmation message and wait for GABRIX verification.
+</p>
+</div>
+
+<div class="payment-mark">PAY<br>01</div>
+
+</div>
+
+<div class="payment-grid">
+
+<div class="payment-card">
+
+<div class="payment-tag">GABRIX / M-PESA PAYMENT</div>
+
+<h3>PAY YOUR CAMPAIGN</h3>
+
+<p>Send your agreed campaign payment to the official GABRIX M-Pesa number below.</p>
+
+<div class="payment-number-label">M-PESA NUMBER</div>
+
+<div class="payment-number-row">
+
+<div class="payment-number">0702880452</div>
+
+<button type="button" class="payment-copy" onclick="copyPaymentNumber()">
+COPY NUMBER
+</button>
+
+</div>
+
+<span id="paymentCopyMessage" class="payment-copy-message" aria-live="polite"></span>
+
+<div class="payment-action-row">
+
+<label class="payment-amount-wrap">
+
+<span class="payment-amount-label">AMOUNT TO PAY (KSh)</span>
+
+<input
+id="paymentAmount"
+class="payment-amount"
+type="number"
+min="1"
+inputmode="numeric"
+placeholder="Enter amount">
+
+</label>
+
+<button
+type="button"
+class="payment-status-button"
+onclick="checkPaymentStatus()">
+I HAVE PAID — CHECK PAYMENT STATUS
+</button>
+
+</div>
+
+<div id="paymentStatusPanel" class="payment-status-panel" aria-live="polite">
+
+<div class="payment-status-line">
+
+<span class="payment-status-title">PAYMENT STATUS</span>
+
+<span
+class="payment-status-value"
+id="paymentStatusValue">
+PENDING VERIFICATION
+</span>
+
+<span class="payment-status-dot" aria-hidden="true"></span>
+
+</div>
+
+<p id="paymentStatusCopy" class="payment-status-copy">
+Your payment will be verified by the GABRIX team.
+</p>
+
+</div>
+
+<p class="payment-note">
+Keep your M-Pesa confirmation message. Payment is not marked as confirmed until GABRIX verifies the transaction.
+</p>
+
+</div>
+</div>
+
+<div class="payment-footer-note">
+
+<span>M-PESA PAYMENT PROCESS</span>
+
+<span>PAYMENT CONFIRMATION REQUIRES GABRIX VERIFICATION</span>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="client-desk" class="client-desk">
+
+<div class="container">
+
+<div class="desk-head">
+
+<div>
+
+<div class="label">08 / Private Clients</div>
+
+<h2>PRIVATE CLIENTS<br><span class="gold">DESK.</span></h2>
+
+<p class="lead">
+Enter your private 4-digit client code to open your campaign workspace, workflow and reports.
+</p>
+
+</div>
+
+<div class="desk-lock">🔐</div>
+
+</div>
+
+<div class="private-arena client-arena">
+
+<div id="clientLogin" class="desk-login standalone-login">
+
+<div class="desk-tag">CLIENT ACCESS / 4 DIGIT CODE</div>
+
+<h3>PRIVATE CLIENTS DESK</h3>
+
+<p>
+Enter your private four-digit client code to open your campaign workspace, workflow and reports.
+</p>
+
+<div class="code-boxes" id="clientCodeBoxes">
+
+<input maxlength="1" inputmode="numeric" class="code-input" aria-label="Client code digit 1">
+
+<input maxlength="1" inputmode="numeric" class="code-input" aria-label="Client code digit 2">
+
+<input maxlength="1" inputmode="numeric" class="code-input" aria-label="Client code digit 3">
+
+<input maxlength="1" inputmode="numeric" class="code-input" aria-label="Client code digit 4">
+
+</div>
+
+<button type="button" onclick="openClientDashboard()">
+ENTER PRIVATE CLIENTS DESK →
+</button>
+
+<div id="clientLoginError" class="desk-error"></div>
+
+<p class="desk-demo">
+Client access is issued privately by GABRIX after campaign onboarding.
+Your access code is not displayed publicly.
+</p>
+
+</div>
+
+<div id="clientDashboard" class="private-dashboard hidden">
+
+<div class="dashboard-top">
+
+<div>
+
+<div class="desk-tag">PRIVATE CLIENT / OVERVIEW</div>
+
+<h3 id="cProject">Client Campaign</h3>
+
+<div class="campaign-id" id="cCampaignId">
+CAMPAIGN —
+</div>
+
+</div>
+
+<div>
+<span class="live" id="cStatus">ACTIVE</span>
+</div>
+
+</div>
+
+<div class="dashboard-nav">
+
+<button class="dash-tab active" onclick="clientPage('overview')">
+OVERVIEW
+</button>
+
+<button class="dash-tab" onclick="clientPage('workflow')">
+WORK FLOW
+</button>
+
+<button class="dash-tab" onclick="clientPage('reports')">
+REPORTS
+</button>
+
+<button class="dash-tab" onclick="clientPage('status')">
+STATUS
+</button>
+
+</div>
+
+<div id="clientOverview" class="dash-page">
+
+<div class="client-welcome">
+Welcome to your private GABRIX campaign space.
+</div>
+
+<div class="client-stats">
+
+<div class="client-stat">
+<small>Subscribers</small>
+<strong id="cSubs">—</strong>
+</div>
+
+<div class="client-stat">
+<small>Likes</small>
+<strong id="cLikes">—</strong>
+</div>
+
+<div class="client-stat">
+<small>Comments</small>
+<strong id="cComments">—</strong>
+</div>
+
+<div class="client-stat">
+<small>Watch Time</small>
+<strong id="cWatch">—</strong>
+</div>
+
+</div>
+
+<div class="progress-wrap">
+
+<div class="progress-line">
+
+<span>CAMPAIGN PROGRESS</span>
+
+<strong id="cPercent">0%</strong>
+
+</div>
+
+<div class="progress-bar">
+
+<div class="progress-fill" id="cFill"></div>
+
+</div>
+
+</div>
+
+<div class="client-meta">
+
+<div>
+<small>CLIENT</small>
+<strong id="cClient">—</strong>
+</div>
+
+<div>
+<small>PACKAGE</small>
+<strong id="cPackage">—</strong>
+</div>
+
+</div>
+
+</div>
+
+<div id="clientWorkflow" class="dash-page hidden">
+
+<div class="page-title">CAMPAIGN WORK FLOW</div>
+
+<div id="cWorkflow" class="workflow-list"></div>
+
+</div>
+
+<div id="clientReports" class="dash-page hidden">
+
+<div class="page-title">WORK REPORTS</div>
+
+<div id="cReports"></div>
+
+</div>
+
+<div id="clientStatus" class="dash-page hidden">
+
+<div class="page-title">CAMPAIGN STATUS</div>
+
+<div class="status-big" id="cStatusBig">
+ACTIVE
+</div>
+
+<p class="muted" id="cStatusText">
+Your campaign is currently active.
+</p>
+
+<div class="status-timeline">
+
+<div>
+<b>01</b>
+<span>Campaign created</span>
+</div>
+
+<div>
+<b>02</b>
+<span>Campaign activated</span>
+</div>
+
+<div>
+<b>03</b>
+<span>Work in progress</span>
+</div>
+
+<div>
+<b>04</b>
+<span>Campaign completion</span>
+</div>
+
+</div>
+
+</div>
+
+<button
+type="button"
+class="desk-logout"
+onclick="closePrivateDesk()">
+CLOSE PRIVATE DESK
+</button>
+
+</div>
+
+</div>
+
+<div class="dashboard-divider">
+<span>GABRIX NETWORK / AUTHORISED ACCESS</span>
+</div>
+
+<div class="admin-section-title">
+
+<div class="label">09 / GABRIX Administration</div>
+
+<h2>
+GABRIX ADMIN
+<span class="admin-dashboard-word-yellow">DASHBOARD</span>
+</h2>
+
+<p>
+Private management headquarters for authorised GABRIX administration,
+client access codes, campaign workflow and reports.
+</p>
+
+</div>
+
+<div id="adminArena" class="private-arena admin-arena">
+
+<div id="adminLogin" class="desk-login standalone-login admin-login">
+
+<div class="desk-tag">ADMIN ACCESS / 4 DIGIT SECRET</div>
+
+<h3>GABRIX ADMIN DASHBOARD</h3>
+
+<p>
+This arena is for authorised GABRIX administration only.
+Enter your four-digit secret code.
+</p>
+
+<div class="code-boxes" id="adminCodeBoxes">
+
+<input maxlength="1" inputmode="numeric" class="code-input" aria-label="Admin code digit 1">
+
+<input maxlength="1" inputmode="numeric" class="code-input" aria-label="Admin code digit 2">
+
+<input maxlength="1" inputmode="numeric" class="code-input" aria-label="Admin code digit 3">
+
+<input maxlength="1" inputmode="numeric" class="code-input" aria-label="Admin code digit 4">
+
+</div>
+
+<button type="button" onclick="openAdminDashboard()">
+<span class="admin-open-dashboard-text">
+OPEN GABRIX ADMIN DASHBOARD
+</span> →
+</button>
+
+<div id="adminLoginError" class="desk-error"></div>
+
+<p class="desk-demo">
+Authorised administration is protected by server-side authentication.
+No administrator credentials are stored in this page.
+</p>
+
+</div>
+
+<div id="adminDashboard" class="private-dashboard hidden">
+
+<div class="dashboard-top">
+
+<div>
+
+<div class="desk-tag">GABRIX / AUTHORISED ADMIN</div>
+
+<h3>GABRIX ADMIN DASHBOARD</h3>
+
+<div class="campaign-id">
+PRIVATE MANAGEMENT ARENA
+</div>
+
+</div>
+
+<div>
+<span class="live">ADMIN ONLY</span>
+</div>
+
+</div>
+
+<div class="dashboard-nav">
+
+<button class="admin-tab active" onclick="adminPage('home')">
+DASHBOARD
+</button>
+
+<button class="admin-tab" onclick="adminPage('create')">
+NEW CLIENT
+</button>
+
+<button class="admin-tab" onclick="adminPage('clients')">
+CLIENTS
+</button>
+
+<button class="admin-tab" onclick="adminPage('update')">
+UPDATE WORK
+</button>
+
+<button class="admin-tab" onclick="adminPage('reports')">
+REPORTS
+</button>
+
+</div>
+
+<div id="adminHome" class="dash-page">
+
+<div class="admin-stats">
+
+<div class="client-stat">
+<small>Total Clients</small>
+<strong id="aTotal">0</strong>
+</div>
+
+<div class="client-stat">
+<small>Active Campaigns</small>
+<strong id="aActive">0</strong>
+</div>
+
+<div class="client-stat">
+<small>Completed</small>
+<strong id="aCompleted">0</strong>
+</div>
+
+<div class="client-stat">
+<small>Updates Posted</small>
+<strong id="aReports">0</strong>
+</div>
+
+</div>
+
+<div class="admin-message">
+You are inside the authorised GABRIX management arena.
+Create clients, issue their 4-digit codes and publish campaign workflow updates from here.
+</div>
+
+<div class="pending-requests">
+
+<div class="pending-head">
+
+<h4>PENDING CLIENT REQUESTS</h4>
+
+<span id="pendingCount" class="pending-badge">0</span>
+
+</div>
+
+<div id="pendingRequestList">
+
+<div class="pending-empty">
+No client requests are waiting for action.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="adminCreate" class="dash-page hidden">
+
+<div class="page-title">CREATE NEW CLIENT</div>
+
+<div class="admin-form-grid">
+
+<label>
+Client Name
+<input id="newClient" placeholder="Client name">
+</label>
+
+<label>
+Project / YouTube Name
+<input id="newProject" placeholder="Project or channel">
+</label>
+
+<label>
+Package
+<input id="newPackage" placeholder="THE RISE — KSh 1,500">
+</label>
+
+<label>
+Campaign ID
+<input id="newCampaign" placeholder="GAB-001">
+</label>
+
+<label>
+4-Digit Client Code
+<input id="newCode" maxlength="4" inputmode="numeric" placeholder="e.g. 4821">
+</label>
+
+<label>
+Subscriber Target
+<input id="newSubs" type="number" value="70">
+</label>
+
+<label>
+Likes Target
+<input id="newLikes" type="number" value="70">
+</label>
+
+<label>
+Comments Target
+<input id="newComments" type="number" value="50">
+</label>
+
+<label>
+Watch-Time Target
+<input id="newWatch" type="number" value="25">
+</label>
+
+</div>
+
+<button type="button" onclick="createClient()">
+CREATE CLIENT + ISSUE CODE
+</button>
+
+<div id="createClientMsg" class="admin-success"></div>
+
+</div>
+
+<div id="adminClients" class="dash-page hidden">
+
+<div class="page-title">CLIENTS</div>
+
+<div id="adminClientList"></div>
+
+</div>
+
+<div id="adminUpdate" class="dash-page hidden">
+
+<div class="page-title">UPDATE CLIENT WORK</div>
+
+<label>
+Choose Client
+
+<select id="updateClientSelect"></select>
+
+</label>
+
+<div class="admin-form-grid compact">
+
+<label>
+Subscribers Done
+<input id="uSubs" type="number" value="0">
+</label>
+
+<label>
+Likes Done
+<input id="uLikes" type="number" value="0">
+</label>
+
+<label>
+Comments Done
+<input id="uComments" type="number" value="0">
+</label>
+
+<label>
+Watch Hours Done
+<input id="uWatch" type="number" value="0">
+</label>
+
+<label>
+Status
+
+<select id="uStatus">
+
+<option>ACTIVE</option>
+<option>IN PROGRESS</option>
+<option>COMPLETED</option>
+<option>PAUSED</option>
+
+</select>
+
+</label>
+
+<label>
+Round / Stage
+<input id="uRound" placeholder="Round 01">
+</label>
+
+</div>
+
+<textarea id="uDetails" placeholder="Describe the work completed in this update..."></textarea>
+
+<button type="button" onclick="postWorkUpdate()">
+POST WORK UPDATE
+</button>
+
+<div id="updateMsg" class="admin-success"></div>
+
+</div>
+
+<div id="adminReports" class="dash-page hidden">
+
+<div class="page-title">REPORT CENTER</div>
+
+<p class="muted">
+Select a client below to review the workflow and reports that their private desk will display.
+</p>
+
+<div id="adminReportList" style="margin-top:15px"></div>
+
+</div>
+
+<button
+type="button"
+class="desk-logout"
+onclick="closeAdminDashboard()">
+CLOSE ADMIN DASHBOARD
+</button>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+<div id="privacy" hidden></div>
+<div id="terms" hidden></div>
+
+</main>
+
+<footer class="container">
+
+<div>
+
+<div>© 2026 GABRIX NETWORK®. ALL RIGHTS RESERVED.</div>
+
+<div class="launch-badge">
+PRODUCTION FRONT-END · SECURE PORTAL CONNECTION REQUIRED
+</div>
+
+<div class="legal-row">
+<a href="#privacy">Privacy</a>
+<a href="#terms">Terms</a>
+<a href="#payment-desk">Payment Policy</a>
+</div>
+
+</div>
+
+<div>
+THE NETWORK BEHIND THE NEXT BIG THING.
+</div>
+
+</footer>
+
+<script>
+
+const GABRIX_API_BASE="";
+
+function $(id){
+return document.getElementById(id);
+}
+
+function esc(v){
+return String(v??"").replace(
+/[&<>"']/g,
+m=>({
+"&":"&amp;",
+"<":"&lt;",
+">":"&gt;",
+'"':"&quot;",
+"'":"&#039;"
+}[m])
+);
+}
+
+function setupCodeBoxes(containerId){
+
+const box=$(containerId);
+
+if(!box)return;
+
+const inputs=[...box.querySelectorAll('.code-input')];
+
+inputs.forEach((input,i)=>{
+
+input.addEventListener('input',()=>{
+
+input.value=input.value.replace(/\D/g,'').slice(0,1);
+
+if(input.value&&inputs[i+1])
+inputs[i+1].focus();
+
+});
+
+input.addEventListener('keydown',e=>{
+
+if(
+e.key==='Backspace' &&
+!input.value &&
+inputs[i-1]
+){
+
+inputs[i-1].focus();
+
+}
+
+});
+
+});
+
+}
+
+function getCode(containerId){
+
+return [
+...$(containerId).querySelectorAll('.code-input')
+]
+.map(x=>x.value)
+.join('');
+
+}
+
+function renderClient(client){
+
+const c=client||{};
+
+$('clientLogin').classList.add('hidden');
+
+$('clientDashboard').classList.remove('hidden');
+
+const progress=Math.max(
+0,
+Math.min(100,Number(c.progress)||0)
+);
+
+$('cProject').textContent=
+c.campaign||
+'Client Campaign';
+
+$('cCampaignId').textContent=
+c.campaign
+?'CAMPAIGN — '+c.campaign
+:'CAMPAIGN —';
+
+$('cStatus').textContent=
+c.status||
+'ACTIVE';
+
+$('cStatusBig').textContent=
+c.status||
+'ACTIVE';
+
+$('cStatusText').textContent=
+c.status==='COMPLETED'
+?'Your campaign has been completed.'
+:'Your campaign is currently active.';
+
+$('cPercent').textContent=
+progress+'%';
+
+$('cFill').style.width=
+progress+'%';
+
+$('cClient').textContent=
+c.name||
+'—';
+
+$('cPackage').textContent=
+c.package||
+'—';
+
+$('cSubs').textContent=
+c.subscribers_done ??
+c.subscribers ??
+'—';
+
+$('cLikes').textContent=
+c.likes_done ??
+c.likes ??
+'—';
+
+$('cComments').textContent=
+c.comments_done ??
+c.comments ??
+'—';
+
+$('cWatch').textContent=
+c.watch_hours_done ??
+c.watch ??
+'—';
+
+const note=
+c.update_note||
+'No campaign update has been posted yet.';
+
+const safeNote=esc(note);
+
+const statusLabel=
+c.status==='COMPLETED'
+?'Completed'
+:(c.status||'In Progress');
+
+const report={
+date:new Date().toLocaleDateString(
+'en-GB',
+{
+day:'2-digit',
+month:'short',
+year:'numeric'
+}
+).toUpperCase(),
+
+round:
+c.update_round||
+'LATEST CAMPAIGN UPDATE',
+
+status:
+statusLabel,
+
+details:
+note
+};
+
+$('cWorkflow').innerHTML=
+'<div class="workflow-item">'+
+'<div class="workflow-round">'+
+esc(report.round)+
+'</div>'+
+'<div>'+
+'<strong>LATEST CAMPAIGN UPDATE</strong>'+
+'<p>'+
+safeNote+
+'</p>'+
+'</div>'+
+'<div class="workflow-status">'+
+esc(statusLabel)+
+'</div>'+
+'</div>';
+
+$('cReports').innerHTML=
+'<div class="report">'+
+'<div>'+
+'<small>CAMPAIGN UPDATE • '+
+report.date+
+'</small>'+
+'</div>'+
+'<div>'+
+'<strong>'+
+esc(report.round)+
+'</strong>'+
+'<p>'+
+safeNote+
+'</p>'+
+'</div>'+
+'<div class="workflow-status">'+
+esc(report.status)+
+'</div>'+
+'</div>';
+
+clientPage('overview');
+
+$('clientDashboard').scrollIntoView({
+behavior:'smooth',
+block:'start'
+});
+
+}
+
+function openClientDashboard(){
+
+const err=
+$('clientLoginError');
+
+err.textContent='';
+
+const code=
+getCode('clientCodeBoxes');
+
+if(!/^\d{4}$/.test(code)){
+
+err.textContent=
+'Enter all 4 digits.';
+
+return;
+
+}
+
+fetch('/api/client-login',{
+
+method:'POST',
+
+headers:{
+'Content-Type':'application/json'
+},
+
+body:
+JSON.stringify({
+code:code
+})
+
+})
+
+.then(async r=>{
+
+let d={};
+
+try{
+d=await r.json();
+}catch(e){}
+
+if(!r.ok)
+throw new Error(
+d.error||
+'Access denied.'
+);
+
+if(!d.client)
+throw new Error(
+'Client record was not returned.'
+);
+
+renderClient(d.client);
+
+})
+
+.catch(e=>
+
+err.textContent=
+e.message||
+'Unable to connect to the client desk.'
+
+);
+
+}
+
+function openAdminDashboard(){
+
+const err=
+$('adminLoginError');
+
+err.textContent='';
+
+const code=
+getCode('adminCodeBoxes');
+
+if(!/^\d{4}$/.test(code)){
+
+err.textContent=
+'Enter all 4 digits.';
+
+return;
+
+}
+
+if(!GABRIX_API_BASE){
+
+err.textContent=
+'Authorised admin access requires the secure GABRIX backend.';
+
+return;
+
+}
+
+fetch(
+GABRIX_API_BASE+'/api/admin-login',
+{
+method:'POST',
+
+headers:{
+'Content-Type':'application/json'
+},
+
+body:
+JSON.stringify({
+accessCode:code
+})
+
+}
+)
+
+.then(async r=>{
+
+const d=
+await r.json();
+
+if(!r.ok)
+throw new Error(
+d.error||
+'Access denied.'
+);
+
+sessionStorage.setItem(
+'gabrix_admin_token',
+d.token
+);
+
+$('adminLogin')
+.classList.add('hidden');
+
+$('adminDashboard')
+.classList.remove('hidden');
+
+loadAdminData();
+
+})
+
+.catch(e=>
+
+err.textContent=
+e.message
+
+);
+
+}
+
+function closePrivateDesk(){
+
+$('clientDashboard')
+.classList.add('hidden');
+
+$('clientLogin')
+.classList.remove('hidden');
+
+$('clientLoginError')
+.textContent='';
+
+$('clientCodeBoxes')
+.querySelectorAll('input')
+.forEach(x=>x.value='');
+
+}
+
+function closeAdminDashboard(){
+
+$('adminDashboard')
+.classList.add('hidden');
+
+$('adminLogin')
+.classList.remove('hidden');
+
+$('adminLoginError')
+.textContent='';
+
+$('adminCodeBoxes')
+.querySelectorAll('input')
+.forEach(x=>x.value='');
+
+sessionStorage.removeItem(
+'gabrix_admin_token'
+);
+
+}
+
+function clientPage(page){
+
+[
+'overview',
+'workflow',
+'reports',
+'status'
+]
+.forEach(x=>{
+
+const el=$(
+'client'+
+x.charAt(0).toUpperCase()+
+x.slice(1)
+);
+
+if(el)
+el.classList.toggle(
+'hidden',
+x!==page
+);
+
+});
+
+document
+.querySelectorAll('.dash-tab')
+.forEach((b,i)=>
+
+b.classList.toggle(
+'active',
+[
+'overview',
+'workflow',
+'reports',
+'status'
+][i]===page
+)
+
+);
+
+}
+
+function adminPage(page){
+
+const pages={
+home:'adminHome',
+create:'adminCreate',
+clients:'adminClients',
+update:'adminUpdate',
+reports:'adminReports'
+};
+
+Object.values(pages)
+.forEach(id=>
+$(id)?.classList.add('hidden')
+);
+
+$(pages[page])?.classList.remove('hidden');
+
+document
+.querySelectorAll('.admin-tab')
+.forEach((b,i)=>
+
+b.classList.toggle(
+'active',
+[
+'home',
+'create',
+'clients',
+'update',
+'reports'
+][i]===page
+)
+
+);
+
+if(page==='home')
+loadPendingRequests();
+
+if(page==='clients')
+loadAdminClients();
+
+if(page==='update')
+loadAdminClientsForUpdate();
+
+if(page==='reports')
+loadAdminReports();
+
+}
+
+function toggleMenu(){
+
+document
+.querySelector('.links')
+?.classList.toggle('open');
+
+}
+
+document
+.querySelectorAll('.links a')
+.forEach(a=>
+
+a.addEventListener(
+'click',
+()=>
+document
+.querySelector('.links')
+?.classList.remove('open')
+)
+
+);
+
+setupCodeBoxes('clientCodeBoxes');
+setupCodeBoxes('adminCodeBoxes');
+
+function getAdminToken(){
+
+return sessionStorage.getItem(
+'gabrix_admin_token'
+);
+
+}
+
+async function adminFetch(path,options={}){
+
+const token=
+getAdminToken();
+
+if(!token)
+throw new Error(
+'Admin session expired.'
+);
+
+const headers=
+Object.assign(
+{},
+options.headers||{},
+{
+'Content-Type':'application/json',
+'Authorization':
+'Bearer '+token
+}
+);
+
+const response=
+await fetch(
+GABRIX_API_BASE+path,
+Object.assign(
+{},
+options,
+{
+headers
+}
+)
+);
+
+let data={};
+
+try{
+data=await response.json();
+}catch(e){}
+
+if(!response.ok){
+
+throw new Error(
+data.error||
+'Request failed.'
+);
+
+}
+
+return data;
+
+}
+
+async function loadAdminData(){
+
+try{
+
+const data=
+await adminFetch('/api/admin-data');
+
+if(data.stats){
+
+$('aTotal').textContent=
+data.stats.total_clients ??
+0;
+
+$('aActive').textContent=
+data.stats.active_campaigns ??
+0;
+
+$('aCompleted').textContent=
+data.stats.completed ??
+0;
+
+$('aReports').textContent=
+data.stats.updates ??
+0;
+
+}
+
+if(Array.isArray(data.clients))
+renderAdminClients(data.clients);
+
+}catch(e){
+
+console.warn(e);
+
+loadPendingRequests();
+
+}
+
+}
+
+function loadPendingRequests(){
+
+const list=
+$('pendingRequestList');
+
+const count=
+$('pendingCount');
+
+if(!list||!count)
+return;
+
+let requests=[];
+
+try{
+
+requests=
+JSON.parse(
+localStorage.getItem(
+'gabrixPendingRequests'
+)||'[]'
+);
+
+}catch(err){}
+
+count.textContent=
+requests.length;
+
+if(!requests.length){
+
+list.innerHTML=
+'<div class="pending-empty">No client requests are waiting for action.</div>';
+
+return;
+
+}
+
+list.innerHTML=
+requests.map(r=>{
+
+const when=
+new Date(r.createdAt);
+
+const date=
+isNaN(when)
+?r.createdAt
+:when.toLocaleString();
+
+return `
+<div class="pending-item">
+
+<div>
+
+<strong>
+${escapeHtml(
+r.name||
+'Unnamed client'
+)}
+</strong>
+
+<small>
+${escapeHtml(
+r.project||
+'No project'
+)}
+·
+${escapeHtml(
+r.pkg||
+'Package not selected'
+)}
+
+<br>
+
+${escapeHtml(date)}
+
+</small>
+
+</div>
+
+<div>
+
+<span class="pending-status">
+${escapeHtml(
+r.status||
+'PENDING'
+)}
+</span>
+
+<br>
+
+<button
+type="button"
+class="pending-action"
+onclick="markRequestHandled('${r.id}')">
+
+MARK HANDLED
+
+</button>
+
+</div>
+
+</div>
+`;
+
+}).join('');
+
+}
+
+function markRequestHandled(id){
+
+let requests=[];
+
+try{
+
+requests=
+JSON.parse(
+localStorage.getItem(
+'gabrixPendingRequests'
+)||'[]'
+);
+
+}catch(err){}
+
+requests=
+requests.filter(
+r=>r.id!==id
+);
+
+localStorage.setItem(
+'gabrixPendingRequests',
+JSON.stringify(requests)
+);
+
+loadPendingRequests();
+
+}
+
+function escapeHtml(value){
+
+return String(value).replace(
+/[&<>'"]/g,
+c=>({
+'&':'&amp;',
+'<':'&lt;',
+'>':'&gt;',
+"'":'&#39;',
+'"':'&quot;'
+}[c])
+);
+
+}
+
+async function createClient(){
+
+const msg=
+$('createClientMsg');
+
+msg.textContent='';
+
+const client={
+name:$('newClient').value.trim(),
+project:$('newProject').value.trim(),
+package:$('newPackage').value.trim(),
+campaign:$('newCampaign').value.trim(),
+code:$('newCode').value.trim(),
+targets:{
+subscribers:Number(
+$('newSubs').value||0
+),
+likes:Number(
+$('newLikes').value||0
+),
+comments:Number(
+$('newComments').value||0
+),
+watch:Number(
+$('newWatch').value||0
+)
+}
+};
+
+if(
+!client.name||
+!client.project||
+!/^\d{4}$/.test(client.code)
+){
+
+msg.textContent=
+'Enter the client name, project and a valid 4-digit code.';
+
+return;
+
+}
+
+try{
+
+const data=
+await adminFetch(
+'/api/admin/clients',
+{
+method:'POST',
+body:
+JSON.stringify(client)
+}
+);
+
+msg.textContent=
+data.message||
+'Client created successfully.';
+
+[
+'newClient',
+'newProject',
+'newPackage',
+'newCampaign',
+'newCode'
+]
+.forEach(id=>
+$(id).value=''
+);
+
+loadAdminData();
+
+}catch(e){
+
+msg.textContent=
+e.message;
+
+}
+
+}
+
+async function loadAdminClients(){
+
+const list=
+$('adminClientList');
+
+if(!list)return;
+
+list.innerHTML=
+'<p class="muted">Loading clients...</p>';
+
+try{
+
+const data=
+await adminFetch('/api/admin/clients');
+
+const clients=
+data.clients||
+[];
+
+renderAdminClients(clients);
+
+}catch(e){
+
+list.innerHTML=
+'<p class="muted">'+
+escapeHtml(e.message)+
+'</p>';
+
+}
+
+}
+
+function renderAdminClients(clients){
+
+const list=
+$('adminClientList');
+
+if(!list)return;
+
+if(!clients.length){
+
+list.innerHTML=
+'<p class="muted">No clients found.</p>';
+
+return;
+
+}
+
+list.innerHTML=
+clients.map(c=>{
+
+const progress=
+Math.max(
+0,
+Math.min(
+100,
+Number(c.progress)||0
+)
+);
+
+return `
+<div class="card" style="margin-bottom:12px">
+
+<div style="display:flex;justify-content:space-between;gap:15px;align-items:start">
+
+<div>
+
+<div class="number">
+${escapeHtml(
+c.campaign||
+'CAMPAIGN'
+)}
+</div>
+
+<h3>
+${escapeHtml(
+c.name||
+'Client'
+)}
+</h3>
+
+<p>
+${escapeHtml(
+c.project||
+''
+)}
+</p>
+
+</div>
+
+<div class="workflow-status">
+${escapeHtml(
+c.status||
+'ACTIVE'
+)}
+</div>
+
+</div>
+
+<div class="progress-wrap">
+
+<div class="progress-line">
+
+<span>CAMPAIGN PROGRESS</span>
+
+<strong>
+${progress}%
+</strong>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+class="progress-fill"
+style="width:${progress}%">
+</div>
+
+</div>
+
+</div>
+
+</div>
+`;
+
+}).join('');
+
+}
+
+async function loadAdminClientsForUpdate(){
+
+const select=
+$('updateClientSelect');
+
+if(!select)return;
+
+select.innerHTML=
+'<option>Loading clients...</option>';
+
+try{
+
+const data=
+await adminFetch('/api/admin/clients');
+
+const clients=
+data.clients||
+[];
+
+select.innerHTML=
+clients.map(c=>
+`<option value="${escapeHtml(c.id||c.campaign||'')}">
+${escapeHtml(c.name||'Client')} — ${escapeHtml(c.project||'')}
+</option>`
+).join('');
+
+if(!clients.length){
+
+select.innerHTML=
+'<option value="">No clients found</option>';
+
+}
+
+}catch(e){
+
+select.innerHTML=
+'<option value="">Unable to load clients</option>';
+
+}
+
+}
+
+async function postWorkUpdate(){
+
+const msg=
+$('updateMsg');
+
+msg.textContent='';
+
+const clientId=
+$('updateClientSelect').value;
+
+if(!clientId){
+
+msg.textContent=
+'Choose a client first.';
+
+return;
+
+}
+
+const update={
+
+client_id:clientId,
+
+subscribers_done:
+Number($('uSubs').value||0),
+
+likes_done:
+Number($('uLikes').value||0),
+
+comments_done:
+Number($('uComments').value||0),
+
+watch_hours_done:
+Number($('uWatch').value||0),
+
+status:
+$('uStatus').value,
+
+round:
+$('uRound').value.trim(),
+
+details:
+$('uDetails').value.trim()
+
+};
+
+try{
+
+const data=
+await adminFetch(
+'/api/admin/update',
+{
+method:'POST',
+body:
+JSON.stringify(update)
+}
+);
+
+msg.textContent=
+data.message||
+'Client progress updated successfully.';
+
+$('uDetails').value='';
+
+loadAdminData();
+
+}catch(e){
+
+msg.textContent=
+e.message;
+
+}
+
+}
+
+async function loadAdminReports(){
+
+const list=
+$('adminReportList');
+
+if(!list)return;
+
+list.innerHTML=
+'<p class="muted">Loading reports...</p>';
+
+try{
+
+const data=
+await adminFetch(
+'/api/admin/reports'
+);
+
+const reports=
+data.reports||
+[];
+
+if(!reports.length){
+
+list.innerHTML=
+'<p class="muted">No reports available yet.</p>';
+
+return;
+
+}
+
+list.innerHTML=
+reports.map(r=>`
+
+<div class="report">
+
+<div>
+<small>
+${escapeHtml(r.date||'')}
+</small>
+</div>
+
+<div>
+
+<strong>
+${escapeHtml(
+r.client||
+'Client'
+)}
+</strong>
+
+<p>
+${escapeHtml(
+r.details||
+''
+)}
+</p>
+
+</div>
+
+<div class="workflow-status">
+${escapeHtml(
+r.status||
+'UPDATE'
+)}
+</div>
+
+</div>
+
+`).join('');
+
+}catch(e){
+
+list.innerHTML=
+'<p class="muted">'+
+escapeHtml(e.message)+
+'</p>';
+
+}
+
+}
+
+const originalAdminPage=
+adminPage;
+
+adminPage=function(page){
+
+originalAdminPage(page);
+
+if(page==='home')
+loadPendingRequests();
+
+};
+
+document
+.getElementById('campaignForm')
+.addEventListener(
+'submit',
+function(e){
+
+e.preventDefault();
+
+const name=
+$('name').value.trim();
+
+const project=
+$('project').value.trim();
+
+const pkg=
+$('package').value;
+
+const details=
+$('details').value.trim();
+
+const request={
+
+id:
+'REQ-'+Date.now(),
+
+name,
+
+project,
+
+pkg,
+
+details:
+details||
+'I would like to discuss this campaign.',
+
+createdAt:
+new Date().toISOString(),
+
+status:
+'PENDING'
+
+};
+
+try{
+
+const requests=
+JSON.parse(
+localStorage.getItem(
+'gabrixPendingRequests'
+)||'[]'
+);
+
+requests.unshift(request);
+
+localStorage.setItem(
+'gabrixPendingRequests',
+JSON.stringify(requests)
+);
+
+}catch(err){}
+
+const msg=
+`Hello GABRIX NETWORK 👋🏽
+
+My name is ${name}.
+YouTube / Project: ${project}
+Package: ${pkg}
+
+Campaign details:
+${request.details}`;
+
+window.location.href=
+'https://wa.me/254113630612?text='+
+encodeURIComponent(msg);
+
+});
+
+loadPendingRequests();
+
+document
+.querySelectorAll('.code-input')
+.forEach(input=>
+
+input.addEventListener(
+'paste',
+e=>{
+
+const text=
+(e.clipboardData||window.clipboardData)
+.getData('text')
+.replace(/\D/g,'')
+.slice(0,4);
+
+if(!text)
+return;
+
+e.preventDefault();
+
+const inputs=[
+...input.parentElement
+.querySelectorAll('.code-input')
+];
+
+text.split('')
+.forEach((ch,i)=>{
+
+if(inputs[i])
+inputs[i].value=ch;
+
+});
+
+}
+)
+
+);
+
+</script>
+
+<script id="gabrix-payment-script">
+
+function copyPaymentNumber(){
+
+const number=
+"0702880452";
+
+const message=
+document.getElementById(
+"paymentCopyMessage"
+);
+
+if(
+navigator.clipboard&&
+navigator.clipboard.writeText
+){
+
+navigator.clipboard.writeText(number)
+
+.then(function(){
+
+if(message){
+
+message.textContent=
+"✓ NUMBER COPIED";
+
+setTimeout(
+function(){
+message.textContent=""
+},
+2500
+);
+
+}
+
+})
+
+.catch(function(){
+
+legacyCopyPaymentNumber(number);
+
+});
+
+}else{
+
+legacyCopyPaymentNumber(number);
+
+}
+
+}
+
+function legacyCopyPaymentNumber(text){
+
+const helper=
+document.createElement("textarea");
+
+helper.value=text;
+
+helper.setAttribute(
+"readonly",
+""
+);
+
+helper.style.position="fixed";
+
+helper.style.left="-9999px";
+
+document.body.appendChild(helper);
+
+helper.focus();
+
+helper.select();
+
+let copied=false;
+
+try{
+
+copied=
+document.execCommand("copy");
+
+}catch(e){
+
+copied=false;
+
+}
+
+document.body.removeChild(helper);
+
+const message=
+document.getElementById(
+"paymentCopyMessage"
+);
+
+if(message){
+
+message.textContent=
+copied
+?"✓ NUMBER COPIED"
+:"NUMBER SELECTED — TAP COPY";
+
+setTimeout(
+function(){
+message.textContent=""
+},
+2500
+);
+
+}
+
+if(!copied){
+
+const visible=
+document.querySelector(
+".payment-number"
+);
+
+if(visible){
+
+const range=
+document.createRange();
+
+range.selectNodeContents(
+visible
+);
+
+const selection=
+window.getSelection();
+
+selection.removeAllRanges();
+
+selection.addRange(range);
+
+}
+
+}
+
+}
+
+function checkPaymentStatus(){
+
+const amount=
+document
+.getElementById(
+"paymentAmount"
+)
+.value.trim();
+
+const status=
+document.getElementById(
+"paymentStatusValue"
+);
+
+const copy=
+document.getElementById(
+"paymentStatusCopy"
+);
+
+if(
+!amount||
+Number(amount)<=0
+){
+
+document
+.getElementById(
+"paymentAmount"
+)
+.focus();
+
+copy.textContent=
+"Enter the amount you paid to continue.";
+
+status.textContent=
+"AMOUNT REQUIRED";
+
+status.style.color=
+"#ff7180";
+
+return;
+
+}
+
+status.textContent=
+"PENDING VERIFICATION";
+
+status.style.color=
+"#ffe126";
+
+copy.textContent=
+"Payment submitted for verification: KSh "+
+Number(amount).toLocaleString()+
+". The GABRIX team will verify the transaction.";
+
+document
+.getElementById(
+"paymentStatusPanel"
+)
+.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+}
+
+</script>
+
+</body>
+  </html>
