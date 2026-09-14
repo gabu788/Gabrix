@@ -1349,7 +1349,214 @@ function adminPage(page){const pages={home:'adminHome',create:'adminCreate',clie
 function loadPendingRequests(){const list=$('pendingRequestList'),count=$('pendingCount');if(!list||!count)return;let requests=[];try{requests=JSON.parse(localStorage.getItem('gabrixPendingRequests')||'[]');}catch(err){};count.textContent=requests.length;if(!requests.length){list.innerHTML='<div class="pending-empty">No client requests are waiting for action.</div>';return;}list.innerHTML=requests.map(r=>{const when=new Date(r.createdAt);const date=isNaN(when)?r.createdAt:when.toLocaleString();return `<div class="pending-item"><div><strong>${escapeHtml(r.name||'Unnamed client')}</strong><small>${escapeHtml(r.project||'No project')} · ${escapeHtml(r.pkg||'Package not selected')}<br>${escapeHtml(date)}</small></div><div><span class="pending-status">${escapeHtml(r.status||'PENDING')}</span><br><button type="button" class="pending-action" onclick="markRequestHandled('${r.id}')">MARK HANDLED</button></div></div>`}).join('')}
 function markRequestHandled(id){let requests=[];try{requests=JSON.parse(localStorage.getItem('gabrixPendingRequests')||'[]');}catch(err){};requests=requests.filter(r=>r.id!==id);localStorage.setItem('gabrixPendingRequests',JSON.stringify(requests));loadPendingRequests()}
 function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+/* =========================
+   GABRIX ADMIN WORK + REPORTS
+   ========================= */
 
+let gabrixAdminClients = [];
+let gabrixAdminReports = [];
+
+async function loadAdminClients(){
+  try{
+    const d = await apiJson('/api/admin-clients');
+    gabrixAdminClients = d.clients || [];
+
+    const select = $('updateClientSelect');
+    if(select){
+      select.innerHTML = '';
+
+      if(!gabrixAdminClients.length){
+        select.innerHTML = '<option value="">No clients found</option>';
+      }else{
+        gabrixAdminClients.forEach(c=>{
+          const option = document.createElement('option');
+          option.value = c.id;
+          option.textContent =
+            (c.name || 'Unnamed Client') +
+            ' — ' +
+            (c.campaign || 'No Campaign');
+          select.appendChild(option);
+        });
+      }
+    }
+
+    const list = $('adminClientList');
+    if(list){
+      if(!gabrixAdminClients.length){
+        list.innerHTML =
+          '<p class="muted">No clients have been created yet.</p>';
+      }else{
+        list.innerHTML = gabrixAdminClients.map(c=>`
+          <div class="report">
+            <strong>${esc(c.name || 'Unnamed Client')}</strong>
+            <p>Campaign: ${esc(c.campaign || '—')}</p>
+            <p>Status: ${esc(c.status || 'ACTIVE')} • Progress: ${Number(c.progress || 0)}%</p>
+            <small>Client Code: ${esc(c.code || '—')}</small>
+          </div>
+        `).join('');
+      }
+    }
+
+  }catch(e){
+    console.error('GABRIX clients error:', e);
+
+    const select = $('updateClientSelect');
+    if(select){
+      select.innerHTML =
+        '<option value="">Unable to load clients</option>';
+    }
+
+    const list = $('adminClientList');
+    if(list){
+      list.innerHTML =
+        '<p class="muted">Unable to load clients.</p>';
+    }
+  }
+}
+
+
+async function postWorkUpdate(){
+  const clientId = $('updateClientSelect')?.value || '';
+  const subsDone = Number($('uSubs')?.value || 0);
+  const likesDone = Number($('uLikes')?.value || 0);
+  const commentsDone = Number($('uComments')?.value || 0);
+  const watchDone = Number($('uWatch')?.value || 0);
+  const status = $('uStatus')?.value || 'IN PROGRESS';
+  const round = $('uRound')?.value.trim() || 'Round 01';
+  const details = $('uDetails')?.value.trim() || '';
+
+  const msg = $('updateMsg');
+
+  if(!clientId){
+    if(msg) msg.textContent = 'Please choose a client.';
+    return;
+  }
+
+  if(!details){
+    if(msg) msg.textContent = 'Please describe the work completed.';
+    return;
+  }
+
+  if(msg){
+    msg.textContent = 'Posting work update...';
+  }
+
+  try{
+    const d = await apiJson('/api/admin-work-update',{
+      method:'POST',
+      body:JSON.stringify({
+        clientId,
+        subsDone,
+        likesDone,
+        commentsDone,
+        watchDone,
+        status,
+        round,
+        details
+      })
+    });
+
+    if(msg){
+      msg.textContent =
+        d.message || 'Work update posted successfully.';
+    }
+
+    /* Clear the work description and counters
+       ready for the next update */
+    if($('uSubs')) $('uSubs').value = 0;
+    if($('uLikes')) $('uLikes').value = 0;
+    if($('uComments')) $('uComments').value = 0;
+    if($('uWatch')) $('uWatch').value = 0;
+    if($('uRound')) $('uRound').value = '';
+    if($('uDetails')) $('uDetails').value = '';
+
+    /* Refresh client list + reports */
+    await loadAdminClients();
+    await loadAdminReports();
+
+  }catch(e){
+    console.error('GABRIX work update error:', e);
+
+    if(msg){
+      msg.textContent =
+        e.message || 'Unable to post work update.';
+    }
+  }
+}
+
+
+async function loadAdminReports(){
+  const box = $('adminReportList');
+
+  if(box){
+    box.innerHTML =
+      '<p class="muted">Loading reports...</p>';
+  }
+
+  try{
+    const d = await apiJson('/api/admin-reports');
+    gabrixAdminReports = d.reports || [];
+
+    if(!box) return;
+
+    if(!gabrixAdminReports.length){
+      box.innerHTML =
+        '<p class="muted">No work reports have been posted yet.</p>';
+      return;
+    }
+
+    box.innerHTML = gabrixAdminReports.map(r=>{
+      const date = r.created_at
+        ? new Date(r.created_at).toLocaleDateString(
+            'en-GB',
+            {
+              day:'2-digit',
+              month:'short',
+              year:'numeric'
+            }
+          ).toUpperCase()
+        : '—';
+
+      return `
+        <div class="report">
+          <small>${esc(date)} • ${esc(r.round || 'WORK UPDATE')}</small>
+
+          <strong>
+            ${esc(r.client_name || 'Unknown Client')}
+          </strong>
+
+          <p>
+            Campaign: ${esc(r.campaign || '—')}
+          </p>
+
+          <p>
+            <b>Status:</b> ${esc(r.status || 'IN PROGRESS')}
+          </p>
+
+          <p>
+            <b>Subscribers:</b> ${Number(r.subs_done || 0)}
+            &nbsp; | &nbsp;
+            <b>Likes:</b> ${Number(r.likes_done || 0)}
+            &nbsp; | &nbsp;
+            <b>Comments:</b> ${Number(r.comments_done || 0)}
+            &nbsp; | &nbsp;
+            <b>Watch Hours:</b> ${Number(r.watch_done || 0)}
+          </p>
+
+          <p>${esc(r.details || 'No details provided.')}</p>
+        </div>
+      `;
+    }).join('');
+
+  }catch(e){
+    console.error('GABRIX reports error:', e);
+
+    if(box){
+      box.innerHTML =
+        '<p class="muted">Unable to load reports.</p>';
+    }
+  }
+}
 loadPendingRequests();
 function toggleMenu(){document.querySelector('.links')?.classList.toggle('open')}
 document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.links')?.classList.remove('open')));
