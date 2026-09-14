@@ -1364,7 +1364,7 @@ let gabrixAdminReports = [];
 async function loadAdminClients(){
   try{
     const d = await apiJson('/api/admin-clients', {method:'GET'});
-    gabrixAdminClients = d.clients || [];
+    gabrixAdminClients = Array.isArray(d.clients) ? d.clients : [];
 
     const select = $('updateClientSelect');
     if(select){
