@@ -1363,7 +1363,7 @@ let gabrixAdminReports = [];
 
 async function loadAdminClients(){
   try{
-    const d = await apiJson('/api/admin-clients');
+    const d = await apiJson('/api/admin-clients', {method:'GET'});
     gabrixAdminClients = d.clients || [];
 
     const select = $('updateClientSelect');
