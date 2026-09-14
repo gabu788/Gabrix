@@ -1282,7 +1282,7 @@ function openClientDashboard(){
  const err=$('clientLoginError'); err.textContent=''; const code=getCode('clientCodeBoxes');
  if(!/^\d{4}$/.test(code)){err.textContent='Enter all 4 digits.';return;}
 
- fetch('/api/client-login',{
+ fetch(GABRIX_API_BASE+'/api/client-login',{
    method:'POST',
    headers:{'Content-Type':'application/json'},
    body:JSON.stringify({code:code})
