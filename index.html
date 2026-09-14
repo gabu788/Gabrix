@@ -1416,17 +1416,32 @@ async function loadAdminClients(){
     const list = $('adminClientList');
     if(list){
       if(!gabrixAdminClients.length){
-        list.innerHTML =
-          '<p class="muted">No clients have been created yet.</p>';
-      }else{
-        list.innerHTML = gabrixAdminClients.map(c=>`
-          <div class="report">
-            <strong>${esc(c.name || 'Unnamed Client')}</strong>
-            <p>Campaign: ${esc(c.campaign || '—')}</p>
-            <p>Status: ${esc(c.status || 'ACTIVE')} • Progress: ${Number(c.progress || 0)}%</p>
-            <small>Client Code: ${esc(c.code || '—')}</small>
-          </div>
-        `).join('');
+        list.innerHTML = gabrixAdminClients.map(c => `
+  <div class="admin-client">
+    <div>
+      <strong>${esc(c.name || 'Unnamed Client')}</strong>
+      <small>
+        Campaign: ${esc(c.campaign || '—')}<br>
+        Status: ${esc(c.status || 'ACTIVE')} •
+        Progress: ${Number(c.progress || 0)}%
+      </small>
+    </div>
+
+    <div style="text-align:right">
+      <div class="admin-client-code">
+        CODE: ${esc(c.code || '—')}
+      </div>
+
+      <button
+        type="button"
+        onclick="deleteClient('${esc(c.id)}','${esc(c.name || 'this client')}')"
+        style="margin-top:8px;background:#7f1d1d;color:#fff;border:1px solid #ef4444;padding:8px 10px;border-radius:7px;font-size:9px;font-weight:900"
+      >
+        🗑 DELETE CLIENT
+      </button>
+    </div>
+  </div>
+`).join('');
       }
     }
 
