@@ -1,0 +1,12 @@
+{
+  "name": "gabrix-network-api",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-14",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gabrix prod",
+      "database_id": "0000002c-00000000-000050e6-034407cc3afec9ba0e7b66f2224bbdf2"
+    }
+  ]
+}
