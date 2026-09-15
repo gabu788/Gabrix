@@ -1398,8 +1398,7 @@ async function loadAdminClients(){
 
     if(select){
       select.innerHTML = '';
-
-      if(!gabrixAdminClients.length){
+      if(gabrixAdminClients.length){
         select.innerHTML = '<option value="">No clients found</option>';
       }else{
         gabrixAdminClients.forEach(c=>{
