@@ -1480,13 +1480,15 @@ async function loadAdminClients(){
                 Progress: ${Number(c.progress || 0)}%
               </small>
             </div>
+            
+<div style="text-align:right">
+  <div class="admin-client-code">
+    CODE: ${esc(c.code || '—')}
+  </div>
+  <button class="delete-client-btn" onclick="deleteClient('${c.id}')">DELETE</button>
+</div>
 
-            <div style="text-align:right">
-              <div class="admin-client-code">
-                CODE: ${esc(c.code || '—')}
-              </div>
-            </div>
-          </div>
+</div>
         `).join('');
       }
     }
