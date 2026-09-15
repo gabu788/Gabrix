@@ -1648,31 +1648,6 @@ function checkPaymentStatus(){
  copy.textContent="Payment submitted for verification: KSh "+Number(amount).toLocaleString()+". The GABRIX team will verify the transaction.";
  document.getElementById("paymentStatusPanel").scrollIntoView({behavior:"smooth",block:"center"});
 }
-
-loadAdminClients = async function() {
-  await oldLoadAdminClients();
-
-  const list = document.getElementById('adminClientList');
-  if (!list) return;
-
-  const buttons = list.querySelectorAll('[data-client-id]');
-
-  buttons.forEach(button => {
-    const clientId = button.getAttribute('data-client-id');
-    const clientName = button.getAttribute('data-client-name') || 'this client';
-
-    if (button.querySelector('.delete-client-btn')) return;
-
-    const del = document.createElement('button');
-    del.type = 'button';
-    del.className = 'delete-client-btn';
-    del.textContent = '🗑 DELETE CLIENT';
-    del.style.marginTop = '10px';
-    del.onclick = () => deleteClient(clientId, clientName);
-
-    button.appendChild(del);
-  });
-};
 </script>
 </body>
   </html>
