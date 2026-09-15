@@ -1511,7 +1511,28 @@ async function loadAdminClients(){
     }
   }
 }
-async function postWorkUpdate(){
+async function deleteClient(id){
+  if(!id)return;
+
+  const client=gabrixAdminClients.find(c=>c.id===id);
+  const name=client?.name||'this client';
+
+  if(!confirm('Delete '+name+'? This will permanently remove the client and their work updates.'))return;
+
+  try{
+    await apiJson('/api/admin-delete-client',{
+      method:'POST',
+      body:JSON.stringify({clientId:id})
+    });
+
+    await loadAdminClients();
+    await loadAdminReports();
+  }catch(e){
+    alert(e.message||'Unable to delete client.');
+  }
+}
+  
+  async function postWorkUpdate(){
   const clientId = $('updateClientSelect')?.value || '';
   const subsDone = Number($('uSubs')?.value || 0);
   const likesDone = Number($('uLikes')?.value || 0);
