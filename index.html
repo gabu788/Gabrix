@@ -1089,12 +1089,34 @@ footer{
     </div>
     <div id="clientOverview" class="dash-page">
       <div class="client-welcome">Welcome to your private GABRIX campaign space.</div>
-      <div class="client-stats">
-        <div class="client-stat"><small>Subscribers</small><strong id="cSubs">—</strong></div>
-        <div class="client-stat"><small>Likes</small><strong id="cLikes">—</strong></div>
-        <div class="client-stat"><small>Comments</small><strong id="cComments">—</strong></div>
-        <div class="client-stat"><small>Watch Time</small><strong id="cWatch">—</strong></div>
-      </div>
+  <div class="client-stat">
+    <small>Subscribers</small>
+    <strong id="cSubs">0 / 0</strong>
+    <div class="progress-line"><span>PROGRESS</span><b id="cSubsPercent">0%</b></div>
+    <div class="progress-bar"><div class="progress-fill" id="cSubsFill"></div></div>
+  </div>
+
+  <div class="client-stat">
+    <small>Likes</small>
+    <strong id="cLikes">0 / 0</strong>
+    <div class="progress-line"><span>PROGRESS</span><b id="cLikesPercent">0%</b></div>
+    <div class="progress-bar"><div class="progress-fill" id="cLikesFill"></div></div>
+  </div>
+
+  <div class="client-stat">
+    <small>Comments</small>
+    <strong id="cComments">0 / 0</strong>
+    <div class="progress-line"><span>PROGRESS</span><b id="cCommentsPercent">0%</b></div>
+    <div class="progress-bar"><div class="progress-fill" id="cCommentsFill"></div></div>
+  </div>
+
+  <div class="client-stat">
+    <small>Watch Time</small>
+    <strong id="cWatch">0 / 0</strong>
+    <div class="progress-line"><span>PROGRESS</span><b id="cWatchPercent">0%</b></div>
+    <div class="progress-bar"><div class="progress-fill" id="cWatchFill"></div></div>
+  </div>
+</div>
       <div class="progress-wrap">
         <div class="progress-line"><span>CAMPAIGN PROGRESS</span><strong id="cPercent">0%</strong></div>
         <div class="progress-bar"><div class="progress-fill" id="cFill"></div></div>
