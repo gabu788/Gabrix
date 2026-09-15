@@ -1297,7 +1297,25 @@ function renderClient(client){
   $('cLikes').textContent=likes+' / '+likeTarget;
   $('cComments').textContent=comments+' / '+commentTarget;
   $('cWatch').textContent=watch+' / '+watchTarget;
-  
+    const statProgress=(done,target)=>{
+    if(!target)return 0;
+    return Math.max(0,Math.min(100,Math.round((done/target)*100)));
+  };
+
+  const sp=statProgress(subs,subTarget);
+  const lp=statProgress(likes,likeTarget);
+  const cp=statProgress(comments,commentTarget);
+  const wp=statProgress(watch,watchTarget);
+
+  $('cSubsPercent').textContent=sp+'%';
+  $('cLikesPercent').textContent=lp+'%';
+  $('cCommentsPercent').textContent=cp+'%';
+  $('cWatchPercent').textContent=wp+'%';
+
+  $('cSubsFill').style.width=sp+'%';
+  $('cLikesFill').style.width=lp+'%';
+  $('cCommentsFill').style.width=cp+'%';
+  $('cWatchFill').style.width=wp+'%';
   const note=c.update_note||'No campaign update has been posted yet.';
   const safeNote=esc(note);
   const statusLabel=c.status==='COMPLETED'?'Completed':(c.status||'In Progress');
