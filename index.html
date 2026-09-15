@@ -1648,7 +1648,6 @@ function checkPaymentStatus(){
  copy.textContent="Payment submitted for verification: KSh "+Number(amount).toLocaleString()+". The GABRIX team will verify the transaction.";
  document.getElementById("paymentStatusPanel").scrollIntoView({behavior:"smooth",block:"center"});
 }
-  const oldLoadAdminClients = loadAdminClients;
 
 loadAdminClients = async function() {
   await oldLoadAdminClients();
