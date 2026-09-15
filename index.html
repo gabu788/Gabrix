@@ -1259,9 +1259,21 @@ function renderClient(client){
   $('cFill').style.width=progress+'%';
   $('cClient').textContent=c.name||'—';
   $('cPackage').textContent=c.package||'—';
+  
+  const subs=Number(u.subs_done)||0;
+  const likes=Number(u.likes_done)||0;
+  const comments=Number(u.comments_done)||0;
+  const watch=Number(u.watch_done)||0;
 
-  // The production API currently returns aggregate campaign progress rather than
-  // separate YouTube counters, so do not invent subscriber/like/comment figures.
+  const subTarget=Number(c.target_subs)||0;
+  const likeTarget=Number(c.target_likes)||0;
+  const commentTarget=Number(c.target_comments)||0;
+  const watchTarget=Number(c.target_watch)||0;
+
+  $('cSubs').textContent=subs+' / '+subTarget;
+  $('cLikes').textContent=likes+' / '+likeTarget;
+  $('cComments').textContent=comments+' / '+commentTarget;
+  $('cWatch').textContent=watch+' / '+watchTarget;
   
   const note=c.update_note||'No campaign update has been posted yet.';
   const safeNote=esc(note);
