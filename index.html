@@ -1282,7 +1282,7 @@ function renderClient(client){
   $('cFill').style.width=progress+'%';
   $('cClient').textContent=c.name||'—';
   $('cPackage').textContent=c.package||'—';
-  
+  const u=c.latestUpdate||{};
   const subs=Number(u.subs_done)||0;
   const likes=Number(u.likes_done)||0;
   const comments=Number(u.comments_done)||0;
