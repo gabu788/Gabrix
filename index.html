@@ -1384,17 +1384,18 @@ function escapeHtml(value){return String(value).replace(/[&<>'"]/g,c=>({'&':'&am
 
 let gabrixAdminClients = [];
 let gabrixAdminReports = [];
-
 async function loadAdminClients(){
   try{
     const d = await apiJson('/api/admin-clients', {method:'GET'});
-  gabrixAdminClients = Array.isArray(d.clients)
-  ? d.clients
-  : Array.isArray(d)
-    ? d
-    : [];
+
+    gabrixAdminClients = Array.isArray(d.clients)
+      ? d.clients
+      : Array.isArray(d)
+        ? d
+        : [];
 
     const select = $('updateClientSelect');
+
     if(select){
       select.innerHTML = '';
 
@@ -1408,40 +1409,37 @@ async function loadAdminClients(){
             (c.name || 'Unnamed Client') +
             ' — ' +
             (c.campaign || 'No Campaign');
+
           select.appendChild(option);
         });
       }
     }
 
     const list = $('adminClientList');
+
     if(list){
       if(!gabrixAdminClients.length){
-        list.innerHTML = gabrixAdminClients.map(c => `
-  <div class="admin-client">
-    <div>
-      <strong>${esc(c.name || 'Unnamed Client')}</strong>
-      <small>
-        Campaign: ${esc(c.campaign || '—')}<br>
-        Status: ${esc(c.status || 'ACTIVE')} •
-        Progress: ${Number(c.progress || 0)}%
-      </small>
-    </div>
+        list.innerHTML =
+          '<p class="muted">No clients have been created yet.</p>';
+      }else{
+        list.innerHTML = gabrixAdminClients.map(c=>`
+          <div class="admin-client">
+            <div>
+              <strong>${esc(c.name || 'Unnamed Client')}</strong>
+              <small>
+                Campaign: ${esc(c.campaign || '—')}<br>
+                Status: ${esc(c.status || 'ACTIVE')} •
+                Progress: ${Number(c.progress || 0)}%
+              </small>
+            </div>
 
-    <div style="text-align:right">
-      <div class="admin-client-code">
-        CODE: ${esc(c.code || '—')}
-      </div>
-
-      <button
-        type="button"
-        onclick="deleteClient('${esc(c.id)}','${esc(c.name || 'this client')}')"
-        style="margin-top:8px;background:#7f1d1d;color:#fff;border:1px solid #ef4444;padding:8px 10px;border-radius:7px;font-size:9px;font-weight:900"
-      >
-        🗑 DELETE CLIENT
-      </button>
-    </div>
-  </div>
-`).join('');
+            <div style="text-align:right">
+              <div class="admin-client-code">
+                CODE: ${esc(c.code || '—')}
+              </div>
+            </div>
+          </div>
+        `).join('');
       }
     }
 
@@ -1449,20 +1447,20 @@ async function loadAdminClients(){
     console.error('GABRIX clients error:', e);
 
     const select = $('updateClientSelect');
+
     if(select){
       select.innerHTML =
         '<option value="">Unable to load clients</option>';
     }
 
     const list = $('adminClientList');
+
     if(list){
       list.innerHTML =
         '<p class="muted">Unable to load clients.</p>';
     }
   }
 }
-
-
 async function postWorkUpdate(){
   const clientId = $('updateClientSelect')?.value || '';
   const subsDone = Number($('uSubs')?.value || 0);
