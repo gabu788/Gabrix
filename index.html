@@ -1262,11 +1262,7 @@ function renderClient(client){
 
   // The production API currently returns aggregate campaign progress rather than
   // separate YouTube counters, so do not invent subscriber/like/comment figures.
-  $('cSubs').textContent='—';
-  $('cLikes').textContent='—';
-  $('cComments').textContent='—';
-  $('cWatch').textContent='—';
-
+  
   const note=c.update_note||'No campaign update has been posted yet.';
   const safeNote=esc(note);
   const statusLabel=c.status==='COMPLETED'?'Completed':(c.status||'In Progress');
